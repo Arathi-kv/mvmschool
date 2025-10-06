@@ -3295,8 +3295,9 @@ input[type=color] {
   }
 }
 .it-header__menu > nav > ul {
-  padding-left: 200px;
+    padding-left: 200px !important;
 }
+
 .it-header__menu > nav > ul > li {
   list-style-type: none;
   display: inline-block;
