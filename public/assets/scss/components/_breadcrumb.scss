@@ -1,0 +1,115 @@
+@use '../utils' as *;
+
+
+
+.it-breadcrumb-height{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    @media #{$xs}{
+        padding: 140px 0;
+    } 
+}
+
+.it-breadcrumb{
+    &__content {
+        @media #{$xs}{
+            text-align: center;
+        } 
+    }
+    &__shape-1 {
+        position: absolute;
+        top: -27%;
+        left: 0;
+        animation: moving 9s linear infinite;
+        @media #{$xxxl}{
+            left: -8%;
+        }
+        @media #{$xxl,$xl,$lg,$md,$xs}{
+            display: none;
+        }
+    }
+    &__shape-2 {
+        position: absolute;
+        top: -3px;
+        right: 0%;
+        @media #{$md}{
+            right: -12%;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__shape-3 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        @media #{$md}{
+            right: -5%;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__shape-4 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @media #{$md}{
+            right: -12%;
+        }
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &__section-box{
+        @media #{$xs}{
+            text-align: center;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1;
+        color: var(--it-common-white); 
+        margin-bottom: 0; 
+        text-transform: capitalize;   
+        @media #{$xs}{
+            font-size: 42px;
+        }      
+    }
+    &__list{
+        display: inline-block;
+        padding: 8px 20px;
+        background-color: rgba(255, 255, 255, 0.102);
+        margin-bottom: 20px;
+        @media #{$xxl}{
+            padding: 6px 20px;
+        }
+        @media #{$xl}{
+            padding: 6px 20px;
+        }
+        @media #{$lg}{
+            padding: 6px 20px;
+        }
+        & span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--it-common-white);
+            text-transform: uppercase;
+            opacity: 85%;
+            @media #{$xxl,$xl}{
+                font-size: 15px;
+            }
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+            &.color {
+                color: var(--it-theme-1);
+            }
+        }
+    }
+}

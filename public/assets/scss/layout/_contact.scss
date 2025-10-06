@@ -1,0 +1,476 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. contact css start
+/*----------------------------------------*/
+.it-contact-2 {
+    &__left-box{
+        padding: 50px;
+        padding-top: 45px;
+        background-color: #0a2428;
+        margin-left: -70px;
+        margin-right: 65px;
+        @media #{$xl}{
+            margin-left: 0;
+            margin-right: 60px;
+        }
+        @media #{$lg}{
+            margin-left: 0px;
+            margin-right: 0px;
+        } 
+        @media #{$md}{
+            margin-bottom: 50px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        @media #{$xs}{
+            margin-bottom: 50px;
+            padding: 30px 10px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        @media #{$sm}{
+            margin-bottom: 50px;
+            padding: 30px 25px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+    &__input{
+        & input {
+            width: 100%;
+            margin-bottom: 18px;
+            background-color: var(--it-common-black);
+            border: none;
+            color: var(--it-common-white);
+            border: 1px solid transparent;
+            @media #{$xl,$lg,$md}{
+                font-size: 14px;
+            }
+            @media #{$xs}{
+                font-size: 13px;
+            }
+            &:focus {
+                border-color: var(--it-theme-1);
+            }
+        }
+        & textarea{
+            height: 150px;
+            resize: none;
+            padding: 30px;
+            padding-top: 25px;
+            margin-bottom: 20px;
+            background-color: var(--it-common-black);
+            border: none;
+            color: var(--it-common-white);
+            border: 1px solid transparent;
+            &:focus {
+                border-color: var(--it-theme-1);
+            }
+            @media #{$xl,$lg,$md}{
+                font-size: 14px;
+            }
+            @media #{$xs}{
+                font-size: 13px;
+            }
+        }
+    }
+    &__title-sm{
+        font-size: 30px;
+        color: var(--it-common-white);
+        @media #{$xl}{
+            font-size: 23px;
+        }
+        @media #{$lg,$md}{
+            font-size: 20px;
+        }
+        @media #{$xs}{
+            font-size: 20px;
+        }
+    }
+    &__left-color{
+        border: none;
+        background-color: #fff;
+        margin-left: 0;
+        & .it-contact-2__input{
+            & input {
+                width: 100%;
+                margin-bottom: 18px;
+                border: none;
+                background-color: rgb(245, 243, 238);
+                color: var(--it-common-black);
+                border: 1px solid transparent;
+                &:focus {
+                    border-color: var(--it-theme-1);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+            & textarea{
+                height: 150px;
+                resize: none;
+                padding: 30px;
+                padding-top: 25px;
+                margin-bottom: 20px;
+                background-color: rgb(245, 243, 238);
+                color: var(--it-common-black);
+                border: none;
+                border: 1px solid transparent;
+                &:focus {
+                    border-color: var(--it-theme-1);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__color-2 {
+        background-color: #f5f3ee;
+        box-shadow: none;
+        padding: 80px 75px;
+        @media #{$lg,$md}{
+            padding: 80px 25px;
+        }
+        @media #{$xs}{
+            padding: 50px 15px;
+        }
+        @media #{$sm}{
+            padding: 50px 25px;
+        }
+        & .it-contact-2__input{
+            & input {
+                border: 1px solid transparent;
+                background-color: var(--it-common-white);
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+            & textarea{
+                border: 1px solid transparent;
+                background-color: var(--it-common-white);
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+        }
+    }
+    &__red-border {
+        border: none;
+        background-color: #fff;
+        margin-left: 0;
+        border: 1px solid var(--it-theme-3);
+        & .it-contact-2__input{
+            & input {
+                width: 100%;
+                margin-bottom: 18px;
+                border: none;
+                background-color: #f3f3f3;
+                color: var(--it-common-black);
+                transition: .3s;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-3);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+            & textarea{
+                height: 150px;
+                resize: none;
+                padding: 30px;
+                padding-top: 25px;
+                margin-bottom: 20px;
+                background-color: #f3f3f3;
+                color: var(--it-common-black);
+                border: none;
+                transition: .3s;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-3);
+                }
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__input-box {
+        padding-top: 25px;
+        & .it-contact-2__input{
+            & input {
+                border: none;
+                background-color:#f5f3ee;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+            & textarea{
+                background-color:#f5f3ee;
+                border: none;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--it-theme-1);
+                }
+            }
+        }
+    }
+    &__text {
+        & p {
+            @media #{$xs}{
+               font-size: 14px;
+            }
+        }
+    }
+}
+.it-contact-3 {
+    &__space{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        margin-bottom: 120px;
+        @media #{$xl,$lg}{
+            margin-bottom: 0;
+        }
+        @media #{$md,$xs}{
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        z-index: -1;                
+        @media #{$xl}{
+            width: 35%;
+        }
+    }
+    &__right-box{
+        margin-left: 70px;
+        @media #{$lg}{
+           margin-left: 40px;
+        }
+        @media #{$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &__top-box{
+        padding: 55px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$xs}{
+            padding: 25px;
+        }
+        @media #{$sm}{
+            padding: 45px;
+        }
+        & span {
+            font-size: 70px;
+            color: var(--it-theme-1);
+            margin-right: 15px;
+            line-height: 0;
+            @media #{$xs}{
+                font-size: 53px;
+            }
+            @media #{$sm}{
+                font-size: 60px;
+            }
+        }
+        & h6 {
+            font-size: 24px;
+            line-height: 34px;
+            color: #fff;
+            margin-bottom: 0;
+            @media #{$xl,$lg}{
+                font-size: 20px;
+            }            
+            @media #{$md,$xs}{
+                font-size: 17px;
+            } 
+            @media #{$sm}{
+                font-size: 21px;
+            } 
+        }
+    }
+    &__contact-list {
+        &:hover {
+            & .it-contact-3__icon {
+                & span {
+                    background-color: var(--it-common-black);
+                    color: var(--it-theme-1);
+                }
+            }
+        }
+    }
+    &__icon{
+        margin-right: 30px;
+        & span {
+            font-size: 40px;
+            color: var(--it-common-black);
+            display:inline-block;
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            line-height:90px;
+            text-align: center;
+            transition: .3s;
+            background-color: #f2f4f8;
+            @media #{$xl,$lg}{
+                font-size: 30px;
+                height: 70px;
+                width: 70px;
+                line-height:70px;
+            }
+            @media #{$md,$xs}{
+                font-size: 30px;
+                height: 70px;
+                width: 70px;
+                line-height:70px;
+            }
+        }
+    }
+    &__text{
+        & span {
+            display: block;
+            padding-bottom: 10px;
+            @media #{$xl,$lg}{
+                font-size: 15px;
+            }            
+            @media #{$md,$md,$xs}{
+                font-size: 14px;
+            } 
+        }
+        & a {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--it-common-black);
+            transition: .3s;
+            &:hover {
+                color: var(--it-theme-1);
+            }
+            @media #{$xl}{
+                font-size: 20px;
+            }            
+            @media #{$lg,$md,$md}{
+                font-size: 19px;
+            }     
+            @media #{$xs}{
+                font-size: 15px;
+            }       
+            @media #{$sm}{
+                font-size: 19px;
+            }       
+        }
+    }
+    &__title-sm{
+        font-size: 36px;
+        @media #{$xxxl,$xxl}{
+            font-size: 30px;
+        }
+        @media #{$xl}{
+            font-size: 23px;
+        }
+        @media #{$lg,$md,$xs}{
+            font-size: 20px;
+        }
+    }
+    &__shape{
+        position: absolute;
+        right: 0%;
+        top: -22%;
+        z-index: 4;
+        animation: itupdown 0.8s infinite alternate;
+        @media #{$xxl}{
+            right: -8%;
+            top: -22%;
+        }
+    }
+}  
+.it-location {
+    &__item {
+        & iframe {
+            width: 100%;
+            height: 480px;
+           @media #{$xxxl} {
+            height: 400px;
+            }
+           @media #{$xxl} {
+            height: 350px;
+            }
+           @media #{$xl} {
+            height: 300px;
+            }
+           @media #{$lg,$md,$xs} {
+            height: 250px;
+            }
+        }
+    }
+}
+.it-contact {
+    &__location {
+        @media #{$lg,$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & iframe {
+            width: 100%;
+            height: 475px;
+        }
+    }
+    &__right-box {
+        margin-left: 70px;
+        @media #{$lg,$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &__content {
+        & h5 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--it-theme-1);
+            padding-bottom: 15px;
+        }
+        & ul {
+            & li {
+                display: block;
+                list-style-type: none;
+                padding-bottom: 20px;
+            }
+        }
+        & > a {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--it-common-black);
+            letter-spacing: 5px;
+            transition: .3s;
+            &:hover {
+                color: var(--it-theme-3);
+            }
+        }
+    }
+    &__list {
+        &  span {
+            font-size: 18px;
+            color: var(--it-common-black);
+            font-weight: 700;
+            display: block;
+            padding-bottom: 5px;
+        }
+        & > a {
+            transition: .3s;
+            &:hover {
+                color: var(--it-theme-3);
+            }
+        }
+    }
+    &__section-box {
+        & p {
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+}

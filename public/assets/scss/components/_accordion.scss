@@ -1,0 +1,166 @@
+@use '../utils' as *;
+
+
+.it-custom-accordion {
+    & .accordion-items {
+        margin-bottom: 10px;
+        box-shadow: 2px 3.464px 20px 0px rgba(16, 23, 40, 0.06);
+        background-color: var(--it-common-white);
+    }
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        padding: 22px 30px;
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--it-common-black);
+        text-align: left;
+        padding-left: 75px;    
+        @media #{$md,$xs}{
+            font-size: 16px;
+        }  
+        @media #{$sm}{
+            font-size: 19px;
+        }  
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 5 Pro';
+            background-image: none;
+            top: 21px;
+            left: 30px;
+            width: auto;
+            height: auto;
+            font-weight: 400;
+            font-size: 12px;
+            opacity: 1;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            border-radius: 50%;
+            background-color: var(--it-theme-1);
+            color: var(--it-common-white);
+            text-align: center;
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f067';
+            }
+        }
+    }
+
+    & .collapsed {
+        border-radius: 16px 16px 16px 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    & .accordion-body {
+        border-top: 1px solid rgba($color: #060728, $alpha: 0.1);
+        background-color: var(--tp-common-white);
+        padding: 23px 0;
+        padding-bottom: 30px;
+        margin:0px 40px;
+        position: relative;
+        z-index: 1;
+        border-radius: 0 0px 16px 16px;
+        font-weight: 400;
+        font-size:16px;
+        line-height: 150%;
+        color: #696A7E;
+        @media #{$xl} {
+            font-size: 15px;
+        }
+        @media #{$lg}{
+            font-size: 14px;
+        }
+        @media #{$md,$xs}{
+            font-size: 14px;
+        }
+        @media #{$sm}{
+            font-size: 15px;
+        }
+    }
+}
+.it-custom-accordion-2 {
+    & .accordion-items {
+        margin-bottom: 10px;
+        box-shadow: 2px 3.464px 20px 0px rgba(16, 23, 40, 0.06);
+        background-color: #FFF;
+    }
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        padding: 22px 30px;
+        font-weight: 700;
+        font-size: 15px;
+        padding-left: 75px;  
+        text-align: left;  
+        @media #{$md,$xs}{
+            font-size: 16px;
+        }  
+        @media #{$sm}{
+            font-size: 19px;
+        }  
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 5 Pro';
+            background-image: none;
+            top: 21px;
+            left: 30px;
+            width: auto;
+            height: auto;
+            font-weight: 400;
+            font-size: 12px;
+            opacity: 1;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            border-radius: 50%;
+            background-color: var(--it-theme-3);
+            color: var(--it-common-white);
+            text-align: center;
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f067';
+            }
+        }
+    }
+
+    & .collapsed {
+        border-radius: 16px 16px 16px 16px;
+        position: relative;
+        z-index: 99;
+    }
+
+    & .accordion-body {
+        border-top: 1px solid rgba($color: #060728, $alpha: 0.1);
+        background-color: var(--it-common-white);
+        padding: 23px 0;
+        padding-bottom: 30px;
+        margin:0px 40px;
+        position: relative;
+        z-index: 1;
+        border-radius: 0 0px 16px 16px;
+        font-weight: 400;
+        font-size:16px;
+        line-height: 150%;
+        color: #696A7E;
+        @media #{$xl} {
+            font-size: 15px;
+        }
+        @media #{$lg}{
+            font-size: 14px;
+        }
+        @media #{$md,$xs}{
+            font-size: 14px;
+        }
+        @media #{$sm}{
+            font-size: 15px;
+        }
+    }
+}

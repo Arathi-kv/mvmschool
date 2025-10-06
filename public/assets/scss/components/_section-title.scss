@@ -1,0 +1,326 @@
+@use '../utils' as *;
+
+.it-section-subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-grey-3);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+
+    &::before {
+        content: '';
+        height: 2px;
+        width: 20px;
+        background-color: var(--it-theme-1);
+        display: inline-block;
+        margin-right: 10px;
+        transform: translateY(-4px);
+
+    }
+    &::after {
+        content: '';
+        height: 2px;
+        width: 20px;
+        background-color: var(--it-theme-1);
+        display: inline-block;
+        margin-left: 10px;
+        transform: translateY(-4px);
+
+    }
+
+    @media #{$xl} {
+        font-size: 13px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        font-size: 12px;
+    }
+}
+.it-section-border-subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-grey-3);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+
+    &::before {
+        content: '';
+        height: 2px;
+        width: 20px;
+        background-color: var(--it-theme-1);
+        display: inline-block;
+        margin-right: 10px;
+        transform: translateY(-4px);
+
+    }
+
+    &::after {
+        content: '';
+        height: 2px;
+        width: 20px;
+        background-color: var(--it-theme-1);
+        display: inline-block;
+        margin-left: 10px;
+        transform: translateY(-4px);
+
+    }
+    @media #{$xl} {
+        font-size: 13px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        font-size: 12px;
+    }
+}
+.it-section-subtitle-2 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-grey-3);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    & em{
+        margin-left: 15px;
+    }
+    @media #{$xl} {
+        font-size: 13px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        font-size: 12px;
+    }
+}
+.it-section-subtitle-3 {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--it-grey-3);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    & em{
+        margin-left: 15px;
+        &:first-child{
+            margin-right: 15px;
+        }
+    }
+    @media #{$xl} {
+        font-size: 14px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        font-size: 13px;
+    }
+}
+.it-section-subtitle-4 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-theme-3);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    & em{
+        margin-right: 15px;
+    }
+    @media #{$xl} {
+        font-size: 14px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        font-size: 13px;
+    }
+}
+.it-section-subtitle-5 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-theme-1);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.it-section-yellow-subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-theme-1);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+
+    @media #{$xl} {
+        font-size: 13px;
+    }
+
+    @media #{$lg,$md,$xs} {
+        font-size: 12px;
+    }
+
+    &::before {
+        content: '';
+        height: 2px;
+        width: 20px;
+        background-color: var(--it-common-white);
+        display: inline-block;
+        margin-right: 10px;
+        transform: translateY(-4px);
+
+    }
+}
+.it-section-title {
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: capitalize;
+    line-height: 1.2;
+
+    @media #{$xxxl} {
+        font-size: 45px;
+    }
+
+    @media #{$xxl} {
+        font-size: 40px;
+    }
+
+    @media #{$xl} {
+        font-size: 40px;
+    }
+
+    @media #{$lg} {
+        font-size: 35px;
+    }
+
+    @media #{$md} {
+        font-size: 36px;
+
+        & br {
+            display: none;
+        }
+    }
+
+    @media #{$xs} {
+        font-size: 31px;
+
+        & br {
+            display: none;
+        }
+    }
+
+    margin-bottom: 0;
+}
+
+/** slider title goes here **/
+.it-slider-subtitle {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--it-common-white);
+    text-transform: uppercase;
+    padding-bottom: 13px;
+
+    @media #{$xs} {
+        font-size: 12px;
+    }
+}
+.it-slider-title {
+    font-weight: 700;
+    font-size: 90px;
+    color: var(--it-theme-2);
+    text-transform: capitalize;
+
+    @media #{$xxxl} {
+        font-size: 80px;
+    }
+
+    @media #{$xxl} {
+        font-size: 75px;
+    }
+
+    @media #{$xl} {
+        font-size: 75px;
+    }
+
+    @media #{$lg} {
+        font-size: 65px;
+    }
+
+    @media #{$md} {
+        font-size: 55px;
+
+        & br {
+            display: none;
+        }
+    }
+
+    @media #{$xs} {
+        font-size: 38px;
+
+        & br {
+            display: none;
+        }
+    }
+}
+.it-slider-2-title {
+    font-weight: 700;
+    font-size: 90px;
+    color: var(--it-theme-2);
+    text-transform: capitalize;
+
+    @media #{$xxxl} {
+        font-size: 85px;
+    }
+
+    @media #{$xxl} {
+        font-size: 86px;
+    }
+
+    @media #{$xl} {
+        font-size: 75px;
+    }
+
+    @media #{$lg} {
+        font-size: 65px;
+    }
+
+    @media #{$md} {
+        font-size: 55px;
+
+        & br {
+            display: none;
+        }
+    }
+
+    @media #{$xs} {
+        font-size: 38px;
+
+        & br {
+            display: none;
+        }
+    }
+    @media #{$sm} {
+        font-size: 43px;
+    }
+    @media only screen and (min-width: 440px) and (max-width: 575px){
+        font-size: 39px;
+    }
+}
+.it-slider-3-subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--it-common-white);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    @media #{$xs} {
+        font-size: 12px;
+    }
+}
+.it-slider-5-subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #8f8f8f;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    @media #{$xs} {
+        font-size: 12px;
+    }
+}

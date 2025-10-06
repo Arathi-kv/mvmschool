@@ -1,0 +1,367 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  26. solution css start
+/*----------------------------------------*/
+.it-solution-2{
+    &__bg {
+        position: relative;
+        z-index: 11;
+    }
+    &__space {
+        padding-top: 115px;
+        padding-bottom: 120px;
+    }
+    &__shape-1{
+        position: absolute;
+        right: 0;
+        top: -40%;
+        z-index: -1;
+    }
+    &__shape-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @media #{$xxxl}{
+            left: -4%; 
+            top: -8%;        
+        }
+        @media #{$xxl}{
+            left: 0%;  
+            top: -28%;       
+        } 
+        @media #{$xl}{
+            left: -4%;  
+            top: -33%;       
+        } 
+        @media #{$lg}{
+            left: -4%;  
+            top: -47%;       
+        } 
+    }
+    &__shape-3 {
+        position: absolute;
+        bottom: 0;
+        left: 19%;
+        z-index: 1;
+        animation: zoom 7s infinite;
+        @media #{$xxxl}{
+            left: 4%;  
+            bottom: -6%;        
+        } 
+        @media #{$xxl}{
+            left: 4%;  
+            bottom: -8%;        
+        } 
+        @media #{$xl}{
+            left: 4%;  
+            bottom: -6%;        
+        } 
+        @media #{$lg}{
+            left: -8%;  
+            bottom: -6%;        
+        } 
+        @media #{$md}{
+            bottom: 49%;        
+        } 
+    }
+    &__shape-4 {
+        position: absolute;
+        top: 0;
+        left: 29%;
+        z-index: -1;
+        animation: itupdown 0.8s infinite alternate;
+        @media #{$xxxl}{
+            left: 27%;     
+        }
+        @media #{$xxl}{
+            left: 24%;     
+        }
+        @media #{$xl}{
+            left: 19%;     
+        }
+        @media #{$lg}{
+            left: 17%;     
+        }
+    }
+    &__thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media #{$xxxl}{
+          left: -9%;        
+        } 
+        @media #{$xxl}{
+          left: -18%;        
+        } 
+        @media #{$xl}{
+          left: -28%;          
+        } 
+        @media #{$lg}{
+          left: -43%;  
+          background-position: right;      
+        } 
+        @media #{$md,$xs}{
+          position: static; 
+          margin-bottom: 50px;     
+        } 
+        & img {
+            @media #{$lg}{ 
+                background-position: left;      
+              }  
+        }
+    }
+    &__bottom-box{
+        padding:32px 30px;
+        background-color: var(--it-common-white);    
+        @media #{$lg,$md}{
+            padding:32px 15px;
+        }   
+        @media #{$xs}{
+            padding:20px 15px;
+            flex-wrap: wrap;
+        }   
+    }
+    &__bottom-thumb{
+        position: relative;
+        margin-right: 50px;
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+    }
+    &__bottom-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -25px;
+    }
+    &__bottom-text{
+        & h6 {
+            font-size: 20px;
+            @media #{$lg,$md,$xs}{
+                font-size: 16px;
+            }
+        }
+        & span {
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.it-solution-4 {
+    &__shape-1{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    &__plr{
+        padding: 0 290px;
+        @media #{$xxxl}{
+            padding: 0 100px;
+        }
+        @media #{$xxl}{
+            padding: 0 50px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            padding: 0px 15px;
+        }
+    }
+    &__item{
+        padding: 30px 10px;
+        padding-bottom: 35px;
+        border: 1px solid #252525;
+        transition: .3s;
+        &:hover {
+            border: 1px solid #FFF;
+            & .it-solution-4__title{
+                color: var(--it-theme-3);
+            }
+            & span {
+                &::after{
+                    height: 120px;
+                    width: 120px;
+                }
+            }
+        }
+        & span {
+            display: inline-block;
+            font-size: 50px;
+            color: var(--it-common-white);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: #252525;
+            line-height: 117px;
+            text-align: center;
+            margin-bottom: 25px;
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+           & i {
+            position: relative;
+            z-index: 2;
+           }
+            &::after{
+                content: '';
+                position: absolute;
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
+                transform: translateY(-50%);
+                background-color: var(--it-theme-3);
+                top: 50%;
+                right: -5px;
+                transition: .5s;
+
+            }
+        }
+    }
+    &__title{
+        font-size: 20px;
+        color: var(--it-common-white);
+        margin-bottom: 0;
+        transition: .3s;
+    }
+}
+.it-solution-5 {
+    &__item {
+        @media #{$md,$xs} {
+            margin-bottom: 30px;
+        }
+        &:hover {
+            & .it-solution-5__thumb {
+                & img {
+                     transform: scale(1.2);
+                     filter: grayscale(100%);
+                     opacity: 0.9;
+                }
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                    bottom: auto;
+                    top: 0;
+                    height: 100%;
+                   }
+            }
+            & .it-solution-5__icon{
+                opacity: 1;
+                visibility: visible;
+            }
+            & .it-solution-5__content {
+                background-color: var(--it-theme-2);
+                & h5 {
+                    color: var(--it-common-white);
+                }
+            }
+            & .it-solution-5__icon-2 {
+                color: var(--it-theme-2);
+                background-color: var(--it-common-white);
+            }
+        }
+    }
+    &__thumb{
+        & img {
+            transition: .7s;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            height:0%;
+            width: 100%;
+            background-color: rgba(15, 15, 15, 0.549);
+            opacity: 0;
+            visibility: hidden;
+            transition: .7s;
+        }
+    }
+    &__icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        & a {
+            color: var(--it-common-white);
+            font-size: 30px;
+            line-height: 0;
+        }
+    }
+    &__content{
+        background-color: #fff;
+        padding:40px 50px;
+        transition: .5s;
+        text-align: center;
+        padding-top: 60px;
+        & h5 {
+            font-size: 18px;
+            margin-bottom: 0;
+            display: inline-block;
+            transition: .3s;
+            line-height: 1.3;
+            @media #{$lg} {
+                font-size: 13px;
+            }
+            @media #{$xs} {
+                font-size: 15px;
+            }
+            @media #{$sm} {
+                font-size: 18px;
+            }
+        }
+    }
+    &__icon-2 {
+        font-size: 43px;
+        color: #FFF;
+        display: inline-block;
+        height: 80px;
+        width: 80px;
+        text-align: center;
+        line-height: 91px;
+        background-color: var(--it-theme-2);
+        border-radius: 50%;
+        position: absolute;
+        top: 55%;
+        margin: 0 auto;
+        left: 0;
+        right:0;
+        text-align: center;
+        transition: .5s;
+        @media #{$lg} {
+            font-size: 35px;
+            height: 60px;
+            width: 60px;
+            line-height: 71px;
+            top: 50%;
+        }
+        @media #{$md} {
+            top: 50%;
+        }
+        @media #{$xs} {
+            font-size: 35px;
+            height: 60px;
+            width: 60px;
+            line-height: 71px;
+            top: 50%;
+        }
+        @media #{$sm} {
+            font-size: 35px;
+            height: 60px;
+            width: 60px;
+            line-height: 71px;
+            top: 67%;
+        }
+        @media only screen and (min-width: 440px) and (max-width: 575px){
+            top: 60%;
+        }
+    }
+}

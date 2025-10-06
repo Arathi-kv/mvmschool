@@ -1,0 +1,136 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  20. pricing css start
+/*----------------------------------------*/
+.it-pricing-5 {
+    &__item{
+        background-color: #FFF;
+        box-shadow: 2px 3.464px 40px 0px rgba(4, 23, 26, 0.08);
+        padding: 40px;
+        @media #{$lg} {
+            padding: 30px;
+        }
+        &.active{
+            background-color: var(--it-common-black);
+            & .it-pricing-5__top-box {
+                & i {
+                    color: var(--it-common-white);
+                }
+                & span {
+                    color: var(--it-common-white);
+                    background-color: #272727;
+                }
+            }
+            & .it-pricing-5__middle-box {
+                & span {
+                    color: var(--it-common-white);                 
+                }
+            }
+        }
+    }
+    &__top-box {
+        & i {
+            font-size: 80px;
+            color: var(--it-common-black);
+            display: inline-block;
+            margin-right: 40px;
+            transform: translateY(11px);
+            @media #{$xxl} {
+                font-size: 70px;
+            }
+            @media #{$xl} {
+                font-size: 65px;
+            }
+            @media #{$lg,$md,$xs} {
+                font-size: 60px;
+            }
+        }
+        & span {
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--it-common-black);
+            height: 40px;
+            line-height: 40px;
+            padding:0 20px ;
+            background-color: #f5efef;
+            display: inline-block;
+            text-align: center;
+            @media #{$xxl} {
+                font-size: 19px;
+            }
+            @media #{$xl} {
+                font-size: 18px;
+            }
+            @media #{$lg,$md,$xs} {
+                font-size: 15px;
+            }
+        }
+    }
+    &__middle-box {
+        & span {
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--it-common-black);
+            & strong {                
+                font-weight: 700;
+                font-size: 48px;
+                @media #{$xxl} {
+                    font-size: 45px;
+                }
+                @media #{$xl} {
+                    font-size: 42px;
+                }
+                @media #{$lg,$md,$xs} {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    &__list {
+        & ul {
+            & li {
+                list-style-type: none;
+                font-size: 16px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    &__shape{
+        position: absolute;
+        right: -52%;
+        bottom: 65px;
+        z-index: -1;
+        @media #{$sm} {
+            right: -20%;
+        }
+    }
+    &__title-wrap{
+        margin-bottom: 55px;
+    }
+    &__section-box {
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+    }
+}
+.it-pricing-5 {
+    &__tab {
+        & ul {
+            & li {
+                & button {
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    color: var(--it-theme-2);
+                    &.active {
+                        color: var(--it-theme-1);
+                    }
+                    &:hover {
+                        color: var(--it-theme-1);
+                    }
+                }
+            }
+        }
+    }
+}

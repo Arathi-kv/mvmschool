@@ -1,0 +1,123 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. customar css start
+/*----------------------------------------*/
+.it-customar-review {
+    &__item-box{
+        position:relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 26, 25, 0.8);
+            z-index: 1;
+            
+        }
+    }
+    &__gradiant-box{
+        position: relative;
+        padding: 44px 60px;
+        @media #{$xs}{
+            padding:44px 20px;
+        }
+        &::after{
+            content: '';
+            top: -1px;
+            right: 0;
+            background-color: var(--it-common-white);
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: -moz-linear-gradient( 180deg, rgb(249,190,23) 0%, rgb(127,107,25) 44%, rgb(4,23,26) 100%);
+            background-image: -webkit-linear-gradient( 180deg, rgb(249,190,23) 0%, rgb(127,107,25) 44%, rgb(4,23,26) 100%);
+            background-image: -ms-linear-gradient( 180deg, rgb(249,190,23) 0%, rgb(127,107,25) 44%, rgb(4,23,26) 100%);
+            z-index: -1;
+        }
+    }
+    &__title{
+        font-size: 48px;
+        color: var(--it-common-white);
+        line-height:1;
+    }
+    &__item{
+        padding:57px 60px;
+        padding-right: 40px;
+        position: relative;
+        z-index: 2;
+        &::after{
+            content: '';
+            top: -1px;
+            right: 0;
+            background-color: var(--it-common-white);
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            @media #{$xl}{
+                top: -1px;
+            }
+        }
+        @media #{$lg}{
+            padding:57px 40px;
+        }
+        @media #{$xs}{
+            padding:57px 20px;
+            flex-wrap: wrap;
+        }
+    }
+    &__icon {
+        margin-right: 30px;
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        & span {
+            font-size: 50px;
+            color: var(--it-common-black);
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: var(--it-theme-1);
+            text-align: center;
+            line-height: 115px;
+        }
+    }
+    &__content{
+        & span {
+            font-family: var(--it-ff-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--it-common-white);
+            display: inline-block;
+            padding-bottom: 10px;
+            @media #{$xs}{
+                font-size: 20px;
+            }
+        }
+        & p {
+            color:#c9c9c9;
+            margin-bottom: 0;
+            @media #{$xl}{
+                font-size: 14px;
+            }
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+}

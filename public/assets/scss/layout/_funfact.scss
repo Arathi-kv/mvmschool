@@ -1,0 +1,119 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  17. funfact css start
+/*----------------------------------------*/
+.it-funfact{
+    &__item {
+        position: relative;
+        z-index: 11;
+    }
+    &__icon{
+        & span {
+            font-size: 65px;
+            color: var(--it-common-white);
+            margin-right: 30px;
+            transform: translateY(11px);
+            display: inline-block;
+            transition: .3s;
+            @media #{$lg,$md,$xs}{
+                font-size: 50px;
+                margin-right: 20px;
+                transform: translateY(7px);
+            }            
+        }
+    }
+    &__title-sm{
+        font-size: 40px;
+        color: var(--it-common-white);
+        @media #{$lg}{
+            font-size: 28px;
+        }   
+        @media #{$md,$xs}{
+            font-size: 32px;
+        }   
+        & i {
+            font-style: normal;
+        }
+    }
+    &__text {
+        & span {
+            color: #ffffffd9;
+            @media #{$lg}{
+                font-size: 15px;
+            }
+            @media #{$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+    &__bg{
+        padding: 100px 120px;
+        padding-bottom: 70px;
+        position: relative;
+        @media #{$xxxl,$xxl,$xl}{
+            padding: 100px 40px;
+            padding-bottom: 70px;
+        }
+        @media #{$lg,$md,$xs}{
+            padding: 60px 17px;
+            padding-bottom: 30px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: var(--it-theme-1);
+            height: 32px;
+            width: 32px;            
+        }
+    }
+    &__wrap{
+        position: relative;
+        padding: 0 260px;
+        @media #{$xxxl}{
+            padding: 0 215px;
+        }
+        @media #{$xxl}{
+            padding: 0 60px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            padding:0 15px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: var(--it-grey-1);
+            height:50%;
+            width:100%;            
+        }
+
+    }
+    &__wrap-2{
+        padding: 0 260px;
+        @media #{$xxxl}{
+            padding: 0 215px;
+        }
+        @media #{$xxl}{
+            padding: 0 60px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            padding:0 15px;
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: -31px;
+        left: -14%;
+    }
+}
+.funfact-inner{
+    & .it-funfact__wrap{
+        &::before{
+            display: none;
+        }
+    }
+}

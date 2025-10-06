@@ -1,0 +1,87 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  14. faq css start
+/*----------------------------------------*/
+.it-faq-2{
+    &__right-side {
+        padding-top: 15px;
+        margin-left: 75px;
+        @media #{$xl}{
+            margin-left: 40px;
+        }
+        @media #{$lg}{
+            font-size: 16px;
+            margin-left: 21px;
+        } 
+        @media #{$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &__bg{
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 51%;
+            background-color: var(--it-common-black);
+            z-index: -1;
+            @media #{$lg,$md,$xs}{
+                display: none;
+            } 
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: -17%;
+        right: -4%;
+        z-index: -1;
+        animation: ittranslateX2 3s infinite alternate;
+        @media #{$xxxl}{
+            top: -17%;
+            right: -9%;
+        }
+    }
+}
+
+.it-faq-4 {
+    &__left-box{
+        margin-right: 80px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        @media #{$xxl}{
+            width: 40%;
+            height: 907px;
+        }
+        & img {
+            @media #{$xxl}{
+                height: 907px;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(225, 18, 18, 0.5);
+        }
+    }
+    &__shape{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

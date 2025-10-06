@@ -1,0 +1,211 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  09. choose css start
+/*----------------------------------------*/
+.it-choose-3{
+    &__space{
+        margin-top: -95px;
+        position: relative;
+        z-index: 3;
+        @media #{$lg,$md,$xs}{
+            margin-top: 0;
+        }
+    }
+    &__thumb {
+        @media #{$xl}{
+           margin-left: 50px;
+        }
+        @media #{$lg}{
+           margin-left: 50px;
+        }
+        @media #{$md,$xs}{
+           margin-bottom: 70px;
+        }
+        & img {
+            @media #{$xl}{
+                max-width: 90%;
+            }
+            @media #{$lg}{
+                max-width: 90%;
+            }
+            @media #{$xs}{
+                margin-bottom: 20px;
+            }           
+            @media #{$sm}{
+                width: 100%;
+            }           
+        }
+    }
+    &__thumb-sm{
+        position: absolute;
+        left: -200px;
+        bottom: 0;
+        animation: ittranslateX2 4s forwards infinite alternate;
+        @media #{$xl}{
+            left: -50px;
+        }
+        @media #{$lg}{
+            left: -50px;
+        }
+        @media #{$md}{
+            left: 0px;
+        }
+        @media #{$xs}{
+            position: static;
+        }
+        & img {
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__thumb-shape {
+        position: absolute;
+        top: 155px;
+        left: -135px;
+        z-index: -1;
+        animation: zoom 7s infinite;
+    }
+    &__shape{
+        position: absolute;
+        top: 0;
+        right: -3%;
+        animation: ittranslateX2 3s infinite alternate;
+        @media #{$xxl}{
+            right: -4%;     
+        } 
+    }
+    &__icon{
+        position: relative;
+        margin-right: 30px;
+        & i{
+            font-size: 62px;
+            color: var(--it-theme-2);
+        }
+        & span{
+            height: 35px;
+            width: 35px;
+            background-color: var(--it-theme-1);
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 6px;
+            z-index: -1;
+        }
+    }
+}
+.it-choose-2 {
+    &__item-box {
+        @media #{$xs}{
+            flex-wrap: wrap;
+        }
+        @media #{$sm}{
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        box-shadow: 2px 3.464px 40px 0px rgba(4, 23, 26, 0.08);
+        padding: 20px;
+        padding-right: 42px;
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        @media #{$sm}{
+            margin-bottom: 0;
+        }
+        @media #{$lg}{
+            padding: 20px;
+        } 
+        @media #{$md}{
+            padding-right: 50px;
+            padding-left: 40px;
+        } 
+        &.active {
+            background-color: var(--it-theme-1);
+        }
+        &.active-2 {
+            box-shadow: 2px 3.464px 40px 0px rgba(4, 23, 26, 0.08);
+            background-color: var(--it-common-white);
+            & span {
+                color: var(--it-theme-3);
+            }
+        }
+        &.color {
+            box-shadow: none;
+            padding: 0;
+            &:not(:last-child){
+                padding-right: 55px;
+            }
+            & span {
+                color: var(--it-theme-3);
+            }
+        }
+        & span {
+            font-size: 50px;
+            color: var(--it-common-black);
+            @media #{$lg}{
+                font-size: 40px;
+            } 
+        }
+        & h6 {
+            line-height: 24px;
+            font-size: 20px;
+            margin-left: 25px;
+            @media #{$lg}{
+                font-size: 15px;
+                margin-left: 21px;
+            } 
+            @media #{$sm}{
+                font-size: 17px;
+            } 
+        }
+    }
+    &__content {
+        & span {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--it-common-black);
+            display: block;
+            margin-bottom: 10px;
+        }
+        & p {
+            @media #{$xl,$lg,$md}{
+                font-size: 14px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$xs}{
+                font-size: 14px;
+                padding-bottom: 20px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__text {
+        margin-left: 55px;
+        & span {
+            & b {
+                font-size: 40px;
+                color: var(--it-common-black);
+            }
+        }        
+    }
+    &__text-2 {
+        & p {
+            font-weight: 700;
+            color: var(--it-theme-3);
+            line-height: 26px;
+            @media #{$xs}{
+                font-size: 14px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  05. brand css start
+/*----------------------------------------*/
+.it-brand{
+    &__border-top{
+        border-top: 1px solid var(--it-border-1);
+    }
+    &__item{
+        text-align: center;
+        & img {
+            opacity: 35%;
+            transition: .3s;
+            &:hover {
+                opacity: 100%;
+            }
+        }
+    }
+    &__border{
+         border-top: 1px solid #e7e7e7;
+    }
+}
