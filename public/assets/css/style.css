@@ -16086,3 +16086,48 @@ p.checkout-coupon input[type=text]:focus {
   min-width: 0;
   flex: 1;
 }
+/*----------------------------------------*/
+/*  IMPROVEMENTS FOR LARGE SCREENS (≥1600px)
+/*----------------------------------------*/
+@media only screen and (min-width: 1600px) {
+  .header-sticky .it-header__main-menu {
+    margin-left: 300px;
+    margin-right: -170px;
+  }
+
+  .it-header__menu > nav > ul {
+    padding-left: 300px;
+  }
+
+  .it-header__menu > nav > ul > li {
+    margin: 0 35px;
+  }
+
+  .it-header__menu > nav > ul > li > a {
+    font-size: 18px;
+  }
+
+  .it-header__logo {
+    padding: 28px 60px;
+    left: 10px;
+  }
+
+  .header-sticky {
+    box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+  }
+
+  .it-header__menu > nav > ul > li:hover .submenu {
+    transition-duration: 0.5s;
+    -webkit-transform: perspective(300px) rotateX(0deg);
+    transform: perspective(300px) rotateX(0deg);
+  }
+}
+
+/*----------------------------------------*/
+/*  HIDE HAMBURGER ICON ON XL SCREENS
+/*----------------------------------------*/
+@media (min-width: 1200px) {
+  .it-header__bar button {
+    display: none;
+  }
+}
