@@ -16079,3 +16079,10 @@ p.checkout-coupon input[type=text]:focus {
     height: 100%;
     width: 30%;
 }
+
+
+
+.it-header__menu {
+  min-width: 0;
+  flex: 1;
+}
