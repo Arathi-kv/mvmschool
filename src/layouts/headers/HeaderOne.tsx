@@ -1,17 +1,17 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import NavMenu from "./Menu/nav-menu";
-import React, { useState } from "react";
-import useSticky from "@/hooks/use-sticky";
-import Search from "@/components/common/Search";
-import Offcanvus from "@/components/common/Offcanvus";
+import Link from 'next/link';
+import NavMenu from './Menu/nav-menu';
+import React, { useState } from 'react';
+import useSticky from '@/hooks/use-sticky';
+import Search from '@/components/common/Search';
+import Offcanvus from '@/components/common/Offcanvus';
 
 const HeaderOne = () => {
-  const { sticky } = useSticky();
-  const [open, setOpen] = useState(false);
-  const [openSidebar, setOpenSidebar] = useState(false);
+  const { sticky } = useSticky()
+  const [open, setOpen] = useState(false)
+  const [openSidebar, setOpenSidebar] = useState(false)
+
 
   return (
     <>
@@ -40,26 +40,20 @@ const HeaderOne = () => {
                   </span>
                 </div>
               </div>
+             
             </div>
           </div>
         </div>
 
-        <div id="header-sticky" className={`it-header__area ${sticky ? "header-sticky" : ""}`}>
+
+
+        <div id="header-sticky" className={`it-header__area ${sticky ? 'header-sticky' : ''}`}>
           <div className="container container-large">
             <div className="it-header__wrap p-relative">
-              {/* Desktop Logo */}
+              
               <div className="it-header__logo d-none d-xl-block">
-                <Link href="/">
-                  <Image
-                    src="/assets/img/logo/school-logo.png"
-                    alt="logo"
-                    width={180}
-                    height={60}
-                    priority
-                  />
-                </Link>
+                <Link href="/"><img src="assets/img/logo/school-logo.png" alt="logo" /></Link>
               </div>
-
               <div className="row align-items-center">
                 <div className="col-xl-10 col-lg-6 col-md-6 col-6">
                   <div className="it-header__menu d-none d-xl-block text-center">
@@ -67,24 +61,16 @@ const HeaderOne = () => {
                       <NavMenu />
                     </nav>
                   </div>
-                  {/* Mobile Logo */}
                   <div className="it-header__main-logo d-xl-none">
-                    <Link href="/">
-                      <Image
-                        src="/assets/img/logo/school-logo.png"
-                        alt="logo"
-                        width={140}
-                        height={50}
-                        priority
-                      />
-                    </Link>
+                    <Link href="/"><img src="assets/img/logo/school-logo.png" alt="logo" /></Link>
                   </div>
                 </div>
                 <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                   <div className="it-header__right-box d-flex align-items-center justify-content-end">
+                    
                     <div className="it-header__bar d-xl-none">
-                      <button className="it-menu-bar" onClick={() => setOpenSidebar(!openSidebar)}>
-                        <i className="fa-regular fa-bars"></i>
+                      <button className="it-menu-bar">
+                        <span onClick={() => setOpenSidebar(!openSidebar)}><i className="fa-regular fa-bars"></i></span>
                       </button>
                     </div>
                   </div>
