@@ -3301,7 +3301,7 @@ input[type=color] {
 .it-header__menu > nav > ul > li {
   list-style-type: none;
   display: inline-block;
-  margin: 0px 22px;
+  margin: 0px 20px;
   position: relative;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
