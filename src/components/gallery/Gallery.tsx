@@ -52,7 +52,10 @@ const galleryItems: GalleryItem[] = [
     title: "Group Photo with MVM Hero's",
     thumbnail: "/assets/img/gallery/group-photo-thumb.jpg",
     popupImages: ["/assets/img/gallery/group-photo-1.jpg"],
-    extraImages: ["/assets/img/gallery/group-photo-2.jpg", "/assets/img/gallery/group-photo-3.jpg"],
+    extraImages: [
+      "/assets/img/gallery/group-photo-2.jpg",
+      "/assets/img/gallery/group-photo-3.jpg",
+    ],
   },
   {
     title: "Presentation for Winners",
@@ -76,7 +79,10 @@ const galleryItems: GalleryItem[] = [
     title: "Celebration",
     thumbnail: "/assets/img/gallery/celebration-thumb.jpg",
     popupImages: ["/assets/img/gallery/celebration-1.jpg"],
-    extraImages: ["/assets/img/gallery/celebration-2.jpg", "/assets/img/gallery/celebration-3.jpg"],
+    extraImages: [
+      "/assets/img/gallery/celebration-2.jpg",
+      "/assets/img/gallery/celebration-3.jpg",
+    ],
   },
   {
     title: "Just a Snap with A+ Winners",
@@ -87,7 +93,10 @@ const galleryItems: GalleryItem[] = [
     title: "School Structure",
     thumbnail: "/assets/img/gallery/school-structure-thumb.jpg",
     popupImages: ["/assets/img/gallery/structure-1.jpg"],
-    extraImages: ["/assets/img/gallery/structure-2.jpg", "/assets/img/gallery/structure-3.jpg"],
+    extraImages: [
+      "/assets/img/gallery/structure-2.jpg",
+      "/assets/img/gallery/structure-3.jpg",
+    ],
   },
   {
     title: "Inauguration",
@@ -117,9 +126,9 @@ const Gallery = () => {
         style={{
           display: "grid",
           gap: "20px",
-          gridTemplateColumns: "repeat(3, 1fr)", // 3 columns per row
-          maxWidth: "1000px", // grid max width
-          margin: "0 auto", // center grid
+          gridTemplateColumns: "repeat(3, 1fr)",
+          maxWidth: "1000px",
+          margin: "0 auto",
         }}
       >
         {galleryItems.map((item, index) => (
@@ -155,8 +164,9 @@ const Gallery = () => {
           close={() => setOpen(false)}
           slides={slides}
           toolbar={{
-            render: () => (
+            buttons: [
               <div
+                key="custom-title"
                 style={{
                   position: "absolute",
                   top: "20px",
@@ -164,11 +174,12 @@ const Gallery = () => {
                   color: "white",
                   fontSize: "20px",
                   fontWeight: "bold",
+                  pointerEvents: "none", // makes sure title doesn’t block clicks
                 }}
               >
                 {title}
-              </div>
-            ),
+              </div>,
+            ],
           }}
         />
       )}
