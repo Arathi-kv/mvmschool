@@ -44,7 +44,7 @@ const HeroHomeOne = () => {
               <div className="it-slider__shape-2">
                 <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
               </div>
-              <div className="it-slider__bg" style={{ backgroundImage: `url(/assets/img/slider/slider1.jpg)` }}></div>
+              <div className="it-slider__bg" style={{ backgroundImage: `url(/assets/img/slider/slider3.jpg)` }}></div>
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">
@@ -72,7 +72,7 @@ const HeroHomeOne = () => {
               <div className="it-slider__shape-2">
                 <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
               </div>
-              <div className="it-slider__bg " style={{ backgroundImage: `url(/assets/img/slider/slider2.jpg)` }}></div>
+              <div className="it-slider__bg " style={{ backgroundImage: `url(/assets/img/slider/slider1.jpg)` }}></div>
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">
@@ -91,31 +91,7 @@ const HeroHomeOne = () => {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className="swiper-slide">
-            <div className="it-slider__area it-slider__height it-slider__overlay p-relative">
-              <div className="it-slider__shape-1">
-                <img src="assets/img/slider/slider-shape-3-2.png" alt="rk-theme" />
-              </div>
-              <div className="it-slider__shape-2">
-                <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
-              </div>
-              <div className="it-slider__bg" style={{ backgroundImage: `url(/assets/img/slider/slider3.jpg)` }}></div>
-              <div className="container">
-                <div className="row">
-                  <div className="col-xl-12">
-                    <div className="it-slider__content-wrap">
-                      <div className="it-slider__content">
-                        <h2 className="it-slider-title pb-30">M.V.M <br /> Higher Secondary School</h2>
-                      </div>
-                      <div className="it-slider__button d-flex align-items-center">
-                        <Link className="it-btn" href="/about-us"><span>discover more</span></Link> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+          
 
         </Swiper> 
         {/* <div className="it-slider-dots"></div>       */}
