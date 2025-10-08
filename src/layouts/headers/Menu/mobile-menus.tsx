@@ -4,13 +4,13 @@ import React from "react";
 import Link from "next/link";
 import menu_data from "./menu-data";
 
-const NavMenu = () => {
+const MobileMenus = () => {
   return (
-    <nav className="it-main-menu-content">
+    <nav className="it-menu-content">
       <ul>
-        {menu_data.map((item, index) => (
+        {menu_data.map((menu, index) => (
           <li key={index}>
-            <Link href={item.link}>{item.title}</Link>
+            <Link href={menu.link}>{menu.title}</Link>
           </li>
         ))}
       </ul>
@@ -18,4 +18,4 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default MobileMenus;
