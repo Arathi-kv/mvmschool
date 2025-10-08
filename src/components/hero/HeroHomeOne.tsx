@@ -14,34 +14,27 @@ const HeroHomeOne = () => {
   return (
     <>
       <div className="it-slider__wrapper z-index fix">
-        <Swiper
-          loop={true}
-          slidesPerView={1}
-          spaceBetween={0}
-          effect="fade"
-          autoplay={true}
-          
-          modules={[Autoplay, EffectFade, Pagination]}
-          pagination={{ el: ".it-slider-dots", clickable: true }}
-          breakpoints={{
-            '1200': {
-              slidesPerView: 1,
-            },
-            '992': {
-              slidesPerView: 1,
-            },
-            '768': {
-              slidesPerView: 1,
-            },
-            '576': {
-              slidesPerView: 1,
-            },
-            '0': {
-              slidesPerView: 1,
-            },
-          }}
+     <Swiper
+  loop={true}
+  slidesPerView={1}
+  spaceBetween={0}
+  effect="fade"
+  autoplay={{
+    delay: 5000, // 5 seconds per slide
+    disableOnInteraction: false, // continues autoplay after user interaction
+  }}
+  modules={[Autoplay, EffectFade, Pagination]}
+  pagination={{ el: ".it-slider-dots", clickable: true }}
+  breakpoints={{
+    1200: { slidesPerView: 1 },
+    992: { slidesPerView: 1 },
+    768: { slidesPerView: 1 },
+    576: { slidesPerView: 1 },
+    0: { slidesPerView: 1 },
+  }}
+  className="swiper-container it-slider__active p-relative"
+>
 
-          className="swiper-container it-slider__active p-relative">
 
           <SwiperSlide className="swiper-slide">
             <div className="it-slider__area it-slider__height it-slider__overlay p-relative">

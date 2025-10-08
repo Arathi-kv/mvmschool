@@ -1769,7 +1769,7 @@ input[type=color] {
   }
 }
 .itoffcanvas__logo img {
-  width: 157px;
+  width: 100px;
   height: 100%;
 }
 .itoffcanvas__close-btn button {
@@ -3326,8 +3326,8 @@ input[type=color] {
   color: var(--it-theme-2);
 }
 .it-header__menu > nav > ul > li > a {
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 18px;
   padding: 30px 0px;
   display: inline-block;
   color: var(--it-theme-2);
@@ -3335,7 +3335,7 @@ input[type=color] {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .it-header__menu > nav > ul > li > a {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .it-header__menu > nav > ul > li > .submenu {

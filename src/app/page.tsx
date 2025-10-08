@@ -31,8 +31,7 @@ const IndexPage = () => {
         {/* Separate Motto section */}
          <Motto />
 
-        {/* Projects / Facilities Section */}
-        <ProjectHomeOne />
+       
       </main>
 
       <FooterOne />
