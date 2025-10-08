@@ -120,40 +120,17 @@ const Gallery = () => {
   };
 
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
-      <h2 style={{ fontSize: "2rem", marginBottom: "20px" }}>Gallery</h2>
-      <div
-        style={{
-          display: "grid",
-          gap: "20px",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          maxWidth: "1000px",
-          margin: "0 auto",
-        }}
-      >
+    <div className="gallery-container">
+      <h2 className="gallery-title">Gallery</h2>
+      <div className="gallery-grid">
         {galleryItems.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              cursor: "pointer",
-              overflow: "hidden",
-              borderRadius: "10px",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-            }}
-          >
-            <div onClick={() => handleOpen(item)}>
-              <img
-                src={item.thumbnail}
-                alt={item.title}
-                style={{
-                  width: "100%",
-                  height: "250px",
-                  objectFit: "cover",
-                  transition: "transform 0.3s ease",
-                }}
-              />
-            </div>
-            <h5 style={{ marginTop: "10px", fontWeight: "normal" }}>{item.title}</h5>
+          <div className="gallery-item" key={index} onClick={() => handleOpen(item)}>
+            <img
+              src={item.thumbnail}
+              alt={item.title}
+              className="gallery-thumb"
+            />
+            <h5 className="gallery-caption">{item.title}</h5>
           </div>
         ))}
       </div>
@@ -163,8 +140,10 @@ const Gallery = () => {
           open={open}
           close={() => setOpen(false)}
           slides={slides}
+          // ✅ Keep default navigation buttons
           toolbar={{
             buttons: [
+              // title on top-left
               <div
                 key="custom-title"
                 style={{
@@ -174,15 +153,97 @@ const Gallery = () => {
                   color: "white",
                   fontSize: "20px",
                   fontWeight: "bold",
-                  pointerEvents: "none", // makes sure title doesn’t block clicks
+                  pointerEvents: "none",
                 }}
               >
                 {title}
               </div>,
+              // close button on top-right
+              <button
+                key="close-btn"
+                onClick={() => setOpen(false)}
+                style={{
+                  position: "absolute",
+                  top: "15px",
+                  right: "25px",
+                  background: "rgba(0,0,0,0.6)",
+                  border: "none",
+                  color: "white",
+                  fontSize: "24px",
+                  borderRadius: "50%",
+                  width: "40px",
+                  height: "40px",
+                  cursor: "pointer",
+                  lineHeight: "40px",
+                  textAlign: "center",
+                }}
+                aria-label="Close"
+              >
+                ✕
+              </button>,
             ],
           }}
         />
       )}
+
+      <style jsx>{`
+        .gallery-container {
+          padding: 40px 20px;
+          text-align: center;
+        }
+
+        .gallery-title {
+          font-size: 2rem;
+          margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+          display: grid;
+          gap: 20px;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .gallery-item {
+          cursor: pointer;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+          transform: scale(1.02);
+        }
+
+        .gallery-thumb {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+
+        .gallery-caption {
+          margin-top: 10px;
+          font-weight: normal;
+          font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+          .gallery-thumb {
+            height: 200px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .gallery-thumb {
+            height: 150px;
+          }
+          .gallery-caption {
+            font-size: 0.9rem;
+          }
+        }
+      `}</style>
     </div>
   );
 };
