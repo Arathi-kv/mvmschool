@@ -2884,7 +2884,7 @@ input[type=color] {
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .it-slider-title {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
@@ -3325,14 +3325,17 @@ input[type=color] {
   transform: translateY(1px);
   color: var(--it-theme-2);
 }
-.it-header__menu > nav > ul > li > a {
-  font-weight: 600;
-  font-size: 18px;
-  padding: 30px 0px;
-  display: inline-block;
-  color: var(--it-theme-2);
-  text-transform: uppercase;
+/* Stronger specificity */
+header .it-header__menu nav ul li a {
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  padding: 30px 0 !important;
+  display: inline-block !important;
+  color: var(--it-theme-2) !important;
+  text-transform: uppercase !important;
 }
+
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .it-header__menu > nav > ul > li > a {
     font-size: 16px;
@@ -16022,7 +16025,7 @@ p.checkout-coupon input[type=text]:focus {
 }
 .it-copyright__text span {
   color: #7b8789;
-  font-size: 14px;
+  font-size: 16px;
 }
 .it-copyright__text span b {
   font-weight: 400;
@@ -16131,4 +16134,56 @@ p.checkout-coupon input[type=text]:focus {
   .it-header__bar button {
     display: none;
   }
+}
+.it-header__menu nav {
+  display: inline-block;
+}
+
+.it-header__area {
+  background-color: #fff;
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.it-header__logo img {
+  max-height: 50px;
+}
+/* Mobile breakpoint */
+@media (max-width: 767px) {
+  .it-breadcrumb__content {
+    flex-direction: column; /* Stack title and list vertically */
+    align-items: flex-start; /* Align to left */
+  }
+
+  .it-breadcrumb__title {
+    margin-bottom: 10px; /* Space between title and list */
+  }
+
+  .it-breadcrumb__list {
+    display: block; /* Ensure full width if needed */
+  }
+}
+
+/* Header search underline animation */
+.header-search__input .search-input-field ~ .search-focus-border {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--it-common-orange);
+  transition: all 0.5s ease-out;
+}
+
+.header-search__input .search-input-field:focus ~ .search-focus-border {
+  width: 100%;
+  left: 0;
+  right: auto;
+  transition: all 0.5s ease-out;
 }

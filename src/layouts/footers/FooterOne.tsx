@@ -61,31 +61,46 @@ const FooterOne = ({ style_2 }: any) => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-3 col-lg-4 col-md-6 mb-30 wow itfadeUp" data-wow-duration=".9s"
-                data-wow-delay=".9s">
-                <div className="it-footer__widget footer-col-4">
-                  <h4 className="it-footer__widget-title">Reach Us</h4>
-                  <div className="it-footer__input-box">
-                    <input type="text" placeholder="info@mvmrhss.com" />
-                    <div className={`it-footer__button-box ${style_2 ? "color-red" : ""}`}>
-                      <button><i className="fas fa-arrow-right"></i></button>
-                    </div>
-                  </div>
-                   <div className="it-footer__list">
-                    <ul>
-                      <li><i className="flaticon-next"></i><a href="#">+919567871424 , +917593078368</a></li>
-                  <br />
-                    </ul>
-                  </div>
+           <div className="col-xl-3 col-lg-4 col-md-6 mb-30 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+        <div className="it-footer__widget footer-col-4">
+      <h4 className="it-footer__widget-title">Contact Us</h4>
+    {/* Contact List */}
+    <div className="it-footer__list mb-4">
+      <ul>
+        <li className="flex items-center mb-2">
+          <i className="fa-solid fa-envelope mr-2 text-orange-500"></i>
+          <a href="mailto:info@mvmrhss.com">info@mvmrhss.com</a>
+        </li>
+        <li className="flex items-center mb-2">
+          <i className="fa-solid fa-phone mr-2 text-orange-500"></i>
+          <a href="tel:+919567871424">+91 95678 71424</a>
+        </li>
+        <li className="flex items-center">
+          <i className="fa-solid fa-phone mr-2 text-orange-500"></i>
+          <a href="tel:+917593078368">+91 75930 78368</a>
+        </li>
+      </ul>
+    </div>
 
-                  <div className="it-footer__social">
-                    <a href="#"><i className="fa-brands fa-facebook-f"></i></a> {" "}
-                    <a href="#"><i className="fa-brands fa-instagram"></i></a> {" "}
-                    <a href="#"><i className="fa-brands fa-linkedin-in"></i></a> {" "}
-                    <a href="#"><i className="fa-brands fa-twitter"></i></a> {" "}
-                  </div>
-                </div>
-              </div>
+    {/* Social Links */}
+    <div className="it-footer__social flex space-x-4">
+      <a href="#" className="text-orange-500">
+        <i className="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" className="text-orange-500">
+        <i className="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#" className="text-orange-500">
+        <i className="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="#" className="text-orange-500">
+        <i className="fa-brands fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
             </div>
           </div>
         </div>
