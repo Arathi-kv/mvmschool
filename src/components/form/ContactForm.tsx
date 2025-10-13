@@ -23,21 +23,30 @@ const ContactForm: React.FC = () => {
   const [values, setValues] = useState<ContactFormData>(initialState);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const handleFormSubmit = async (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      await emailjs.send(
-        "YOUR_SERVICE_ID",      // replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID",     // replace with your EmailJS Template ID
-        values as Record<string, unknown>, // template parameters
-        "YOUR_PUBLIC_KEY"       // replace with your EmailJS Public Key
-      );
+     await emailjs.send(
+  "gmail", // ✅ Your Service ID (from old working file)
+  "template_lblai0z", // ✅ Your Template ID
+  {
+    name: values.name,
+    email: values.email,
+    phoneNumber: values.phoneNumber,
+    subject: values.subject,
+    message: values.message,
+  },
+  "user_mEWvBp6teHQpXmSA2yZ19" // ✅ Your Public/User ID
+);
+
 
       alert("✅ Thank you for contacting us! We will get back to you shortly.");
       setValues(initialState);

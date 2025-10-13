@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "@/components/form/ContactForm";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <>
       {/* Top Section: Map + Info */}
@@ -19,6 +19,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="School Location Map" // ✅ Accessibility improvement
                 ></iframe>
               </div>
             </div>
@@ -42,7 +43,7 @@ const Contact = () => {
                       <div className="it-contact__list">
                         <span>Address</span>
                         <a href="#">
-                          Valayamkulam, P.O Kokoor Malappuram, Kerala
+                          Valayamkulam, P.O Kokoor, Malappuram, Kerala
                         </a>
                       </div>
                     </li>
