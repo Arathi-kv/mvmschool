@@ -139,7 +139,7 @@ const ContactForm: React.FC = () => {
               style={{
                 backgroundColor: "#007bff",
                 color: "#ffffffff",
-                padding: "10px 25px",
+                padding: "1px 25px",
                 border: "none",
                 borderRadius: "5px",
               }}
