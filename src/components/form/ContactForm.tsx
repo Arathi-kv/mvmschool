@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 interface ContactFormData {
   name: string;
@@ -11,58 +12,38 @@ interface ContactFormData {
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
+  const initialState: ContactFormData = {
     name: "",
     email: "",
     phoneNumber: "",
     subject: "",
     message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const [values, setValues] = useState<ContactFormData>(initialState);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    const data = {
-      service_id: "gmail",
-      template_id: "template_lblai0z",
-      user_id: "user_mEWvBp6teHQpXmSA2yZ19",
-      template_params: formData,
-    };
-
     try {
-      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      await emailjs.send(
+        "YOUR_SERVICE_ID",      // replace with your EmailJS Service ID
+        "YOUR_TEMPLATE_ID",     // replace with your EmailJS Template ID
+        values as Record<string, unknown>, // template parameters
+        "YOUR_PUBLIC_KEY"       // replace with your EmailJS Public Key
+      );
 
-      if (res.ok) {
-        alert("✅ Thank you for contacting us!");
-        setFormData({
-          name: "",
-          email: "",
-          phoneNumber: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        alert("⚠️ Failed to send. Please try again.");
-      }
+      alert("✅ Thank you for contacting us! We will get back to you shortly.");
+      setValues(initialState);
     } catch (err) {
-      console.error("Error:", err);
-      alert("❌ Error sending message.");
+      console.error("EmailJS Error:", err);
+      alert("❌ Failed to send message. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -70,7 +51,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="it-contact__form-box">
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={handleFormSubmit} className="contact-form">
         <div className="row">
           <div className="col-12 mb-3">
             <input
@@ -78,7 +59,7 @@ const ContactForm: React.FC = () => {
               name="name"
               placeholder="Your Name*"
               required
-              value={formData.name}
+              value={values.name}
               onChange={handleChange}
               className="form-control"
             />
@@ -90,7 +71,7 @@ const ContactForm: React.FC = () => {
               name="email"
               placeholder="Your Email*"
               required
-              value={formData.email}
+              value={values.email}
               onChange={handleChange}
               className="form-control"
             />
@@ -102,7 +83,7 @@ const ContactForm: React.FC = () => {
               name="phoneNumber"
               placeholder="Phone Number*"
               required
-              value={formData.phoneNumber}
+              value={values.phoneNumber}
               onChange={handleChange}
               className="form-control"
             />
@@ -114,7 +95,7 @@ const ContactForm: React.FC = () => {
               name="subject"
               placeholder="Subject*"
               required
-              value={formData.subject}
+              value={values.subject}
               onChange={handleChange}
               className="form-control"
             />
@@ -125,7 +106,7 @@ const ContactForm: React.FC = () => {
               name="message"
               placeholder="Type Your Message*"
               required
-              value={formData.message}
+              value={values.message}
               onChange={handleChange}
               className="form-control"
               rows={5}
@@ -136,14 +117,14 @@ const ContactForm: React.FC = () => {
             <button
               type="submit"
               className="it-btn hover-2"
+              disabled={loading}
               style={{
                 backgroundColor: "#007bff",
-                color: "#ffffffff",
+                color: "#fff",
                 padding: "1px 25px",
                 border: "none",
                 borderRadius: "5px",
               }}
-              disabled={loading}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
