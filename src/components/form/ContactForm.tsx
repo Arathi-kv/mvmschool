@@ -137,8 +137,8 @@ const ContactForm: React.FC = () => {
               type="submit"
               className="it-btn hover-2"
               style={{
-                backgroundColor: " #43baff", 
-                color: "#fff",
+                backgroundColor: "#007bff",
+                color: "#ffffffff",
                 padding: "10px 25px",
                 border: "none",
                 borderRadius: "5px",
