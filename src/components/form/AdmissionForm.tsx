@@ -102,7 +102,7 @@ export default function AdmissionForm() {
   <button
     type="submit"
     style={{
-      backgroundColor: "#43baff;",
+      backgroundColor: "#43baff",
       color: "#fff",              
       padding: "10px 20px",
       border: "none",
