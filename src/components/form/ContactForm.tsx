@@ -1,27 +1,29 @@
 "use client";
+
 import React, { useState } from "react";
 
-interface AdmissionData {
-  studentName: string;
-  guardianName: string;
-  dob: string;
-  aadhar: string;
-  phone: string;
-  address: string;
+interface ContactFormData {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  subject: string;
+  message: string;
 }
 
-const AdmissionForm: React.FC = () => {
-  const [formData, setFormData] = useState<AdmissionData>({
-    studentName: "",
-    guardianName: "",
-    dob: "",
-    aadhar: "",
-    phone: "",
-    address: "",
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    subject: "",
+    message: "",
   });
+
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -29,39 +31,38 @@ const AdmissionForm: React.FC = () => {
     e.preventDefault();
     setLoading(true);
 
-    const dataToSend = {
-      Name: formData.studentName,
-      Gardion: formData.guardianName,
-      DOB: formData.dob,
-      Adhar: formData.aadhar,
-      Phone: formData.phone,
-      Adress: formData.address,
+    const data = {
+      service_id: "gmail",
+      template_id: "template_lblai0z",
+      user_id: "user_mEWvBp6teHQpXmSA2yZ19",
+      template_params: formData,
     };
 
     try {
-      const res = await fetch(
-        "https://sheet.best/api/sheets/aef03dc8-ef15-48e0-b6bb-ea7881275f7d",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(dataToSend),
-        }
-      );
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
       if (res.ok) {
-        alert("Successfully registered!");
+        alert("✅ Thank you for contacting us!");
         setFormData({
-          studentName: "",
-          guardianName: "",
-          dob: "",
-          aadhar: "",
-          phone: "",
-          address: "",
+          name: "",
+          email: "",
+          phoneNumber: "",
+          subject: "",
+          message: "",
         });
+      } else {
+        alert("⚠️ Failed to send. Please try again.");
       }
     } catch (err) {
-      console.error(err);
-      alert("Error submitting form!");
+      console.error("Error:", err);
+      alert("❌ Error sending message.");
     } finally {
       setLoading(false);
     }
@@ -74,10 +75,10 @@ const AdmissionForm: React.FC = () => {
           <div className="col-12 mb-3">
             <input
               type="text"
-              name="studentName"
-              placeholder="Student Name*"
+              name="name"
+              placeholder="Your Name*"
               required
-              value={formData.studentName}
+              value={formData.name}
               onChange={handleChange}
               className="form-control"
             />
@@ -85,35 +86,11 @@ const AdmissionForm: React.FC = () => {
 
           <div className="col-12 mb-3">
             <input
-              type="text"
-              name="guardianName"
-              placeholder="Guardian Name*"
+              type="email"
+              name="email"
+              placeholder="Your Email*"
               required
-              value={formData.guardianName}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-12 mb-3">
-            <input
-              type="date"
-              name="dob"
-              placeholder="Date of Birth*"
-              required
-              value={formData.dob}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-12 mb-3">
-            <input
-              type="text"
-              name="aadhar"
-              placeholder="Aadhar*"
-              required
-              value={formData.aadhar}
+              value={formData.email}
               onChange={handleChange}
               className="form-control"
             />
@@ -122,10 +99,22 @@ const AdmissionForm: React.FC = () => {
           <div className="col-12 mb-3">
             <input
               type="tel"
-              name="phone"
-              placeholder="Phone*"
+              name="phoneNumber"
+              placeholder="Phone Number*"
               required
-              value={formData.phone}
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
+
+          <div className="col-12 mb-3">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject*"
+              required
+              value={formData.subject}
               onChange={handleChange}
               className="form-control"
             />
@@ -133,19 +122,30 @@ const AdmissionForm: React.FC = () => {
 
           <div className="col-12 mb-3">
             <textarea
-              name="address"
-              placeholder="Address*"
+              name="message"
+              placeholder="Type Your Message*"
               required
-              value={formData.address}
+              value={formData.message}
               onChange={handleChange}
               className="form-control"
-              rows={4}
+              rows={5}
             />
           </div>
 
           <div className="col-12">
-            <button type="submit" className="it-btn hover-2" disabled={loading}>
-              {loading ? "Submitting..." : "Submit"}
+            <button
+              type="submit"
+              className="it-btn hover-2"
+              style={{
+                backgroundColor: "#007bff",
+                color: "#fff",
+                padding: "10px 25px",
+                border: "none",
+                borderRadius: "5px",
+              }}
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
         </div>
@@ -154,4 +154,4 @@ const AdmissionForm: React.FC = () => {
   );
 };
 
-export default AdmissionForm;
+export default ContactForm;
