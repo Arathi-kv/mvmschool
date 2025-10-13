@@ -17,7 +17,7 @@ const AdmissionPage = () => {
       <main>
         <Breadcrumb title="Admission" subtitle="Admission" />
         <Admission />
-        <AdmissionForm />
+    
       </main>
       <FooterOne />
     </Wrapper>

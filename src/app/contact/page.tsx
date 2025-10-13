@@ -2,7 +2,6 @@
 
 import Breadcrumb from '@/components/common/Breadcrumb';
 import Contact from '@/components/contact/Contact';
-import ContactForm from '@/components/form/ContactForm';
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderFour from '@/layouts/headers/HeaderFour';
 import Wrapper from '@/layouts/Wrapper';
@@ -21,7 +20,6 @@ const index = () => {
       <main>
         <Breadcrumb title="Contact" subtitle="Contact" />
         <Contact />
-        <ContactForm />
       </main>
       <FooterOne />      
     </Wrapper>
