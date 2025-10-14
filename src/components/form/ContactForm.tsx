@@ -1,18 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  phoneNumber: string;
-  subject: string;
-  message: string;
-}
-
-const ContactForm: React.FC = () => {
-  const initialState: ContactFormData = {
+function ContactForm() {
+  const initialState = {
     name: "",
     email: "",
     phoneNumber: "",
@@ -20,8 +11,39 @@ const ContactForm: React.FC = () => {
     message: "",
   };
 
-  const [values, setValues] = useState<ContactFormData>(initialState);
+  const [values, setValues] = useState(initialState);
   const [loading, setLoading] = useState(false);
+  const { name, email, phoneNumber, subject, message } = values;
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const data = {
+      service_id: "gmail",
+      template_id: "template_lblai0z",
+      user_id: "user_mEWvBp6teHQpXmSA2yZ19",
+      template_params: values,
+    };
+
+    try {
+      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      alert("Thank you for contacting us, we will get back to you.");
+      setValues(initialState);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,119 +51,114 @@ const ContactForm: React.FC = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-     await emailjs.send(
-  "gmail", // ✅ Your Service ID (from old working file)
-  "template_lblai0z", // ✅ Your Template ID
-  {
-    name: values.name,
-    email: values.email,
-    phoneNumber: values.phoneNumber,
-    subject: values.subject,
-    message: values.message,
-  },
-  "user_mEWvBp6teHQpXmSA2yZ19" // ✅ Your Public/User ID
-);
-
-
-      alert("✅ Thank you for contacting us! We will get back to you shortly.");
-      setValues(initialState);
-    } catch (err) {
-      console.error("EmailJS Error:", err);
-      alert("❌ Failed to send message. Please try again later.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
-    <div className="it-contact__form-box">
-      <form onSubmit={handleFormSubmit} className="contact-form">
-        <div className="row">
-          <div className="col-12 mb-3">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name*"
-              required
-              value={values.name}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-12 mb-3">
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email*"
-              required
-              value={values.email}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-12 mb-3">
-            <input
-              type="tel"
-              name="phoneNumber"
-              placeholder="Phone Number*"
-              required
-              value={values.phoneNumber}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-12 mb-3">
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject*"
-              required
-              value={values.subject}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-12 mb-3">
-            <textarea
-              name="message"
-              placeholder="Type Your Message*"
-              required
-              value={values.message}
-              onChange={handleChange}
-              className="form-control"
-              rows={5}
-            />
-          </div>
-
-          <div className="col-12">
-            <button
-              type="submit"
-              className="it-btn hover-2"
-              disabled={loading}
-              style={{
-                backgroundColor: "#007bff",
-                color: "#fff",
-                padding: "1px 25px",
-                border: "none",
-                borderRadius: "5px",
-              }}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
+    <form
+      onSubmit={handleFormSubmit}
+      style={{
+        maxWidth: "700px",
+        margin: "40px auto",
+        padding: "25px",
+        borderRadius: "10px",
+        border: "1px solid #ddd",
+        backgroundColor: "#fff",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <input
+        type="text"
+        name="name"
+        value={name}
+        placeholder="Your Name *"
+        onChange={handleChange}
+        required
+        style={{
+          width: "100%",
+          padding: "12px",
+          marginBottom: "15px",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+        }}
+      />
+      <input
+        type="email"
+        name="email"
+        value={email}
+        placeholder="Your Email *"
+        onChange={handleChange}
+        required
+        style={{
+          width: "100%",
+          padding: "12px",
+          marginBottom: "15px",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+        }}
+      />
+      <input
+        type="tel"
+        name="phoneNumber"
+        value={phoneNumber}
+        placeholder="Phone Number *"
+        onChange={handleChange}
+        required
+        style={{
+          width: "100%",
+          padding: "12px",
+          marginBottom: "15px",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+        }}
+      />
+      <input
+        type="text"
+        name="subject"
+        value={subject}
+        placeholder="Subject *"
+        onChange={handleChange}
+        required
+        style={{
+          width: "100%",
+          padding: "12px",
+          marginBottom: "15px",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+        }}
+      />
+      <textarea
+        name="message"
+        value={message}
+        placeholder="Type Your Message Here..."
+        onChange={handleChange}
+        required
+        style={{
+          width: "100%",
+          padding: "12px",
+          marginBottom: "20px",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+          minHeight: "120px",
+          resize: "vertical",
+        }}
+      />
+      <button
+        type="submit"
+        disabled={loading}
+        style={{
+          width: "100%",
+          padding: "12px",
+          backgroundColor: loading ? "#ccc" : "#007bff",
+          color: "#fff",
+          fontWeight: "bold",
+          border: "none",
+          borderRadius: "6px",
+          cursor: loading ? "not-allowed" : "pointer",
+          transition: "background-color 0.2s",
+        }}
+      >
+        {loading ? "Sending..." : "Send Message"}
+      </button>
+    </form>
   );
-};
+}
 
 export default ContactForm;
