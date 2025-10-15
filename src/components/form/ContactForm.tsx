@@ -1,164 +1,117 @@
-"use client";
+"use client"
+import React, { useState } from "react";
 
-import { useState } from "react";
-
-function ContactForm() {
-  const initialState = {
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phoneNumber: "",
-    subject: "",
+    phone: "",
     message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const [values, setValues] = useState(initialState);
-  const [loading, setLoading] = useState(false);
-  const { name, email, phoneNumber, subject, message } = values;
-
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
-    const data = {
-      service_id: "gmail",
-      template_id: "template_lblai0z",
-      user_id: "user_mEWvBp6teHQpXmSA2yZ19",
-      template_params: values,
-    };
 
     try {
-      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwvlZUWnBkiUX0g3sNm3zIICxj8txo96i1e7ezco-D6aF0JPW2YpU_e2y-5MoIK1DK9/exec", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
-      alert("Thank you for contacting us, we will get back to you.");
-      setValues(initialState);
-    } catch (err) {
-      console.error(err);
-      alert("Failed to send message. Please try again later.");
-    } finally {
-      setLoading(false);
+
+      const result = await response.json();
+
+      if (result.result === "success") {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Error sending message.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error sending message.");
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      style={{
-        maxWidth: "700px",
-        margin: "40px auto",
-        padding: "25px",
-        borderRadius: "10px",
-        border: "1px solid #ddd",
-        backgroundColor: "#fff",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <input
-        type="text"
-        name="name"
-        value={name}
-        placeholder="Your Name *"
-        onChange={handleChange}
-        required
-        style={{
-          width: "100%",
-          padding: "12px",
-          marginBottom: "15px",
-          border: "1px solid #ccc",
-          borderRadius: "6px",
-        }}
-      />
-      <input
-        type="email"
-        name="email"
-        value={email}
-        placeholder="Your Email *"
-        onChange={handleChange}
-        required
-        style={{
-          width: "100%",
-          padding: "12px",
-          marginBottom: "15px",
-          border: "1px solid #ccc",
-          borderRadius: "6px",
-        }}
-      />
-      <input
-        type="tel"
-        name="phoneNumber"
-        value={phoneNumber}
-        placeholder="Phone Number *"
-        onChange={handleChange}
-        required
-        style={{
-          width: "100%",
-          padding: "12px",
-          marginBottom: "15px",
-          border: "1px solid #ccc",
-          borderRadius: "6px",
-        }}
-      />
-      <input
-        type="text"
-        name="subject"
-        value={subject}
-        placeholder="Subject *"
-        onChange={handleChange}
-        required
-        style={{
-          width: "100%",
-          padding: "12px",
-          marginBottom: "15px",
-          border: "1px solid #ccc",
-          borderRadius: "6px",
-        }}
-      />
-      <textarea
-        name="message"
-        value={message}
-        placeholder="Type Your Message Here..."
-        onChange={handleChange}
-        required
-        style={{
-          width: "100%",
-          padding: "12px",
-          marginBottom: "20px",
-          border: "1px solid #ccc",
-          borderRadius: "6px",
-          minHeight: "120px",
-          resize: "vertical",
-        }}
-      />
-      <button
-        type="submit"
-        disabled={loading}
-        style={{
-          width: "100%",
-          padding: "12px",
-          backgroundColor: loading ? "#ccc" : "#007bff",
-          color: "#fff",
-          fontWeight: "bold",
-          border: "none",
-          borderRadius: "6px",
-          cursor: loading ? "not-allowed" : "pointer",
-          transition: "background-color 0.2s",
-        }}
-      >
-        {loading ? "Sending..." : "Send Message"}
-      </button>
-    </form>
+    <div className="it-contact__form-box pb-120">
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-12">
+            <div className="it-contact-2__color-2">
+              <div className="it-contact-2__text pb-30">
+                <h5 className="it-contact-2__title-sm text-black">Have Any Question?</h5>
+                <p>Your email address will not be published. Required fields are marked *</p>
+              </div>
+              <div className="it-contact-2__form-box">
+                <form onSubmit={handleSubmit}>
+                  <div className="row">
+                    <div className="col-xl-6 col-lg-6 col-12">
+                      <div className="it-contact-2__input">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name*"
+                          required
+                          style={{ color: "black" }}
+                          value={formData.name}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-6 col-lg-6 col-12">
+                      <div className="it-contact-2__input">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email Address*"
+                          required
+                          style={{ color: "black" }}
+                          value={formData.email}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div className="it-contact-2__input">
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Phone Number*"
+                          required
+                          style={{ color: "black" }}
+                          value={formData.phone}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div className="it-contact-2__input">
+                        <textarea
+                          name="message"
+                          placeholder="Write Your Message"
+                          required
+                          style={{ color: "black" }}
+                          value={formData.message}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" className="it-btn hover-2">
+                    <span>Send Your Message</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default ContactForm;
