@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
     try {
       await emailjs.send(
         "service_d59q71c", // Your EmailJS Service ID
-        "template_zm0dgv8", // Your EmailJS Template ID
+        "template_5cv60tb", // Your EmailJS Template ID
         {
           name: formData.name,
           email: formData.email,

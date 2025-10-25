@@ -1,8 +1,19 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useState, useRef, FormEvent, ChangeEvent } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+
+interface AdmissionData {
+  studentName: string;
+  guardianName: string;
+  dob: string;
+  aadhar: string;
+  phone: string;
+  address: string;
+}
 
 const AdmissionForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<AdmissionData>({
     studentName: "",
     guardianName: "",
     dob: "",
@@ -11,39 +22,48 @@ const AdmissionForm: React.FC = () => {
     address: "",
   });
 
-  // Properly type the change event
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const [sending, setSending] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // Properly type the submit event
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!formRef.current) return;
+
+    setSending(true);
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbwfkD29bCkzglZa9-C5cqkX78IRV1QAkahluLh-e6uFweV3rvajey8G5KJXBUi98QdH/exec", {
-        method: "POST",
-        body: JSON.stringify(formData),
+      await emailjs.send(
+        "service_b8jhths", // Your EmailJS Service ID
+        "template_5cv60tb", // Your EmailJS Template ID
+        {
+          studentName: formData.studentName,
+          guardianName: formData.guardianName,
+          dob: formData.dob,
+          aadhar: formData.aadhar,
+          phone: formData.phone,
+          address: formData.address,
+        },
+        "rdpFsDpIb5RAcDe5S" // Your EmailJS Public Key
+      );
+
+      toast.success("Admission form submitted successfully!");
+      setFormData({
+        studentName: "",
+        guardianName: "",
+        dob: "",
+        aadhar: "",
+        phone: "",
+        address: "",
       });
-
-      const result = await response.json();
-
-      if (result.result === "success") {
-        alert("Admission form submitted successfully!");
-        setFormData({
-          studentName: "",
-          guardianName: "",
-          dob: "",
-          aadhar: "",
-          phone: "",
-          address: "",
-        });
-      } else {
-        alert("Error submitting form.");
-      }
     } catch (error) {
-      console.error(error);
-      alert("Error submitting form.");
+      console.error("EmailJS error:", error);
+      toast.error("Failed to send admission form. Try again later.");
+    } finally {
+      setSending(false);
     }
   };
 
@@ -59,94 +79,82 @@ const AdmissionForm: React.FC = () => {
               </div>
 
               <div className="it-contact-2__form-box">
-                <form onSubmit={handleSubmit}>
+                <form ref={formRef} onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <div className="it-contact-2__input">
-                        <input
-                          type="text"
-                          name="studentName"
-                          placeholder="Student Name*"
-                          required
-                          style={{ color: "black" }}
-                          value={formData.studentName}
-                          onChange={handleChange}
-                        />
-                      </div>
+                      <input
+                        type="text"
+                        name="studentName"
+                        placeholder="Student Name*"
+                        required
+                        style={{ color: "black" }}
+                        value={formData.studentName}
+                        onChange={handleChange}
+                      />
                     </div>
 
                     <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <div className="it-contact-2__input">
-                        <input
-                          type="text"
-                          name="guardianName"
-                          placeholder="Guardian Name*"
-                          required
-                          style={{ color: "black" }}
-                          value={formData.guardianName}
-                          onChange={handleChange}
-                        />
-                      </div>
+                      <input
+                        type="text"
+                        name="guardianName"
+                        placeholder="Guardian Name*"
+                        required
+                        style={{ color: "black" }}
+                        value={formData.guardianName}
+                        onChange={handleChange}
+                      />
                     </div>
 
                     <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <div className="it-contact-2__input">
-                        <input
-                          type="date"
-                          name="dob"
-                          placeholder="Date of Birth*"
-                          required
-                          style={{ color: "black" }}
-                          value={formData.dob}
-                          onChange={handleChange}
-                        />
-                      </div>
+                      <input
+                        type="date"
+                        name="dob"
+                        placeholder="Date of Birth*"
+                        required
+                        style={{ color: "black" }}
+                        value={formData.dob}
+                        onChange={handleChange}
+                      />
                     </div>
 
                     <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <div className="it-contact-2__input">
-                        <input
-                          type="text"
-                          name="aadhar"
-                          placeholder="Aadhar Card Number*"
-                          required
-                          style={{ color: "black" }}
-                          value={formData.aadhar}
-                          onChange={handleChange}
-                        />
-                      </div>
+                      <input
+                        type="text"
+                        name="aadhar"
+                        placeholder="Aadhar Card Number*"
+                        required
+                        style={{ color: "black" }}
+                        value={formData.aadhar}
+                        onChange={handleChange}
+                      />
                     </div>
 
                     <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <div className="it-contact-2__input">
-                        <input
-                          type="tel"
-                          name="phone"
-                          placeholder="Phone Number*"
-                          required
-                          style={{ color: "black" }}
-                          value={formData.phone}
-                          onChange={handleChange}
-                        />
-                      </div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number*"
+                        required
+                        style={{ color: "black" }}
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
                     </div>
 
                     <div className="col-12">
-                      <div className="it-contact-2__input">
-                        <textarea
-                          name="address"
-                          placeholder="Address*"
-                          required
-                          style={{ color: "black" }}
-                          value={formData.address}
-                          onChange={handleChange}
-                        ></textarea>
-                      </div>
+                      <textarea
+                        name="address"
+                        placeholder="Address*"
+                        required
+                        style={{ color: "black" }}
+                        value={formData.address}
+                        onChange={handleChange}
+                      ></textarea>
                     </div>
-
                   </div>
-                  <button type="submit" className="it-btn hover-2">
-                    <span>Submit Admission Form</span>
+
+                  <button type="submit" className="it-btn hover-2" disabled={sending}>
+                    <span>{sending ? "Submitting..." : "Submit Admission Form"}</span>
                   </button>
                 </form>
               </div>
