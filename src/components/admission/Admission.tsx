@@ -55,10 +55,13 @@ const Admission = () => {
           </div>
           {/* Admission Form */}
             <div className="container" style={{ marginTop: "50px" }}>
-          <div className="it-contact__form-box p-4 shadow-sm bg-white rounded-3">
-            <h3 className="it-section-title mb-3">Online Admission Form</h3>
-            <AdmissionForm />
-          </div>
+         <div className="d-flex justify-content-center align-items-center min-vh-100">
+  <div className="it-contact__form-box p-4 shadow-sm bg-white rounded-3">
+    <h3 className="it-section-title mb-3 text-center">Online Admission Form</h3>
+    <AdmissionForm />
+  </div>
+</div>
+
         </div>
       </div>
     </div>

@@ -70,95 +70,90 @@ const AdmissionForm: React.FC = () => {
   return (
     <div className="it-contact__form-box pb-120">
       <div className="container">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="it-contact-2__color-2">
-              <div className="it-contact-2__text pb-30">
-                <h5 className="it-contact-2__title-sm text-black">Admission Form</h5>
-                <p>Required fields are marked *</p>
-              </div>
-
-              <div className="it-contact-2__form-box">
-                <form ref={formRef} onSubmit={handleSubmit}>
-                  <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <input
-                        type="text"
-                        name="studentName"
-                        placeholder="Student Name*"
-                        required
-                        style={{ color: "black" }}
-                        value={formData.studentName}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <input
-                        type="text"
-                        name="guardianName"
-                        placeholder="Guardian Name*"
-                        required
-                        style={{ color: "black" }}
-                        value={formData.guardianName}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <input
-                        type="date"
-                        name="dob"
-                        placeholder="Date of Birth*"
-                        required
-                        style={{ color: "black" }}
-                        value={formData.dob}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <input
-                        type="text"
-                        name="aadhar"
-                        placeholder="Aadhar Card Number*"
-                        required
-                        style={{ color: "black" }}
-                        value={formData.aadhar}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-12">
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number*"
-                        required
-                        style={{ color: "black" }}
-                        value={formData.phone}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div className="col-12">
-                      <textarea
-                        name="address"
-                        placeholder="Address*"
-                        required
-                        style={{ color: "black" }}
-                        value={formData.address}
-                        onChange={handleChange}
-                      ></textarea>
-                    </div>
+        <div className="row justify-content-center">
+          <div className="col-xl-8 col-lg-10">
+            <div className="it-contact-2__color-2 p-4">
+              <form ref={formRef} onSubmit={handleSubmit}>
+                <div className="row g-3">
+                  <div className="col-12 col-md-6">
+                    <input
+                      type="text"
+                      name="studentName"
+                      placeholder="Student Name*"
+                      required
+                      style={{ color: "black" }}
+                      value={formData.studentName}
+                      onChange={handleChange}
+                    />
                   </div>
 
-                  <button type="submit" className="it-btn hover-2" disabled={sending}>
-                    <span>{sending ? "Submitting..." : "Submit Admission Form"}</span>
-                  </button>
-                </form>
-              </div>
+                  <div className="col-12 col-md-6">
+                    <input
+                      type="text"
+                      name="guardianName"
+                      placeholder="Guardian Name*"
+                      required
+                      style={{ color: "black" }}
+                      value={formData.guardianName}
+                      onChange={handleChange}
+                    />
+                  </div>
 
+                  <div className="col-12 col-md-6">
+                    <input
+                      type="date"
+                      name="dob"
+                      placeholder="Date of Birth*"
+                      required
+                      style={{ color: "black" }}
+                      value={formData.dob}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="col-12 col-md-6">
+                    <input
+                      type="text"
+                      name="aadhar"
+                      placeholder="Aadhar Card Number*"
+                      required
+                      style={{ color: "black" }}
+                      value={formData.aadhar}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="col-12 col-md-6">
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number*"
+                      required
+                      style={{ color: "black" }}
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="col-12">
+                    <textarea
+                      name="address"
+                      placeholder="Address*"
+                      required
+                      style={{ color: "black" }}
+                      value={formData.address}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
+                <div className="mt-3 text-center">
+                  <button type="submit" className="it-btn hover-2" disabled={sending}>
+                    {sending ? "Submitting..." : "Submit Admission Form"}
+                  </button>
+                </div>
+              </form>
+              
             </div>
           </div>
         </div>
