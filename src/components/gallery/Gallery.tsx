@@ -12,9 +12,45 @@ type GalleryItem = {
 
 const galleryItems: GalleryItem[] = [
   {
+    title: "School Fest",
+    thumbnail: "/assets/img/gallery/schoolfest-thumb.jpg",
+    popupImages: ["/assets/img/gallery/schoolfest-1.jpg"],
+    extraImages: [
+      "/assets/img/gallery/schoolfest-2.jpg",
+      "/assets/img/gallery/schoolfest-3.jpg",
+      "/assets/img/gallery/schoolfest-4.jpg",
+      "/assets/img/gallery/schoolfest-5.jpg",
+      "/assets/img/gallery/schoolfest-6.jpg",
+    ],
+  },
+  
+  {
+    title: "1st Day of School",
+    thumbnail: "/assets/img/gallery/day-school-thumb.jpg",
+    popupImages: ["/assets/img/gallery/day-school-1.jpg"],
+    extraImages: [
+      "/assets/img/gallery/day-school-3.jpg",
+      "/assets/img/gallery/day-school-4.jpg",
+    ],
+  },
+  {
+    title: "KG",
+    thumbnail: "/assets/img/gallery/kg-thumb.jpg",
+    popupImages: ["/assets/img/gallery/kg-1.jpg"],
+    extraImages: [
+      "/assets/img/gallery/kg-2.jpg",
+       "/assets/img/gallery/kg-3.jpg",
+      "/assets/img/gallery/kg-4.jpg",
+        "/assets/img/gallery/kg-5.jpg",
+         "/assets/img/gallery/kg-6.jpg",
+      
+    ],
+  },
+
+  {
     title: "Environment Day",
     thumbnail: "/assets/img/gallery/environment-day-thumb.jpg",
-    popupImages: ["/assets/img/gallery/environment-day.jpg"],
+    popupImages: ["/assets/img/gallery/environment-day1.jpg"],
     extraImages: [
       "/assets/img/gallery/environment-day-2.jpg",
       "/assets/img/gallery/environment-day-3.jpg",
@@ -23,20 +59,28 @@ const galleryItems: GalleryItem[] = [
       "/assets/img/gallery/environment-day-6.jpg",
     ],
   },
-  {
-    title: "1st Day of School",
-    thumbnail: "/assets/img/gallery/day-school-thumb.jpg",
-    popupImages: ["/assets/img/gallery/day-school-1.jpg"],
+
+   {
+    title: "Celebration",
+    thumbnail: "/assets/img/gallery/celebration-thumb.jpg",
+    popupImages: ["/assets/img/gallery/celebration-thumb.jpg"],
     extraImages: [
-      "/assets/img/gallery/day-school-2.jpg",
-      "/assets/img/gallery/day-school-3.jpg",
-      "/assets/img/gallery/day-school-4.jpg",
+      "/assets/img/gallery/celebration-1.jpg",
+      "/assets/img/gallery/celebration-2.jpg",
+       "/assets/img/gallery/celebration-3.jpg",
     ],
   },
-  {
-    title: "KG",
-    thumbnail: "/assets/img/gallery/kg-thumb.jpg",
-    popupImages: ["/assets/img/gallery/kg-1.jpg", "/assets/img/gallery/kg-2.jpg"],
+
+    {
+    title: "guides and scouts",
+    thumbnail: "/assets/img/gallery/guides-thumb.jpg",
+    popupImages: ["/assets/img/gallery/guides-thumb.jpg"],
+    extraImages: [
+      "/assets/img/gallery/guides-1.jpg",
+      "/assets/img/gallery/guides-2.jpg",
+       "/assets/img/gallery/guides-3.jpg",
+      "/assets/img/gallery/guides-4.jpg",
+    ],
   },
   {
     title: "Hand Over the Memento to Students",
@@ -57,6 +101,17 @@ const galleryItems: GalleryItem[] = [
       "/assets/img/gallery/group-photo-3.jpg",
     ],
   },
+
+{
+    title: "Students Performance",
+    thumbnail: "/assets/img/gallery/studentsperform.jpg",
+    popupImages: ["/assets/img/gallery/students Performance.jpg"],
+     extraImages: [
+      "/assets/img/gallery/studentsperform-1.jpg",
+       "/assets/img/gallery/studentsperform-2.jpg",
+     ],
+  },
+
   {
     title: "Presentation for Winners",
     thumbnail: "/assets/img/gallery/presentation-thumb.jpg",
@@ -71,29 +126,45 @@ const galleryItems: GalleryItem[] = [
     ],
   },
   {
-    title: "Appreciate the Children in Front of Parents",
-    thumbnail: "/assets/img/gallery/appreciate-thumb.jpg",
-    popupImages: ["/assets/img/gallery/appreciate-1.jpg"],
+    title: "PTA meeting",
+    thumbnail: "/assets/img/gallery/pta-thumb.jpg",
+    popupImages: ["/assets/img/gallery/pta-thumb.jpg"],
+     extraImages: [
+      "/assets/img/gallery/pta-2.jpg",
+       "/assets/img/gallery/pta-1.jpg",
+     ],
   },
-  {
-    title: "Celebration",
-    thumbnail: "/assets/img/gallery/celebration-thumb.jpg",
-    popupImages: ["/assets/img/gallery/celebration-1.jpg"],
-    extraImages: [
-      "/assets/img/gallery/celebration-2.jpg",
-      "/assets/img/gallery/celebration-3.jpg",
-    ],
-  },
+  
+ 
   {
     title: "Just a Snap with A+ Winners",
     thumbnail: "/assets/img/gallery/a-plus-thumb.jpg",
     popupImages: ["/assets/img/gallery/a-plus-1.jpg"],
   },
+   {
+    title: "Reading Day",
+    thumbnail: "/assets/img/gallery/readingday.jpg",
+    popupImages: ["/assets/img/gallery/readingday.jpg"],
+     extraImages: [
+      "/assets/img/gallery/readingday-1.jpg",
+       "/assets/img/gallery/readingday-2.jpg",
+     ],
+  },
+  {
+    title: "School Assembly",
+    thumbnail: "/assets/img/gallery/assembly.jpg",
+    popupImages: ["/assets/img/gallery/assembly.jpg"],
+     extraImages: [
+      "/assets/img/gallery/assembly1.jpg",
+    
+     ],
+  },
   {
     title: "School Structure",
     thumbnail: "/assets/img/gallery/school-structure-thumb.jpg",
-    popupImages: ["/assets/img/gallery/structure-1.jpg"],
+    popupImages: ["/assets/img/gallery/school-structure-thumb.jpg"],
     extraImages: [
+      "/assets/img/gallery/structure-1.jpg",
       "/assets/img/gallery/structure-2.jpg",
       "/assets/img/gallery/structure-3.jpg",
     ],
