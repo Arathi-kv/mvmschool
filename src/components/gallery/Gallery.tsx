@@ -15,8 +15,9 @@ const galleryItems: GalleryItem[] = [
  {
     title: "1st Day of School",
     thumbnail: "/assets/img/gallery/dayschool.jpg",
-    popupImages: ["/assets/img/gallery/day-school-1.jpg"],
+    popupImages: ["/assets/img/gallery/dayschool.jpg"],
     extraImages: [
+      "/assets/img/gallery/day-school-2.jpg",
       "/assets/img/gallery/day-school-3.jpg",
       "/assets/img/gallery/day-school-4.jpg",
     ],
