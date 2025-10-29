@@ -11,8 +11,7 @@ type GalleryItem = {
 };
 
 const galleryItems: GalleryItem[] = [
-
- {
+  {
     title: "1st Day of School",
     thumbnail: "/assets/img/gallery/dayschool.jpg",
     popupImages: ["/assets/img/gallery/dayschool.jpg"],
@@ -22,7 +21,6 @@ const galleryItems: GalleryItem[] = [
       "/assets/img/gallery/day-school-4.jpg",
     ],
   },
-  
   {
     title: "School Fest",
     thumbnail: "/assets/img/gallery/schoolfest.jpg",
@@ -35,22 +33,18 @@ const galleryItems: GalleryItem[] = [
       "/assets/img/gallery/schoolfest-6.jpg",
     ],
   },
-  
- 
   {
     title: "KG",
     thumbnail: "/assets/img/gallery/kgthumb.jpg",
     popupImages: ["/assets/img/gallery/kg-1.jpg"],
     extraImages: [
       "/assets/img/gallery/kg-2.jpg",
-       "/assets/img/gallery/kg-3.jpg",
+      "/assets/img/gallery/kg-3.jpg",
       "/assets/img/gallery/kg-4.jpg",
-        "/assets/img/gallery/kg-5.jpg",
-         "/assets/img/gallery/kg-6.jpg",
-      
+      "/assets/img/gallery/kg-5.jpg",
+      "/assets/img/gallery/kg-6.jpg",
     ],
   },
-
   {
     title: "Environment Day",
     thumbnail: "/assets/img/gallery/environmentdaythumb.jpg",
@@ -63,26 +57,24 @@ const galleryItems: GalleryItem[] = [
       "/assets/img/gallery/environment-day-6.jpg",
     ],
   },
-
-   {
+  {
     title: "Celebration",
     thumbnail: "/assets/img/gallery/celebrationthumb.jpg",
     popupImages: ["/assets/img/gallery/celebrationthumb.jpg"],
     extraImages: [
       "/assets/img/gallery/celebration-1.jpg",
       "/assets/img/gallery/celebration-2.jpg",
-       "/assets/img/gallery/celebration-3.jpg",
+      "/assets/img/gallery/celebration-3.jpg",
     ],
   },
-
-    {
-    title: "guides and scouts",
+  {
+    title: "Guides and Scouts",
     thumbnail: "/assets/img/gallery/guidesthumb.jpg",
     popupImages: ["/assets/img/gallery/guidesthumb.jpg"],
     extraImages: [
       "/assets/img/gallery/guides-1.jpg",
       "/assets/img/gallery/guides-2.jpg",
-       "/assets/img/gallery/guides-3.jpg",
+      "/assets/img/gallery/guides-3.jpg",
       "/assets/img/gallery/guides-4.jpg",
     ],
   },
@@ -105,17 +97,15 @@ const galleryItems: GalleryItem[] = [
       "/assets/img/gallery/group-photo-3.jpg",
     ],
   },
-
-{
+  {
     title: "Students Performance",
     thumbnail: "/assets/img/gallery/studentsperform.jpg",
     popupImages: ["/assets/img/gallery/studentsPerformance.jpg"],
-     extraImages: [
+    extraImages: [
       "/assets/img/gallery/studentsperform-1.jpg",
-       "/assets/img/gallery/studentsperform-2.jpg",
-     ],
+      "/assets/img/gallery/studentsperform-2.jpg",
+    ],
   },
-
   {
     title: "Presentation for Winners",
     thumbnail: "/assets/img/gallery/presentationthumb.jpg",
@@ -130,38 +120,33 @@ const galleryItems: GalleryItem[] = [
     ],
   },
   {
-    title: "PTA meeting",
+    title: "PTA Meeting",
     thumbnail: "/assets/img/gallery/ptathumb.jpg",
     popupImages: ["/assets/img/gallery/ptathumb.jpg"],
-     extraImages: [
+    extraImages: [
       "/assets/img/gallery/pta-2.jpg",
-       "/assets/img/gallery/pta-1.jpg",
-     ],
+      "/assets/img/gallery/pta-1.jpg",
+    ],
   },
-  
- 
   {
     title: "Just a Snap with A+ Winners",
     thumbnail: "/assets/img/gallery/aplusthumb.jpg",
     popupImages: ["/assets/img/gallery/a-plus-1.jpg"],
   },
-   {
+  {
     title: "Reading Day",
     thumbnail: "/assets/img/gallery/readingday.jpg",
     popupImages: ["/assets/img/gallery/readingday.jpg"],
-     extraImages: [
+    extraImages: [
       "/assets/img/gallery/readingday-1.jpg",
-       "/assets/img/gallery/readingday-2.jpg",
-     ],
+      "/assets/img/gallery/readingday-2.jpg",
+    ],
   },
   {
     title: "School Assembly",
     thumbnail: "/assets/img/gallery/assembly.jpg",
     popupImages: ["/assets/img/gallery/assembly.jpg"],
-     extraImages: [
-      "/assets/img/gallery/assembly1.jpg",
-    
-     ],
+    extraImages: ["/assets/img/gallery/assembly1.jpg"],
   },
   {
     title: "School Structure",
@@ -180,7 +165,7 @@ const galleryItems: GalleryItem[] = [
   },
 ];
 
-const DEFAULT_RATIO = 4 / 3; // fallback ratio if unknown
+const DEFAULT_RATIO = 4 / 3;
 
 const Gallery = () => {
   const [open, setOpen] = useState(false);
@@ -200,12 +185,8 @@ const Gallery = () => {
     <div className="gallery-container">
       <div className="gallery-grid">
         {galleryItems.map((item, index) => {
-          // If you know a specific aspect ratio per item, you can add it to the item object
-          // e.g. { ..., ratio: 16/9 } and use that instead of DEFAULT_RATIO
           const ratio = DEFAULT_RATIO;
-          const paddingTop = `${100 / ratio}%`; // padding-top % trick (intrinsic ratio)
-
-          // sanitize path quick-check (not a replacement for renaming files)
+          const paddingTop = `${100 / ratio}%`;
           const safeThumb = item.thumbnail.replace(/\s/g, "%20");
 
           return (
@@ -214,43 +195,17 @@ const Gallery = () => {
               key={index}
               onClick={() => handleOpen(item)}
             >
-              {/* Inline style for ratio ensures the reserve happens before CSS loads */}
-              <div
-                className="thumb-wrapper"
-                // inline style prevents FOUC from missing CSS
-                style={{ paddingTop, minHeight: 140 }}
-                data-loaded="false"
-              >
+              <div className="thumb-wrapper" style={{ paddingTop }}>
                 <img
-  src={safeThumb}
-  alt={item.title}
-  className="gallery-thumb"
-  loading={index === 0 ? "eager" : "lazy"}
-  decoding="async"
-  onLoad={(e) => {
-    const img = e.currentTarget;
-    const parent = img.parentElement as HTMLElement;
-
-    // Show image immediately once loaded
-    img.style.opacity = "1";
-    img.style.transform = "scale(1)";
-    if (parent) parent.setAttribute("data-loaded", "true");
-
-    // fallback — in case React re-renders post hydration
-    requestAnimationFrame(() => {
-      if (parent && parent.getAttribute("data-loaded") !== "true") {
-        parent.setAttribute("data-loaded", "true");
-      }
-    });
-  }}
-  onError={(e) => {
-    // Fallback image in case of missing file
-    e.currentTarget.src = "/assets/img/fallback.jpg";
-    e.currentTarget.style.opacity = "1";
-  }}
-/>
-
-
+                  src={safeThumb}
+                  alt={item.title}
+                  className="gallery-thumb"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.src = "/assets/img/fallback.jpg";
+                  }}
+                />
               </div>
               <h5 className="gallery-caption">{item.title}</h5>
             </div>
@@ -321,17 +276,15 @@ const Gallery = () => {
 
         .gallery-item {
           cursor: pointer;
-          overflow: visible; /* keep caption outside overflow if needed */
+          overflow: visible;
           border-radius: 10px;
           transition: transform 0.2s ease;
         }
 
-        /* remove scale transform temporarily for debugging if needed */
         .gallery-item:hover {
           transform: scale(1.01);
         }
 
-        /* thumb wrapper uses inline paddingTop to reserve space immediately */
         .thumb-wrapper {
           position: relative;
           width: 100%;
@@ -340,7 +293,6 @@ const Gallery = () => {
           border-radius: 10px;
         }
 
-        /* Set inner img absolute so it fills the reserved box */
         .gallery-thumb {
           position: absolute;
           top: 0;
@@ -348,16 +300,6 @@ const Gallery = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          opacity: 0;
-          transition: opacity 0.4s ease, transform 0.4s ease;
-          transform: scale(1.02);
-          display: block;
-        }
-
-        /* when parent data-loaded becomes true, show image */
-        .thumb-wrapper[data-loaded="true"] .gallery-thumb {
-          opacity: 1;
-          transform: scale(1);
         }
 
         .gallery-caption {
@@ -367,11 +309,10 @@ const Gallery = () => {
           text-align: center;
         }
 
-        /* Debug helper: uncomment to visualize reflow areas */
-        /* .thumb-wrapper { outline: 1px dashed rgba(0,0,0,0.06); } */
-
         @media (max-width: 768px) {
-          .thumb-wrapper { min-height: 140px; }
+          .thumb-wrapper {
+            min-height: 140px;
+          }
         }
       `}</style>
     </div>

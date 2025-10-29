@@ -16187,3 +16187,26 @@ p.checkout-coupon input[type=text]:focus {
   right: auto;
   transition: all 0.5s ease-out;
 }
+/* 1️⃣ Make the eager-loaded (first) image show immediately */
+.gallery-thumb[loading="eager"] {
+  opacity: 1 !important;
+  transform: scale(1);
+  transition: none !important;
+}
+
+/* 2️⃣ Default: hide until loaded */
+.thumb-wrapper .gallery-thumb {
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3️⃣ When parent wrapper gets loaded */
+.thumb-wrapper[data-loaded="true"] .gallery-thumb {
+  opacity: 1;
+  transform: scale(1);
+}
