@@ -108,7 +108,7 @@ const galleryItems: GalleryItem[] = [
 {
     title: "Students Performance",
     thumbnail: "/assets/img/gallery/studentsperform.jpg",
-    popupImages: ["/assets/img/gallery/students Performance.jpg"],
+    popupImages: ["/assets/img/gallery/studentsPerformance.jpg"],
      extraImages: [
       "/assets/img/gallery/studentsperform-1.jpg",
        "/assets/img/gallery/studentsperform-2.jpg",
