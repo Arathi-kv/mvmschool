@@ -93,8 +93,8 @@ const galleryItems: GalleryItem[] = [
     thumbnail: "/assets/img/gallery/group-photo-thumb.jpg",
     popupImages: ["/assets/img/gallery/group-photo-1.jpg"],
     extraImages: [
-      "/assets/img/gallery/group-photo-2.jpg",
-      "/assets/img/gallery/group-photo-3.jpg",
+     "/assets/img/gallery/memento-3.jpg",
+      "/assets/img/gallery/memento-4.jpg",
     ],
   },
   {
