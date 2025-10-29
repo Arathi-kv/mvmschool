@@ -130,8 +130,8 @@ const galleryItems: GalleryItem[] = [
   },
   {
     title: "PTA meeting",
-    thumbnail: "/assets/img/gallery/pta-thumb.jpg",
-    popupImages: ["/assets/img/gallery/pta-thumb.jpg"],
+    thumbnail: "/assets/img/gallery/ptathumb.jpg",
+    popupImages: ["/assets/img/gallery/ptathumb.jpg"],
      extraImages: [
       "/assets/img/gallery/pta-2.jpg",
        "/assets/img/gallery/pta-1.jpg",
@@ -164,8 +164,8 @@ const galleryItems: GalleryItem[] = [
   },
   {
     title: "School Structure",
-    thumbnail: "/assets/img/gallery/school-structure-thumb.jpg",
-    popupImages: ["/assets/img/gallery/school-structure-thumb.jpg"],
+    thumbnail: "/assets/img/gallery/schoolstructurethumb.jpg",
+    popupImages: ["/assets/img/gallery/schoolstructurethumb.jpg"],
     extraImages: [
       "/assets/img/gallery/structure-1.jpg",
       "/assets/img/gallery/structure-2.jpg",
