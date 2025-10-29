@@ -221,21 +221,19 @@ const Gallery = () => {
                 data-loaded="false"
               >
                 <img
-                  src={safeThumb}
-                  alt={item.title}
-                  className="gallery-thumb"
-                  loading="lazy"
-                  decoding="async"
-                  // when image loads, set attribute on parent to trigger CSS transitions
-                  onLoad={(e) => {
-                    const parent = (e.currentTarget.parentElement as HTMLElement);
-                    if (parent) parent.setAttribute("data-loaded", "true");
-                    // also ensure final opacity
-                    e.currentTarget.style.opacity = "1";
-                  }}
-                  // defensive width/height (if you have exact dims, add them here)
-                  // width={400} height={300}
-                />
+                src={safeThumb}
+                alt={item.title}
+                className="gallery-thumb"
+                loading={index === 0 ? "eager" : "lazy"}   // 👈 eager for first image
+                decoding="async"
+                onLoad={(e) => {
+                  const parent = e.currentTarget.parentElement as HTMLElement;
+                  if (parent) parent.setAttribute("data-loaded", "true");
+                  e.currentTarget.style.opacity = "1";
+                }}
+              />
+
+
               </div>
               <h5 className="gallery-caption">{item.title}</h5>
             </div>
