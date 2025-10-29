@@ -221,17 +221,33 @@ const Gallery = () => {
                 data-loaded="false"
               >
                 <img
-                src={safeThumb}
-                alt={item.title}
-                className="gallery-thumb"
-                loading={index === 0 ? "eager" : "lazy"}   // 👈 eager for first image
-                decoding="async"
-                onLoad={(e) => {
-                  const parent = e.currentTarget.parentElement as HTMLElement;
-                  if (parent) parent.setAttribute("data-loaded", "true");
-                  e.currentTarget.style.opacity = "1";
-                }}
-              />
+  src={safeThumb}
+  alt={item.title}
+  className="gallery-thumb"
+  loading={index === 0 ? "eager" : "lazy"}
+  decoding="async"
+  onLoad={(e) => {
+    const img = e.currentTarget;
+    const parent = img.parentElement as HTMLElement;
+
+    // Show image immediately once loaded
+    img.style.opacity = "1";
+    img.style.transform = "scale(1)";
+    if (parent) parent.setAttribute("data-loaded", "true");
+
+    // fallback — in case React re-renders post hydration
+    requestAnimationFrame(() => {
+      if (parent && parent.getAttribute("data-loaded") !== "true") {
+        parent.setAttribute("data-loaded", "true");
+      }
+    });
+  }}
+  onError={(e) => {
+    // Fallback image in case of missing file
+    e.currentTarget.src = "/assets/img/fallback.jpg";
+    e.currentTarget.style.opacity = "1";
+  }}
+/>
 
 
               </div>
