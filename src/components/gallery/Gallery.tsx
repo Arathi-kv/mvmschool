@@ -38,7 +38,7 @@ const galleryItems: GalleryItem[] = [
  
   {
     title: "KG",
-    thumbnail: "/assets/img/gallery/kg-thumb.jpg",
+    thumbnail: "/assets/img/gallery/kgthumb.jpg",
     popupImages: ["/assets/img/gallery/kg-1.jpg"],
     extraImages: [
       "/assets/img/gallery/kg-2.jpg",
@@ -52,7 +52,7 @@ const galleryItems: GalleryItem[] = [
 
   {
     title: "Environment Day",
-    thumbnail: "/assets/img/gallery/environment-day-thumb.jpg",
+    thumbnail: "/assets/img/gallery/environmentdaythumb.jpg",
     popupImages: ["/assets/img/gallery/environment-day1.jpg"],
     extraImages: [
       "/assets/img/gallery/environment-day-2.jpg",
@@ -65,8 +65,8 @@ const galleryItems: GalleryItem[] = [
 
    {
     title: "Celebration",
-    thumbnail: "/assets/img/gallery/celebration-thumb.jpg",
-    popupImages: ["/assets/img/gallery/celebration-thumb.jpg"],
+    thumbnail: "/assets/img/gallery/celebrationthumb.jpg",
+    popupImages: ["/assets/img/gallery/celebrationthumb.jpg"],
     extraImages: [
       "/assets/img/gallery/celebration-1.jpg",
       "/assets/img/gallery/celebration-2.jpg",
@@ -76,8 +76,8 @@ const galleryItems: GalleryItem[] = [
 
     {
     title: "guides and scouts",
-    thumbnail: "/assets/img/gallery/guides-thumb.jpg",
-    popupImages: ["/assets/img/gallery/guides-thumb.jpg"],
+    thumbnail: "/assets/img/gallery/guidesthumb.jpg",
+    popupImages: ["/assets/img/gallery/guidesthumb.jpg"],
     extraImages: [
       "/assets/img/gallery/guides-1.jpg",
       "/assets/img/gallery/guides-2.jpg",
@@ -87,7 +87,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     title: "Hand Over the Memento to Students",
-    thumbnail: "/assets/img/gallery/memento-thumb.jpg",
+    thumbnail: "/assets/img/gallery/mementothumb.jpg",
     popupImages: ["/assets/img/gallery/memento-1.jpg"],
     extraImages: [
       "/assets/img/gallery/memento-2.jpg",
@@ -117,7 +117,7 @@ const galleryItems: GalleryItem[] = [
 
   {
     title: "Presentation for Winners",
-    thumbnail: "/assets/img/gallery/presentation-thumb.jpg",
+    thumbnail: "/assets/img/gallery/presentationthumb.jpg",
     popupImages: ["/assets/img/gallery/presentation-1.jpg"],
     extraImages: [
       "/assets/img/gallery/presentation-2.jpg",
@@ -141,7 +141,7 @@ const galleryItems: GalleryItem[] = [
  
   {
     title: "Just a Snap with A+ Winners",
-    thumbnail: "/assets/img/gallery/a-plus-thumb.jpg",
+    thumbnail: "/assets/img/gallery/aplusthumb.jpg",
     popupImages: ["/assets/img/gallery/a-plus-1.jpg"],
   },
    {
@@ -174,7 +174,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     title: "Inauguration",
-    thumbnail: "/assets/img/gallery/inauguration-thumb.jpg",
+    thumbnail: "/assets/img/gallery/inaugurationthumb.jpg",
     popupImages: ["/assets/img/gallery/inauguration-1.jpg"],
   },
 ];
