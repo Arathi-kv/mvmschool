@@ -139,7 +139,6 @@ const galleryItems: GalleryItem[] = [
     popupImages: ["/assets/img/gallery/readingday.jpg"],
     extraImages: [
       "/assets/img/gallery/readingday-1.jpg",
-      "/assets/img/gallery/readingday-2.jpg",
     ],
   },
   {
