@@ -192,7 +192,6 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <h2 className="gallery-title">Gallery</h2>
       <div className="gallery-grid">
         {galleryItems.map((item, index) => (
           <div className="gallery-item" key={index} onClick={() => handleOpen(item)}>
@@ -257,64 +256,61 @@ const Gallery = () => {
         />
       )}
 
-      <style jsx>{`
-        .gallery-container {
-          padding: 40px 20px;
-          text-align: center;
-        }
+    <style jsx>{`
+  .gallery-container {
+    padding: 60px 0; /* ✅ adds space before and after the grid */
+  }
 
-        .gallery-title {
-          font-size: 2rem;
-          margin-bottom: 20px;
-        }
+  .gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-        .gallery-grid {
-          display: grid;
-          gap: 20px;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          max-width: 1200px;
-          margin: 0 auto;
-        }
+  .gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
 
-        .gallery-item {
-          cursor: pointer;
-          overflow: hidden;
-          border-radius: 10px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-          transition: transform 0.3s ease;
-        }
+  .gallery-item:hover {
+    transform: scale(1.02);
+  }
 
-        .gallery-item:hover {
-          transform: scale(1.02);
-        }
+  .gallery-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* keeps consistent box size before image loads */
+    object-fit: cover;
+    display: block;
+    background: #f5f5f5; /* avoids white flash while loading */
+  }
 
-        .gallery-thumb {
-          width: 100%;
-          height: 250px;
-          object-fit: cover;
-        }
+  .gallery-caption {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 1rem;
+  }
 
-        .gallery-caption {
-          margin-top: 10px;
-          font-weight: normal;
-          font-size: 1rem;
-        }
+  @media (max-width: 768px) {
+    .gallery-thumb {
+      height: 200px;
+    }
+  }
 
-        @media (max-width: 768px) {
-          .gallery-thumb {
-            height: 200px;
-          }
-        }
+  @media (max-width: 480px) {
+    .gallery-thumb {
+      height: 150px;
+    }
+    .gallery-caption {
+      font-size: 0.9rem;
+    }
+  }
+`}</style>
 
-        @media (max-width: 480px) {
-          .gallery-thumb {
-            height: 150px;
-          }
-          .gallery-caption {
-            font-size: 0.9rem;
-          }
-        }
-      `}</style>
     </div>
   );
 };
