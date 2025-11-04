@@ -16204,3 +16204,14 @@ p.checkout-coupon input[type=text]:focus {
   transform: scale(1);
 }
 
+.it-team-4__thumb img {
+  width: 100%;
+  transition: 0.9s;
+}
+
+.it-team-4__thumb img[alt="Principal"],
+.it-team-4__thumb img[alt="Vice Principal"] {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
