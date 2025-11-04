@@ -211,7 +211,7 @@
         }
     }
     &__content-wrap{
-        background-color: #f3f3f3;
+        background-color: #f3f3f300;
         padding: 50px;
         padding-top: 20px;
         margin: 0px 0px;
@@ -264,15 +264,7 @@
             }
         }
     }
-    &__item{
-        &:hover{
-           & .it-team-4__thumb{
-            & img{
-                transform: scale(1.1) rotate(-2deg);
-            }
-           } 
-        }
-    }
+   
     &__thumb{
         transition: .5s;
         position: relative;

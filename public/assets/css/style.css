@@ -10334,7 +10334,7 @@ p.checkout-coupon input[type=text]:focus {
   padding-bottom: 7px;
 }
 .it-team-4__content-wrap {
-  background-color: #f3f3f3;
+  background-color:#f3f3f300;
   padding: 40px;
   padding-top: 20px;
   margin: 0px 0px;
@@ -10356,12 +10356,7 @@ p.checkout-coupon input[type=text]:focus {
   margin-bottom: 0;
   transition: 0.3s;
 }
-.it-team-4__author-name.color:hover {
-  color: var(--it-theme-3);
-}
-.it-team-4__author-name:hover {
-  color: var(--it-theme-1);
-}
+
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .it-team-4__author-name {
     font-size: 18px;
@@ -10389,16 +10384,14 @@ p.checkout-coupon input[type=text]:focus {
   background-color: var(--it-theme-2);
   color: var(--it-common-white);
 }
-.it-team-4__item:hover .it-team-4__thumb img {
-  transform: scale(1.1) rotate(-2deg);
-}
+
 .it-team-4__thumb {
-  transition: 0.5s;
   position: relative;
+  transition: none;
 }
 .it-team-4__thumb img {
   width:80%;
-  transition: 0.9s;
+   transition: none;
 }
 .it-team-4__yellow-color .it-team-4__social-box span {
   background-color: var(--it-theme-1);
@@ -16210,3 +16203,4 @@ p.checkout-coupon input[type=text]:focus {
   opacity: 1;
   transform: scale(1);
 }
+

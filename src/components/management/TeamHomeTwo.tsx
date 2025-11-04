@@ -22,7 +22,7 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/chairman.jpg" alt="rk-theme" />
+                  <img src="assets/img/management/abdul-azeez-k-p-assabah-trust-chairman.jpg" alt="rk-theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">
@@ -38,45 +38,30 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/president.jpg" alt="rk-theme" />
+                  <img src="assets/img/management/abdul-rasheed-k-m-joint-secretary.jpg" alt="rk-theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">
-                    <span>President</span>
+                    <span>Joint Secretary</span>
                     <Link href="/team-details">
-                      <h5 className="it-team-4__author-name color">Basheer Pallikkara</h5><br />
+                      <h5 className="it-team-4__author-name color">Abdul Rasheed K M</h5><br />
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
-              <div className="it-team-4__item">
-                <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/vice_president.jpg" alt="rk-theme" />
-                </div>
-                <div className="it-team-4__content-wrap">
-                  <div className="it-team-4__author-info">
-                    <span>Vice President</span>
-                    <Link href="/team-details">
-                      <h5 className="it-team-4__author-name color">Mohammadunni Haji</h5>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/general_secretary1.jpg" alt="rk-theme" />
+                  <img src="assets/img/management/k-kunji-muhammed-general-secretary.jpg" alt="rk-theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">
                     <span>General Secretary</span>
                     <Link href="/team-details">
-                      <h5 className="it-team-4__author-name color">Kunjimohammed Panthavoor</h5>
+                      <h5 className="it-team-4__author-name color">K Kunji Muhammed</h5>
                     </Link>
                   </div>
                 </div>
@@ -86,45 +71,76 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/secretary.jpg" alt="rk-theme" />
-                </div>
-                <div className="it-team-4__content-wrap">
-                  <div className="it-team-4__author-info">
-                    <span>Secretary</span>
-                    <Link href="/team-details">
-                      <h5 className="it-team-4__author-name color">N Hameed Kokkur</h5>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
-              <div className="it-team-4__item">
-                <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/secretary_2.jpg" alt="rk-theme" />
-                </div>
-                <div className="it-team-4__content-wrap">
-                  <div className="it-team-4__author-info">
-                    <span>Secretary</span>
-                    <Link href="/team-details">
-                      <h5 className="it-team-4__author-name color">Moosakutty V V</h5>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
-              <div className="it-team-4__item">
-                <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/treasurer.jpg" alt="rk-theme" />
+                  <img src="assets/img/management/k-v-beeravu-treasurer.jpg" alt="rk-theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">
                     <span>Treasurer</span>
                     <Link href="/team-details">
-                      <h5 className="it-team-4__author-name color">Salih M V</h5>
+                      <h5 className="it-team-4__author-name color">K V Beeravu</h5>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+              <div className="it-team-4__item">
+                <div className="it-team-4__thumb fix p-relative">
+                  <img src="assets/img/management/kv-hassan-master.jpg" alt="rk-theme" />
+                </div>
+                <div className="it-team-4__content-wrap">
+                  <div className="it-team-4__author-info">
+                    <span>  </span>
+                    <Link href="/team-details">
+                      <h5 className="it-team-4__author-name color">K V Hassan Master</h5>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+              <div className="it-team-4__item">
+                <div className="it-team-4__thumb fix p-relative">
+                  <img src="assets/img/management/mujeeb-rahman-general-secretary.jpg" alt="rk-theme" />
+                </div>
+                <div className="it-team-4__content-wrap">
+                  <div className="it-team-4__author-info">
+                    <span>General Secretary</span>
+                    <Link href="/team-details">
+                      <h5 className="it-team-4__author-name color">Mujeeb Rahman</h5>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+              <div className="it-team-4__item">
+                <div className="it-team-4__thumb fix p-relative">
+                  <img src="assets/img/management/n-hameed-vice-president.jpg" alt="rk-theme" />
+                </div>
+                <div className="it-team-4__content-wrap">
+                  <div className="it-team-4__author-info">
+                    <span>Vice President</span>
+                    <Link href="/team-details">
+                      <h5 className="it-team-4__author-name color">N Hameed</h5>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+              <div className="it-team-4__item">
+                <div className="it-team-4__thumb fix p-relative">
+                  <img src="assets/img/management/sainu-nechikkal-joint-secretary.jpg" alt="rk-theme" />
+                </div>
+                <div className="it-team-4__content-wrap">
+                  <div className="it-team-4__author-info">
+                    <span>Joint Secretary</span>
+                    <Link href="/team-details">
+                      <h5 className="it-team-4__author-name color">Sainu Nechikkal</h5>
                     </Link>
                   </div>
                 </div>
