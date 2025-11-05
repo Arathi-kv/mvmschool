@@ -91,7 +91,7 @@ const Product = () => {
                 <h5 className="it-product__title">Best Seller</h5>
                 <div className="it-product__box d-flex align-items-center mb-20">
                   <div className="it-product__thmb-sm">
-                    <img src="assets/img/product/sm-1-1.jpg" alt="rk-theme" />
+                    <img src="assets/img/product/sm-1-1.jpg" alt="theme" />
                   </div>
                   <div className="it-product__text-box">
                     <h5>Vaccum Clean</h5>
@@ -107,7 +107,7 @@ const Product = () => {
                 </div>
                 <div className="it-product__box d-flex align-items-center mb-20">
                   <div className="it-product__thmb-sm">
-                    <img src="assets/img/product/sm-1-2.jpg" alt="rk-theme" />
+                    <img src="assets/img/product/sm-1-2.jpg" alt="theme" />
                   </div>
                   <div className="it-product__text-box">
                     <h5>Aple Vr Pro</h5>
@@ -123,7 +123,7 @@ const Product = () => {
                 </div>
                 <div className="it-product__box d-flex align-items-center">
                   <div className="it-product__thmb-sm">
-                    <img src="assets/img/product/sm-1-3.jpg" alt="rk-theme" />
+                    <img src="assets/img/product/sm-1-3.jpg" alt="theme" />
                   </div>
                   <div className="it-product__text-box">
                     <h5>Hair Trimmer</h5>
@@ -156,7 +156,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-1.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-1.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -196,7 +196,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-2.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-2.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -236,7 +236,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-3.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-3.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -279,7 +279,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-4.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-4.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -319,7 +319,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-5.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-5.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -362,7 +362,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-6.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-6.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -402,7 +402,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-7.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-7.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -442,7 +442,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-8.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-8.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">
@@ -482,7 +482,7 @@ const Product = () => {
                     <div className="it-product__item text-center">
                       <div className="it-product__thumb-box fix p-relative">
                         <div className="it-product__thumb">
-                          <img src="assets/img/product/product-1-9.jpg" alt="rk-theme" />
+                          <img src="assets/img/product/product-1-9.jpg" alt="theme" />
                         </div>
                         <div className="it-product__social-box">
                           <a href="#">

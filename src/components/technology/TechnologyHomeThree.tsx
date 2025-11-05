@@ -8,7 +8,7 @@ const TechnologyHomeThree = () => {
     <>
       <div className="it-technology-5__area p-relative black-bg pt-120 pb-120">
         <div className="it-technology-5__bg">
-          <img src="assets/img/technology/tech-5-1.jpg" alt="rk-theme" />
+          <img src="assets/img/technology/tech-5-1.jpg" alt="theme" />
             <div className="it-technology-5__bg-text-box d-none d-lg-block">
               <div className="it-technology-5__bg-text d-flex align-items-center">
                 <i className="flaticon-medal"></i>

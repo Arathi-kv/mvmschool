@@ -71,7 +71,7 @@ const PricingHomeThree = () => {
                 <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
                   <div className="it-pricing-5__item z-index fix p-relative active">
                     <div className="it-pricing-5__shape">
-                      <img src="assets/img/project/shape-5-2.png" alt="rk-theme" />
+                      <img src="assets/img/project/shape-5-2.png" alt="theme" />
                     </div>
                     <div className="it-pricing-5__top-box mb-30">
                       <i className="flaticon-internet"></i>
@@ -142,7 +142,7 @@ const PricingHomeThree = () => {
                 <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
                   <div className="it-pricing-5__item z-index fix p-relative active">
                     <div className="it-pricing-5__shape">
-                      <img src="assets/img/project/shape-5-2.png" alt="rk-theme" />
+                      <img src="assets/img/project/shape-5-2.png" alt="theme" />
                     </div>
                     <div className="it-pricing-5__top-box mb-30">
                       <i className="flaticon-internet"></i>

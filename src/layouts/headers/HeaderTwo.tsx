@@ -24,7 +24,7 @@ const HeaderTwo = () => {
               <div className="col-xl-3 col-lg-6 col-md-4 col-6">
                 <div className="it-header-middle__logo-box">
                   <Link href="/">
-                    <img src="assets/img/logo/black-logo.png" alt="rk-theme" />
+                    <img src="assets/img/logo/black-logo.png" alt="theme" />
                   </Link>
                 </div>
               </div>

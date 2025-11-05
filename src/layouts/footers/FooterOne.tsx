@@ -16,7 +16,7 @@ const FooterOne = ({ style_2 }: any) => {
                 <div className="it-footer__widget footer-col-1">
                   <div className="it-footer__logo">
                     <Link href="/">
-                      <img src="assets/img/logo/footer-logo.png" alt="rk-theme" />
+                      <img src="assets/img/logo/footer-logo.png" alt="theme" />
                     </Link>
                   </div>
                   <div className="it-footer__text pb-15">
@@ -45,14 +45,14 @@ const FooterOne = ({ style_2 }: any) => {
                   <h4 className="it-footer__widget-title">Our Updates</h4>
                   <div className="it-footer__gallery-box">
                     <div className="it-footer__gallery d-flex align-items-center">
-                      <img src="assets/img/footer/footer-sm-1-1.jpg" alt="rk-theme" />
+                      <img src="assets/img/footer/footer-sm-1-1.jpg" alt="theme" />
                       <div className="it-footer__gallery-content">
                         <span className={`${style_2 ? "color-red" : ""}`}><i className="far fa-clock"></i>Admission</span>
                         <p>Admissions open for the academic year.</p>
                       </div>
                     </div>
                     <div className="it-footer__gallery d-flex align-items-center">
-                      <img src="assets/img/footer/footer-sm-1-2.jpg" alt="rk-theme" />
+                      <img src="assets/img/footer/footer-sm-1-2.jpg" alt="theme" />
                       <div className="it-footer__gallery-content">
                         <span className={`${style_2 ? "color-red" : ""}`}><i className="far fa-clock"></i>Facilities</span>
                         <p>From classrooms to labs, our facilities are designed for excellence.</p>

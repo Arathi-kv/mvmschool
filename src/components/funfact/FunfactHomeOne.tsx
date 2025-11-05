@@ -23,7 +23,7 @@ const FunfactHomeOne = ({style_2} : any) => {
         <div className="it-funfact__wrap">
           <div className="it-funfact__bg fix theme-bg-2 p-relative">
             <div className="it-funfact__shape d-none d-xl-block">
-              <img src="assets/img/funfact/funfact-shape-1.png" alt="rk-theme" />
+              <img src="assets/img/funfact/funfact-shape-1.png" alt="theme" />
             </div>
             <div className="container-fluid">
               <div className="row">

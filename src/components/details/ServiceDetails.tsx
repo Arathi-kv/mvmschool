@@ -86,7 +86,7 @@ const ServiceDetails = () => {
 									<div className="it-service-details__thumb pb-30">
 										<img
 											src="assets/img/service/details1-1.jpg"
-											alt="rk-theme"
+											alt="theme"
 										/>
 									</div>
 									<h5 className="it-service-details__title">Cloud Service</h5>

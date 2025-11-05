@@ -21,7 +21,7 @@ const TeamHomeOne = () => {
               <div className="col-xl-3 col-lg-4 col-sm-6 mb-30 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".3s">
                 <div className="it-team__item">
-                  <img className="w-100" src="assets/img/team/chairman.jpg" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/team/chairman.jpg" alt="theme" />
                   <div className="it-team__content">
                     <Link href="/team-details">
                       <h5 className="it-team__author-name">Robert Teel</h5>
@@ -35,7 +35,7 @@ const TeamHomeOne = () => {
                     </div>
                   </div>
                   <div className="it-team__item-shape">
-                    <img src="assets/img/team/team-shape-1.png" alt="rk-theme" />
+                    <img src="assets/img/team/team-shape-1.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -43,7 +43,7 @@ const TeamHomeOne = () => {
               <div className="col-xl-3 col-lg-4 col-sm-6 mb-30 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".5s">
                 <div className="it-team__item">
-                  <img className="w-100" src="assets/img/team/team-1-2.png" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/team/team-1-2.png" alt="theme" />
                   <div className="it-team__content">
                     <Link href="/team-details">
                       <h5 className="it-team__author-name">Bonnie Ashley</h5>
@@ -57,7 +57,7 @@ const TeamHomeOne = () => {
                     </div>
                   </div>
                   <div className="it-team__item-shape">
-                    <img src="assets/img/team/team-shape-1.png" alt="rk-theme" />
+                    <img src="assets/img/team/team-shape-1.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const TeamHomeOne = () => {
               <div className="col-xl-3 col-lg-4 col-sm-6 mb-30 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".7s">
                 <div className="it-team__item">
-                  <img className="w-100" src="assets/img/team/team-1-3.png" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/team/team-1-3.png" alt="theme" />
                   <div className="it-team__content">
                     <Link href="/team-details">
                       <h5 className="it-team__author-name">Katie Plaster</h5>
@@ -79,7 +79,7 @@ const TeamHomeOne = () => {
                     </div>
                   </div>
                   <div className="it-team__item-shape">
-                    <img src="assets/img/team/team-shape-1.png" alt="rk-theme" />
+                    <img src="assets/img/team/team-shape-1.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const TeamHomeOne = () => {
               <div className="col-xl-3 col-lg-4 col-sm-6 mb-30 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".9s">
                 <div className="it-team__item">
-                  <img className="w-100" src="assets/img/team/team-1-4.png" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/team/team-1-4.png" alt="theme" />
                   <div className="it-team__content">
                     <Link href="/team-details">
                       <h5 className="it-team__author-name">David Backhum</h5>
@@ -101,7 +101,7 @@ const TeamHomeOne = () => {
                     </div>
                   </div>
                   <div className="it-team__item-shape">
-                    <img src="assets/img/team/team-shape-1.png" alt="rk-theme" />
+                    <img src="assets/img/team/team-shape-1.png" alt="theme" />
                   </div>
                 </div>
               </div>

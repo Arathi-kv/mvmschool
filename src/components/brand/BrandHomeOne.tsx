@@ -68,7 +68,7 @@ const BrandHomeOne = ({ style_2 }: any) => {
                   {brand_data.map((item, i) => (
                     <SwiperSlide key={i} className="swiper-slide">
                       <div className="it-brand__item">
-                        <Image src={item} alt="rk-theme" />
+                        <Image src={item} alt="theme" />
                       </div>
                     </SwiperSlide>
                   ))}

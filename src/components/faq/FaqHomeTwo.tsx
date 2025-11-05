@@ -12,10 +12,10 @@ const FaqHomeTwo = () => {
 		<>
 			<div className="it-faq-4__area  grey-bg-2 p-relative pt-120 pb-90">
 				<div className="it-faq-4__bg d-none d-xxl-block">
-					<img src="assets/img/faq/bg-4-1.jpg" alt="rk-theme" />
+					<img src="assets/img/faq/bg-4-1.jpg" alt="theme" />
 				</div>
 				<div className="it-faq-4__shape">
-					<img src="assets/img/faq/shape-4-1.png" alt="rk-theme" />
+					<img src="assets/img/faq/shape-4-1.png" alt="theme" />
 				</div>
 				<div className="container">
 					<div className="row">

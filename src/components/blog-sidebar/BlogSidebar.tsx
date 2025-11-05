@@ -17,7 +17,7 @@ const BlogSidebar = () => {
               <div className="postbox__details-wrapper">
                 <div className="postbox__thumb-box mb-30">
                   <div className="postbox__main-thumb">
-                    <img src="assets/img/blog/Details-1-4.jpg" alt="rk-theme" />
+                    <img src="assets/img/blog/Details-1-4.jpg" alt="theme" />
                   </div>
                   <div className="postbox__content-box">
                     <div className="postbox__meta">
@@ -65,17 +65,17 @@ const BlogSidebar = () => {
 
                       <SwiperSlide className="swiper-slide">
                         <div className="postbox__main-thumb">
-                          <img src="assets/img/blog/Details-1-5.jpg" alt="rk-theme" />
+                          <img src="assets/img/blog/Details-1-5.jpg" alt="theme" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide className="swiper-slide">
                         <div className="postbox__main-thumb">
-                          <img src="assets/img/blog/Details-1-4.jpg" alt="rk-theme" />
+                          <img src="assets/img/blog/Details-1-4.jpg" alt="theme" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide className="swiper-slide">
                         <div className="postbox__main-thumb">
-                          <img src="assets/img/blog/Details-1-6.jpg" alt="rk-theme" />
+                          <img src="assets/img/blog/Details-1-6.jpg" alt="theme" />
                         </div>
                       </SwiperSlide>
 
@@ -101,7 +101,7 @@ const BlogSidebar = () => {
                 </div>
                 <div className="postbox__thumb-box">
                   <div className="postbox__main-thumb">
-                    <img src="assets/img/blog/Details-1-6.jpg" alt="rk-theme" />
+                    <img src="assets/img/blog/Details-1-6.jpg" alt="theme" />
                   </div>
                   <div className="postbox__content-box">
                     <div className="postbox__meta">
@@ -140,7 +140,7 @@ const BlogSidebar = () => {
                     <div className="sidebar__post">
                       <div className="rc__post mb-20 d-flex">
                         <div className="rc__post-thumb mr-20">
-                          <Link href="#"><img src="assets/img/blog/blog-details-1.jpg" alt="rk-theme" /></Link>
+                          <Link href="#"><img src="assets/img/blog/blog-details-1.jpg" alt="theme" /></Link>
                         </div>
                         <div className="rc__post-content">
                           <h3 className="rc__post-title">
@@ -154,7 +154,7 @@ const BlogSidebar = () => {
                       </div>
                       <div className="rc__post mb-20 d-flex">
                         <div className="rc__post-thumb mr-20">
-                          <Link href="#"><img src="assets/img/blog/blog-details-1-2.jpg" alt="rk-theme" /></Link>
+                          <Link href="#"><img src="assets/img/blog/blog-details-1-2.jpg" alt="theme" /></Link>
                         </div>
                         <div className="rc__post-content">
                           <h3 className="rc__post-title">
@@ -168,7 +168,7 @@ const BlogSidebar = () => {
                       </div>
                       <div className="rc__post d-flex">
                         <div className="rc__post-thumb mr-20">
-                          <Link href="#"><img src="assets/img/blog/blog-details-1-3.jpg" alt="rk-theme" /></Link>
+                          <Link href="#"><img src="assets/img/blog/blog-details-1-3.jpg" alt="theme" /></Link>
                         </div>
                         <div className="rc__post-content">
                           <h3 className="rc__post-title">

@@ -65,7 +65,7 @@ const Cart = () => {
                     <tbody>
                       <tr>
                         <td className="product-thumbnail"><Link href="/product-details"><img
-                          src="assets/img/product/product-1.jpg" alt="rk-theme" /></Link></td>
+                          src="assets/img/product/product-1.jpg" alt="theme" /></Link></td>
                         <td className="product-name"><Link href="/product-details">specialone 4 Inch 820W</Link></td>
                         <td className="product-price"><span className="amount">$180.00</span></td>
                         <td className="product-quantity">
@@ -82,7 +82,7 @@ const Cart = () => {
                       </tr>
                       <tr>
                         <td className="product-thumbnail"><Link href="/product-details"><img
-                          src="assets/img/product/product-2.jpg" alt="rk-theme" /></Link></td>
+                          src="assets/img/product/product-2.jpg" alt="theme" /></Link></td>
                         <td className="product-name"><Link href="/product-details">specialone 4 Inch 820W</Link>
                         </td>
                         <td className="product-price"><span className="amount">$1260.50</span></td>
@@ -100,7 +100,7 @@ const Cart = () => {
                       </tr>
                       <tr>
                         <td className="product-thumbnail"><Link href="/product-details"><img
-                          src="assets/img/product/product-3.jpg" alt="rk-theme" /></Link></td>
+                          src="assets/img/product/product-3.jpg" alt="theme" /></Link></td>
                         <td className="product-name"><Link href="/product-details">specialone 4 Inch 820W</Link></td>
                         <td className="product-price"><span className="amount">$180.00</span></td>
                         <td className="product-quantity">
@@ -113,7 +113,7 @@ const Cart = () => {
                       </tr>
                       <tr>
                         <td className="product-thumbnail"><Link href="/product-details"><img
-                          src="assets/img/product/product-2.jpg" alt="rk-theme" /></Link></td>
+                          src="assets/img/product/product-2.jpg" alt="theme" /></Link></td>
                         <td className="product-name"><Link href="/product-details">specialone 4 Inch 820W</Link>
                         </td>
                         <td className="product-price"><span className="amount">$1260.50</span></td>

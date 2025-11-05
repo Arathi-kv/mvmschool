@@ -26,7 +26,7 @@ const BlogHomeOne = () => {
             <div className="col-xl-4 col-lg-4 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
               <div className="it-blog__item">
                 <div className="it-blog__thumb p-relative">
-                  <img className="w-100" src="assets/img/blog/blog-1-1.png" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/blog/blog-1-1.png" alt="theme" />
                     <div className="it-blog__icon">
                       <Link href="#"><i
                         className="flaticon-up-right-arrow"></i></Link>
@@ -45,7 +45,7 @@ const BlogHomeOne = () => {
             <div className="col-xl-4 col-lg-4 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
               <div className="it-blog__item">
                 <div className="it-blog__thumb p-relative">
-                  <img className="w-100" src="assets/img/blog/blog-1-2.png" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/blog/blog-1-2.png" alt="theme" />
                     <div className="it-blog__icon">
                       <Link href="#"><i className="flaticon-up-right-arrow"></i></Link>
                     </div>
@@ -63,7 +63,7 @@ const BlogHomeOne = () => {
             <div className="col-xl-4 col-lg-4 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
               <div className="it-blog__item">
                 <div className="it-blog__thumb p-relative">
-                  <img className="w-100" src="assets/img/blog/blog-1-3.png" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/blog/blog-1-3.png" alt="theme" />
                     <div className="it-blog__icon">
                       <Link href="#"><i className="flaticon-up-right-arrow"></i></Link>
                     </div>

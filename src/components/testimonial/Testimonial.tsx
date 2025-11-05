@@ -11,7 +11,7 @@ const Testimonial = () => {
             <div className="col-xl-6 col-lg-6 mb-80 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
               <div className="it-testimonial__item text-center p-relative">
                 <div className="it-testimonial__avatar">
-                  <img src="assets/img/testimonial/author-1-1.png" alt="rk-theme" />
+                  <img src="assets/img/testimonial/author-1-1.png" alt="theme" />
                 </div>
                 <div className="it-testimonial__author-info">
                   <h5 className="it-testimonial__author-name">Hazzle Hood</h5>
@@ -31,7 +31,7 @@ const Testimonial = () => {
             <div className="col-xl-6 col-lg-6 mb-80 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
               <div className="it-testimonial__item text-center p-relative">
                 <div className="it-testimonial__avatar">
-                  <img src="assets/img/testimonial/author-1-2.png" alt="rk-theme" />
+                  <img src="assets/img/testimonial/author-1-2.png" alt="theme" />
                 </div>
                 <div className="it-testimonial__author-info">
                   <h5 className="it-testimonial__author-name">Devit Roko</h5>
@@ -51,7 +51,7 @@ const Testimonial = () => {
             <div className="col-xl-6 col-lg-6 mb-80 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
               <div className="it-testimonial__item text-center p-relative">
                 <div className="it-testimonial__avatar">
-                  <img src="assets/img/testimonial/author-1-3.png" alt="rk-theme" />
+                  <img src="assets/img/testimonial/author-1-3.png" alt="theme" />
                 </div>
                 <div className="it-testimonial__author-info">
                   <h5 className="it-testimonial__author-name">Luna Baily</h5>
@@ -71,7 +71,7 @@ const Testimonial = () => {
             <div className="col-xl-6 col-lg-6 mb-80 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
               <div className="it-testimonial__item text-center p-relative">
                 <div className="it-testimonial__avatar">
-                  <img src="assets/img/testimonial/author-1-4.png" alt="rk-theme" />
+                  <img src="assets/img/testimonial/author-1-4.png" alt="theme" />
                 </div>
                 <div className="it-testimonial__author-info">
                   <h5 className="it-testimonial__author-name">Broom Robert</h5>

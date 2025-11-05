@@ -17,23 +17,23 @@ const TeamHomeTwo = () => {
             </div>
           </div>
 
-          {/* === Row 1: Principal & Vice Principal === */}
+          {/* === Principal & Vice Principal Section === */}
           <div className="row justify-content-center mb-60">
-            {/* Principal */}
-            <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-30">
+            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-30">
               <div className="it-team-4__item text-center">
                 <div className="it-team-4__thumb fix p-relative">
                   <img
-                    src="assets/img/management/rasheed-karinkappara-principal.jpg"
-                    alt="Principal"
+                     src="assets/img/management/rasheed-karinkappara-principal.jpg"
+                       style={{border: "1px solid #56525283", padding: "4px",        }}
                   />
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Principal</span>
                     <Link href="/team-details">
                       <h5 className="it-team-4__author-name color">
-                       <b>Rasheed Karinkappara</b>
+                         Rasheed Karinkappara
                       </h5>
                     </Link>
                   </div>
@@ -41,21 +41,22 @@ const TeamHomeTwo = () => {
               </div>
             </div>
 
-            {/* Vice Principal */}
-            <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-30">
+            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-30">
               <div className="it-team-4__item text-center">
                 <div className="it-team-4__thumb fix p-relative">
                   <img
-                    src="assets/img/management/alikutty-tm-vice-principal.jpg"
+                       src="assets/img/management/alikutty-tm-vice-principal.jpg"
                     alt="Vice Principal"
+                      style={{border: "1px solid #56525283", padding: "4px",        }}
                   />
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Vice Principal</span>
                     <Link href="/team-details">
                       <h5 className="it-team-4__author-name color">
-                      <b>Alikutty T M</b>
+                          Alikutty T M
                       </h5>
                     </Link>
                   </div>
@@ -63,15 +64,19 @@ const TeamHomeTwo = () => {
               </div>
             </div>
           </div>
+          {/* === End Principal Section === */}
 
-          {/* === Row 2+: Other Management Members === */}
+          {/* === Existing Committee Members === */}
           <div className="row">
+            {/* Other Management Members */}
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/abdul-azeez-k-p-assabah-trust-chairman.jpg" alt="Chairman" />
+                 <img src="assets/img/management/abdul-azeez-k-p-assabah-trust-chairman.jpg" alt="Chairman"
+                 style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Chairman</span>
                     <Link href="/team-details">
@@ -85,9 +90,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/abdul-rasheed-k-m-joint-secretary.jpg" alt="Joint Secretary" />
+                  <img src="assets/img/management/abdul-rasheed-k-m-joint-secretary.jpg" alt="Joint Secretary"
+                    style={{border: "1px solid #56525283", padding: "4px",        }} />
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Joint Secretary</span>
                     <Link href="/team-details">
@@ -101,9 +108,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/k-kunji-muhammed-general-secretary.jpg" alt="General Secretary" />
+                  <img src="assets/img/management/k-kunji-muhammed-general-secretary.jpg" alt="General Secretary" 
+                    style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>General Secretary</span>
                     <Link href="/team-details">
@@ -117,9 +126,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/k-v-beeravu-treasurer.jpg" alt="Treasurer" />
+                  <img src="assets/img/management/k-v-beeravu-treasurer.jpg" alt="Treasurer"
+                    style={{border: "1px solid #56525283", padding: "4px",        }} />
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Treasurer</span>
                     <Link href="/team-details">
@@ -133,9 +144,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/kv-hassan-master.jpg" alt="Member" />
+                  <img src="assets/img/management/kv-hassan-master.jpg" alt="Member" 
+                    style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <Link href="/team-details">
                       <h5 className="it-team-4__author-name color">K V Hassan Master</h5>
@@ -148,9 +161,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/mujeeb-rahman-general-secretary.jpg" alt="General Secretary" />
+                  <img src="assets/img/management/mujeeb-rahman-general-secretary.jpg" alt="General Secretary" 
+                    style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>General Secretary</span>
                     <Link href="/team-details">
@@ -164,9 +179,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/n-hameed-vice-president.jpg" alt="Vice President" />
+                  <img src="assets/img/management/n-hameed-vice-president.jpg" alt="Vice President" 
+                    style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Vice President</span>
                     <Link href="/team-details">
@@ -180,9 +197,11 @@ const TeamHomeTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/management/sainu-nechikkal-joint-secretary.jpg" alt="Joint Secretary" />
+                  <img src="assets/img/management/sainu-nechikkal-joint-secretary.jpg" alt="Joint Secretary"
+                    style={{border: "1px solid #56525283", padding: "4px",        }} />
                 </div>
-              <div className="it-team-4__content-wrap" style={{ marginTop: "2px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+
                   <div className="it-team-4__author-info">
                     <span>Joint Secretary</span>
                     <Link href="/team-details">

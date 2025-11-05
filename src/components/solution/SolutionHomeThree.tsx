@@ -20,7 +20,7 @@ const SolutionHomeThree = () => {
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="it-solution-5__item p-relative">
                 <div className="it-solution-5__thumb fix p-relative">
-                  <img className="w-100" src="assets/img/solution/solution-5-1.jpg" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/solution/solution-5-1.jpg" alt="theme" />
                 </div>
                 <div className="it-solution-5__content">
                   <h5>Providing Excellent Technology Solution</h5>
@@ -31,7 +31,7 @@ const SolutionHomeThree = () => {
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="it-solution-5__item p-relative">
                 <div className="it-solution-5__thumb fix p-relative">
-                  <img className="w-100" src="assets/img/solution/solution-5-2.jpg" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/solution/solution-5-2.jpg" alt="theme" />
                 </div>
                 <div className="it-solution-5__content">
                   <h5>Perfect Solution that Business Demands</h5>
@@ -42,7 +42,7 @@ const SolutionHomeThree = () => {
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="it-solution-5__item p-relative">
                 <div className="it-solution-5__thumb fix p-relative">
-                  <img className="w-100" src="assets/img/solution/solution-5-3.jpg" alt="rk-theme" />
+                  <img className="w-100" src="assets/img/solution/solution-5-3.jpg" alt="theme" />
                 </div>
                 <div className="it-solution-5__content">
                   <h5>We Eagerly Put In Use IT Inovations System</h5>

@@ -24,7 +24,7 @@ const TeamHomeTwo = () => {
               data-wow-delay=".3s">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/chairman.jpg" alt="rk-theme" />
+                  <img src="assets/img/team/chairman.jpg" alt="theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">
@@ -49,7 +49,7 @@ const TeamHomeTwo = () => {
               data-wow-delay=".5s">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/team-4-2.jpg" alt="rk-theme" />
+                  <img src="assets/img/team/team-4-2.jpg" alt="theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">
@@ -74,7 +74,7 @@ const TeamHomeTwo = () => {
               data-wow-delay=".7s">
               <div className="it-team-4__item">
                 <div className="it-team-4__thumb fix p-relative">
-                  <img src="assets/img/team/team-4-3.jpg" alt="rk-theme" />
+                  <img src="assets/img/team/team-4-3.jpg" alt="theme" />
                 </div>
                 <div className="it-team-4__content-wrap">
                   <div className="it-team-4__author-info">

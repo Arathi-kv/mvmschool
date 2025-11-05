@@ -8,10 +8,10 @@ const ServiceHomeOne = ({style_2} :any) => {
     <>
       <div className="it-service__area it-service__space fix theme-bg">
         <div className="it-service__shape">
-          <img src="assets/img/service/service-shape-1-1.png" alt="rk-theme" />
+          <img src="assets/img/service/service-shape-1-1.png" alt="theme" />
         </div>
         <div className="it-service__shape-2">
-          <img src="assets/img/service/service-shape-1-3.png" alt="rk-theme" />
+          <img src="assets/img/service/service-shape-1-3.png" alt="theme" />
         </div>
         <div className="container">
           <div className="row align-items-end">
@@ -37,7 +37,7 @@ const ServiceHomeOne = ({style_2} :any) => {
                       <i className="flaticon-up-right-arrow"></i>
                     </Link>
                   </div>
-                  <img src="assets/img/service/service-1-1.jpg" alt="rk-theme" />
+                  <img src="assets/img/service/service-1-1.jpg" alt="theme" />
                 </div>
                 <Link href="/service-details">
                   <h4 className="it-service__title">Product Development</h4>
@@ -53,7 +53,7 @@ const ServiceHomeOne = ({style_2} :any) => {
                       <i className="flaticon-up-right-arrow"></i>
                     </Link>
                   </div>
-                  <img src="assets/img/service/service-1-2.jpg" alt="rk-theme" />
+                  <img src="assets/img/service/service-1-2.jpg" alt="theme" />
                 </div>
                 <Link href="/service-details">
                   <h4 className="it-service__title">Security System</h4>
@@ -69,7 +69,7 @@ const ServiceHomeOne = ({style_2} :any) => {
                       <i className="flaticon-up-right-arrow"></i>
                     </Link>
                   </div>
-                  <img src="assets/img/service/service-1-4.jpg" alt="rk-theme" />
+                  <img src="assets/img/service/service-1-4.jpg" alt="theme" />
                 </div>
                 <Link href="/service-details">
                   <h4 className="it-service__title">Data Analytics</h4>
@@ -85,7 +85,7 @@ const ServiceHomeOne = ({style_2} :any) => {
                       <i className="flaticon-up-right-arrow"></i>
                     </Link>
                   </div>
-                  <img src="assets/img/service/service-1-3.jpg" alt="rk-theme" />
+                  <img src="assets/img/service/service-1-3.jpg" alt="theme" />
                 </div>
                 <Link href="/service-details">
                   <h4 className="it-service__title">UI/UX Designing</h4>

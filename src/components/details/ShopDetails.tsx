@@ -30,7 +30,7 @@ const ShopDetails = () => {
           <div className="row">
             <div className="col-xl-6 col-lg-6">
               <div className="it-shop-details__thumb-box">
-                <img src="assets/img/service/details1-2.jpg" alt="rk-theme" />
+                <img src="assets/img/service/details1-2.jpg" alt="theme" />
               </div>
             </div>
             <div className="col-xl-6 col-lg-6">
@@ -133,7 +133,7 @@ const ShopDetails = () => {
                 <h4 className="postbox__details-title">Client Reviews</h4>
                 <div className="it-shop-details__review pt-10 d-flex align-items-start">
                   <div className="it-shop-details__review-thumb">
-                    <img src="assets/img/service/author-1.png" alt="rk-theme" />
+                    <img src="assets/img/service/author-1.png" alt="theme" />
                   </div>
                   <div className="it-shop-details__author-info">
                     <span><strong>by David Parker / </strong>March 28, 2022</span>

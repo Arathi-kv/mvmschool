@@ -221,10 +221,11 @@
     }
 }
 .it-slider-title {
-    font-weight: 700;
-    font-size: 90px;
-    color: var(--it-theme-2);
-    text-transform: capitalize;
+  font-weight: 700;
+  font-size: 90px;
+  color: var(--it-common-white);
+  text-transform: capitalize;
+   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 
     @media #{$xxxl} {
         font-size: 80px;

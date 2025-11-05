@@ -46,7 +46,7 @@ const BlogDetails = () => {
               >
                 <img
                   src="/assets/img/facilities/activitiesimg.jpg"
-                  alt="rk-theme"
+                  alt="theme"
                   className="w-100 rounded"
                 />
               </div>

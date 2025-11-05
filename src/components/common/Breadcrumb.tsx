@@ -15,14 +15,14 @@ const Breadcrumb = ({ title, subtitle }: any) => {
           data-wow-duration=".9s"
           data-wow-delay=".9s"
         >
-          <img src="assets/img/breadcrumb/shape-1-2.png" alt="rk-theme" />
+          <img src="assets/img/breadcrumb/shape-1-2.png" alt="theme" />
         </div>
         <div
           className="it-breadcrumb__shape-3 wow itfadeRight"
           data-wow-duration=".9s"
           data-wow-delay="1.4s"
         >
-          <img src="assets/img/breadcrumb/shape-1-3.png" alt="rk-theme" />
+          <img src="assets/img/breadcrumb/shape-1-3.png" alt="theme" />
         </div>
         <div className="container">
           <div className="row">

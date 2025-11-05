@@ -13,7 +13,7 @@ const TeamDetails = () => {
               <div className="col-xl-7 col-lg-7">
                 <div className="it-team-details__item p-relative text-end">
                   <div className="it-team-details__thumb">
-                    <img src="assets/img/team/team-details-1.jpg" alt="rk-theme" />
+                    <img src="assets/img/team/team-details-1.jpg" alt="theme" />
                   </div>
                   <div className="it-team-details__text d-none d-xl-block">
                     <h5 className="it-team-details__big-text">Tecch</h5>

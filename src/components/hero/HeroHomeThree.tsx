@@ -44,13 +44,13 @@ const HeroHomeThree = () => {
           <SwiperSlide className="swiper-slide">
             <div className="it-slider__area it-slider__height it-slider__overlay bg-color-blue p-relative">
               <div className="it-slider__shape-1">
-                <img src="assets/img/slider/slider-shape-3-2.png" alt="rk-theme" />
+                <img src="assets/img/slider/slider-shape-3-2.png" alt="theme" />
               </div>
               <div className="it-slider__shape-2">
-                <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
+                <img src="assets/img/slider/shape-4-2.png" alt="theme" />
               </div>
               <div className="it-slider__shape-3 d-none d-xl-block">
-                <img src="assets/img/slider/slider-shape-1-3.png" alt="rk-theme" />
+                <img src="assets/img/slider/slider-shape-1-3.png" alt="theme" />
               </div>
               <div className="it-slider__bg" style={{ backgroundImage: `url(/assets/img/slider/slider-1-4.png)` }}></div>
               <div className="container">
@@ -83,13 +83,13 @@ const HeroHomeThree = () => {
           <SwiperSlide className="swiper-slide">
             <div className="it-slider__area it-slider__height bg-color-blue p-relative it-slider__overlay">
               <div className="it-slider__shape-1">
-                <img src="assets/img/slider/slider-shape-3-2.png" alt="rk-theme" />
+                <img src="assets/img/slider/slider-shape-3-2.png" alt="theme" />
               </div>
               <div className="it-slider__shape-2">
-                <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
+                <img src="assets/img/slider/shape-4-2.png" alt="theme" />
               </div>
               <div className="it-slider__shape-3 d-none d-xl-block">
-                <img src="assets/img/slider/slider-shape-1-3.png" alt="rk-theme" />
+                <img src="assets/img/slider/slider-shape-1-3.png" alt="theme" />
               </div>
               <div className="it-slider__bg " style={{ backgroundImage: `url(/assets/img/slider/slider-1-5.png)` }}></div>
               <div className="container">
@@ -122,13 +122,13 @@ const HeroHomeThree = () => {
           <SwiperSlide className="swiper-slide">
             <div className="it-slider__area it-slider__height bg-color-blue it-slider__overlay p-relative">
               <div className="it-slider__shape-1">
-                <img src="assets/img/slider/slider-shape-3-2.png" alt="rk-theme" />
+                <img src="assets/img/slider/slider-shape-3-2.png" alt="theme" />
               </div>
               <div className="it-slider__shape-2">
-                <img src="assets/img/slider/shape-4-2.png" alt="rk-theme" />
+                <img src="assets/img/slider/shape-4-2.png" alt="theme" />
               </div>
               <div className="it-slider__shape-3 d-none d-xl-block">
-                <img src="assets/img/slider/slider-shape-1-3.png" alt="rk-theme" />
+                <img src="assets/img/slider/slider-shape-1-3.png" alt="theme" />
               </div>
               <div className="it-slider__bg" style={{ backgroundImage: `url(/assets/img/slider/slider-1-6.png)` }}></div>
               <div className="container">

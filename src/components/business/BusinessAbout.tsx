@@ -88,7 +88,7 @@ const BusinessAbout = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="it-business-3__item d-flex p-relative">
                     <div className="it-business-3__thumb">
-                      <img src="assets/img/business/author-3-2.png" alt="rk-theme" />
+                      <img src="assets/img/business/author-3-2.png" alt="theme" />
                     </div>
                     <div className="it-business-3__text">
                       <h5 className="it-business-3__title">Gaming and <br />
@@ -104,7 +104,7 @@ const BusinessAbout = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="it-business-3__item d-flex p-relative">
                     <div className="it-business-3__thumb">
-                      <img src="assets/img/business/author-3-1.png" alt="rk-theme" />
+                      <img src="assets/img/business/author-3-1.png" alt="theme" />
                     </div>
                     <div className="it-business-3__text">
                       <h5 className="it-business-3__title">Business and <br />
@@ -120,7 +120,7 @@ const BusinessAbout = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="it-business-3__item d-flex p-relative">
                     <div className="it-business-3__thumb">
-                      <img src="assets/img/business/author-3-3.png" alt="rk-theme" />
+                      <img src="assets/img/business/author-3-3.png" alt="theme" />
                     </div>
                     <div className="it-business-3__text">
                       <h5 className="it-business-3__title">Information <br />
@@ -136,7 +136,7 @@ const BusinessAbout = () => {
                 <SwiperSlide className="swiper-slide">
                   <div className="it-business-3__item d-flex p-relative">
                     <div className="it-business-3__thumb">
-                      <img src="assets/img/business/author-3-1.png" alt="rk-theme" />
+                      <img src="assets/img/business/author-3-1.png" alt="theme" />
                     </div>
                     <div className="it-business-3__text">
                       <h5 className="it-business-3__title">Business and <br />

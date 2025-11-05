@@ -2879,7 +2879,7 @@ input[type=color] {
 .it-slider-title {
   font-weight: 700;
   font-size: 90px;
-  color: var(--it-theme-2);
+  color: var(--it-common-white);
   text-transform: capitalize;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {

@@ -11,7 +11,7 @@ const AboutHomeTwo = () => {
           <div className="row align-items-xl-start align-items-center">
             <div className="col-xxl-5 col-xl-6 col-lg-6">
               <div className="it-about-4__thumb-box">
-                <img src="assets/img/about/about-4-1.png" alt="rk-theme" />
+                <img src="assets/img/about/about-4-1.png" alt="theme" />
               </div>
             </div>
             <div className="col-xxl-7 col-xl-6 col-lg-6 wow itfadeRight" data-wow-duration=".9s" data-wow-delay=".5s">

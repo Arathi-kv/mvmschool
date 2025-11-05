@@ -46,13 +46,13 @@ const TechnologyHomeTwo = () => {
             <div className="col-xl-6 col-lg-6">
               <div className="it-technology-4__thumb-box p-relative text-center text-lg-end">
                 <div className="it-technology-4__thumb">
-                  <img src="assets/img/technology/tech-4-1.jpg" alt="rk-theme" />
+                  <img src="assets/img/technology/tech-4-1.jpg" alt="theme" />
                 </div>
                 <div className="it-technology-4__thumb-sm">
-                  <img src="assets/img/technology/tech-4-2.jpg" alt="rk-theme" />
+                  <img src="assets/img/technology/tech-4-2.jpg" alt="theme" />
                 </div>
                 <div className="it-technology-4__shape d-none d-md-block">
-                  <img src="assets/img/technology/shape-4-1.png" alt="rk-theme" />
+                  <img src="assets/img/technology/shape-4-1.png" alt="theme" />
                 </div>
               </div>
             </div>

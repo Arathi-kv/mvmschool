@@ -23,7 +23,7 @@ const BlogHomeThree = () => {
                 <div className="it-blog-3__item z-index space it-blog-3__item-color">
                   <Link href="#">
                     <div className="it-blog-3__thumb fix">
-                      <img className="w-100" src="assets/img/blog/blog-2-1.jpg" alt="rk-theme" />
+                      <img className="w-100" src="assets/img/blog/blog-2-1.jpg" alt="theme" />
                     </div>
                   </Link>
                   <div className="it-blog-3__content-box">
@@ -48,7 +48,7 @@ const BlogHomeThree = () => {
                 <div className="it-blog-3__item z-index space it-blog-2__item-color">
                   <Link href="#">
                     <div className="it-blog-3__thumb fix">
-                      <img className="w-100" src="assets/img/blog/blog-2-3.jpg" alt="rk-theme" />
+                      <img className="w-100" src="assets/img/blog/blog-2-3.jpg" alt="theme" />
                     </div>
                   </Link>
                   <div className="it-blog-3__content-box">
@@ -72,7 +72,7 @@ const BlogHomeThree = () => {
                 <div className="it-blog-3__item z-index space it-blog-2__item-color">
                   <Link href="#">
                     <div className="it-blog-3__thumb fix">
-                      <img className="w-100" src="assets/img/blog/blog-2-2.jpg" alt="rk-theme" />
+                      <img className="w-100" src="assets/img/blog/blog-2-2.jpg" alt="theme" />
                     </div>
                   </Link>
                   <div className="it-blog-3__content-box">

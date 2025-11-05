@@ -13,7 +13,7 @@ const AboutHomeOne = ({style_2}: any) => {
             <div className="col-xl-6 col-lg-6 wow itfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
               <div className="it-about__left-box text-end p-relative">
                 <div className="it-about__thumb">
-                  <img src="assets/img/about/about1.jpg" alt="rk-theme" />
+                  <img src="assets/img/about/about1.jpg" alt="theme" />
                 </div>
               </div>
             </div>

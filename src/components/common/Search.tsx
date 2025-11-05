@@ -15,7 +15,7 @@ const Search = ({ open, setOpen }: any) => {
                 <div className="search__top d-flex justify-content-between align-items-center">
                   <div className="search__logo">
                     <Link href="/">
-                      <img src="assets/img/logo/school-logo.png" alt="rk-theme" />
+                      <img src="assets/img/logo/school-logo.png" alt="theme" />
                     </Link>
                   </div>
                   <div className="search__close">

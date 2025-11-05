@@ -8,7 +8,7 @@ const ProjectHomeTwo = () => {
     <>
       <div className="it-project-4__area fix p-relative pb-120 pt-115">
         <div className="it-project-4__shape d-none d-xl-block">
-          <img src="assets/img/project/shape-4-1.png" alt="rk-theme" />
+          <img src="assets/img/project/shape-4-1.png" alt="theme" />
         </div>
         <div className="it-project-4__plr">
           <div className="container-fluid">
@@ -24,7 +24,7 @@ const ProjectHomeTwo = () => {
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".3s">
                 <div className="it-project-4__item">
-                  <img src="assets/img/project/project-4-1.jpg" alt="rk-theme" />
+                  <img src="assets/img/project/project-4-1.jpg" alt="theme" />
                   <div className="it-project-4__text text-center">
                     <Link href="/facilities"><i
                       className="fa-sharp fa-regular fa-arrow-right"></i></Link>
@@ -36,7 +36,7 @@ const ProjectHomeTwo = () => {
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".5s">
                 <div className="it-project-4__item">
-                  <img src="assets/img/project/project-4-2.jpg" alt="rk-theme" />
+                  <img src="assets/img/project/project-4-2.jpg" alt="theme" />
                   <div className="it-project-4__text text-center">
                     <Link href="/facilities"><i
                       className="fa-sharp fa-regular fa-arrow-right"></i></Link>
@@ -48,7 +48,7 @@ const ProjectHomeTwo = () => {
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".7s">
                 <div className="it-project-4__item">
-                  <img src="assets/img/project/project-4-3.jpg" alt="rk-theme" />
+                  <img src="assets/img/project/project-4-3.jpg" alt="theme" />
                   <div className="it-project-4__text text-center">
                     <Link href="/facilities"><i
                       className="fa-sharp fa-regular fa-arrow-right"></i></Link>
@@ -60,7 +60,7 @@ const ProjectHomeTwo = () => {
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s"
                 data-wow-delay=".9s">
                 <div className="it-project-4__item">
-                  <img src="assets/img/project/project-4-4.jpg" alt="rk-theme" />
+                  <img src="assets/img/project/project-4-4.jpg" alt="theme" />
                   <div className="it-project-4__text text-center">
                     <Link href="/facilities"><i
                       className="fa-sharp fa-regular fa-arrow-right"></i></Link>

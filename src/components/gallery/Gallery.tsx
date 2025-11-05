@@ -56,8 +56,6 @@ const galleryItems: GalleryItem[] = [
   { thumbnail: "/assets/img/gallery/img46.jpg" },
   { thumbnail: "/assets/img/gallery/img47.jpg" },
   { thumbnail: "/assets/img/gallery/img48.jpg" },
-  { thumbnail: "/assets/img/gallery/img49.jpg" },
-  { thumbnail: "/assets/img/gallery/img50.jpg" },
 ];
 
 const DEFAULT_RATIO = 4 / 3;

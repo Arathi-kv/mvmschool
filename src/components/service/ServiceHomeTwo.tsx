@@ -8,7 +8,7 @@ const ServiceHomeTwo = () => {
     <>
       <div className="it-service-4__area fix grey-bg-2 it-service-style-2 p-relative pt-120 pb-120">
         <div className="it-service-4__shape-2">
-          <img src="assets/img/service/shape-4-1.png" alt="rk-theme" />
+          <img src="assets/img/service/shape-4-1.png" alt="theme" />
         </div>
         <div className="container">
           <div className="it-service-4__section-wrap">
@@ -44,7 +44,7 @@ const ServiceHomeTwo = () => {
                 </div>
                 <div className="it-service-4__overly">
                   <div className="it-service-4__shape-1">
-                    <img src="assets/img/about/shape-4-4.png" alt="rk-theme" />
+                    <img src="assets/img/about/shape-4-4.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const ServiceHomeTwo = () => {
                 </div>
                 <div className="it-service-4__overly">
                   <div className="it-service-4__shape-1">
-                    <img src="assets/img/about/shape-4-4.png" alt="rk-theme" />
+                    <img src="assets/img/about/shape-4-4.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const ServiceHomeTwo = () => {
                 </div>
                 <div className="it-service-4__overly">
                   <div className="it-service-4__shape-1">
-                    <img src="assets/img/about/shape-4-4.png" alt="rk-theme" />
+                    <img src="assets/img/about/shape-4-4.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const ServiceHomeTwo = () => {
                 </div>
                 <div className="it-service-4__overly">
                   <div className="it-service-4__shape-1">
-                    <img src="assets/img/about/shape-4-4.png" alt="rk-theme" />
+                    <img src="assets/img/about/shape-4-4.png" alt="theme" />
                   </div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const ServiceHomeTwo = () => {
                 </div>
                 <div className="it-service-4__overly">
                   <div className="it-service-4__shape-1">
-                    <img src="assets/img/about/shape-4-4.png" alt="rk-theme" />
+                    <img src="assets/img/about/shape-4-4.png" alt="theme" />
                   </div>
                 </div>
               </div>

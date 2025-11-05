@@ -7,7 +7,7 @@ const SolutionHomeTwo = () => {
     <>
       <div className="it-solution-4__area fix z-index-3 black-bg pt-100 pb-100">
         <div className="it-solution-4__shape-1">
-          <img src="assets/img/solution/solution-bg-3.png" alt="rk-theme" />
+          <img src="assets/img/solution/solution-bg-3.png" alt="theme" />
         </div>
         <div className="container">
           <div className="row">

@@ -14,7 +14,7 @@ const Error = () => {
                 <h5 className="it-error__title">Page Not Found!</h5>
                 <div className="it-error__content text-center">
                   <div className="it-error__thumb">
-                    <img src="assets/img/error/Error.png" alt="rk-theme" />
+                    <img src="assets/img/error/Error.png" alt="theme" />
                   </div>
                   <p>The page you are looking for does not exist. It might have been moved or deleted.</p>
                   <Link className="it-black-btn hover-2" href="/"><span>back to home</span></Link>

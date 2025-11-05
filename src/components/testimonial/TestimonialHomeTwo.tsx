@@ -11,7 +11,7 @@ const TestimonialHomeTwo = ({ style_2 }: any) => {
     <> 
       <div className={`it-testimonial-4__area fix grey-bg-2 p-relative pt-90 pb-120  ${style_2 ? "" : "it-testimonial-style-2"}`}>
         <div className="it-testimonial-4__shape-2">
-          <img src="assets/img/testimonial/shape-4-2.png" alt="rk-theme" />
+          <img src="assets/img/testimonial/shape-4-2.png" alt="theme" />
         </div>
         <div className="container">
           <div className="row">
@@ -54,7 +54,7 @@ const TestimonialHomeTwo = ({ style_2 }: any) => {
                 <div className="it-testimonial-4__item p-relative">
                   <div className="it-testimonial-4__top-wrapper d-flex align-items-center">
                     <div className="it-testimonial-4__top-thumb">
-                      <img src="assets/img/testimonial/author-4-1.png" alt="rk-theme" />
+                      <img src="assets/img/testimonial/author-4-1.png" alt="theme" />
                     </div>
                     <div className="it-testimonial-4__author-info pt-35">
                       <span>Developer</span>
@@ -86,7 +86,7 @@ const TestimonialHomeTwo = ({ style_2 }: any) => {
                 <div className="it-testimonial-4__item p-relative">
                   <div className="it-testimonial-4__top-wrapper d-flex align-items-center">
                     <div className="it-testimonial-4__top-thumb">
-                      <img src="assets/img/testimonial/author-4-2.png" alt="rk-theme" />
+                      <img src="assets/img/testimonial/author-4-2.png" alt="theme" />
                     </div>
                     <div className="it-testimonial-4__author-info pt-35">
                       <span>DESIGNER</span>
@@ -115,7 +115,7 @@ const TestimonialHomeTwo = ({ style_2 }: any) => {
                 <div className="it-testimonial-4__item p-relative">
                   <div className="it-testimonial-4__top-wrapper d-flex align-items-center">
                     <div className="it-testimonial-4__top-thumb">
-                      <img src="assets/img/testimonial/author-4-1.png" alt="rk-theme" />
+                      <img src="assets/img/testimonial/author-4-1.png" alt="theme" />
                     </div>
                     <div className="it-testimonial-4__author-info pt-35">
                       <span>Developer</span>

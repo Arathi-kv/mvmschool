@@ -8,7 +8,7 @@ const ServiceHomeThree = () => {
     <>
       <div className="it-service-4__area fix black-bg p-relative pt-120 pb-120 z-index">
         <div className="it-service-4__shape-3">
-          <img src="assets/img/feature/shape-5.png" alt="rk-theme" />
+          <img src="assets/img/feature/shape-5.png" alt="theme" />
         </div>
         <div className="container">
           <div className="it-service-4__section-wrap">

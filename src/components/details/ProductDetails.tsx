@@ -13,7 +13,7 @@ const ProductDetails = () => {
             <div className="col-xl-12">
               <div className="it-project-details__wrapper">
                 <div className="it-project-details__thumb">
-                  <img src="assets/img/project/Details1-1.png" alt="rk-theme" />
+                  <img src="assets/img/project/Details1-1.png" alt="theme" />
                 </div>
                 <div className="it-project-details__thumb-text-box mb-45 d-flex align-items-center justify-content-between">
                   <div className="it-project-details__thumb-text">
@@ -54,7 +54,7 @@ const ProductDetails = () => {
                 <div className="row">
                   <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                     <div className="it-project-5__item fix">
-                      <img src="assets/img/project/project-3-1.jpg" alt="rk-theme" />
+                      <img src="assets/img/project/project-3-1.jpg" alt="theme" />
                       <div className="it-project-5__text">
                         <Link href="/facilities"><i
                           className="fa-sharp fa-regular fa-arrow-right"></i></Link>
@@ -62,13 +62,13 @@ const ProductDetails = () => {
                         <h6>Digital Solution</h6>
                       </div>
                       <div className="it-project-5__shape">
-                        <img src="assets/img/project/shape-5-1.png" alt="rk-theme" />
+                        <img src="assets/img/project/shape-5-1.png" alt="theme" />
                       </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                     <div className="it-project-5__item fix">
-                      <img src="assets/img/project/project-3-2.jpg" alt="rk-theme" />
+                      <img src="assets/img/project/project-3-2.jpg" alt="theme" />
                       <div className="it-project-5__text">
                         <Link href="/facilities"><i
                           className="fa-sharp fa-regular fa-arrow-right"></i></Link>
@@ -76,13 +76,13 @@ const ProductDetails = () => {
                         <h6>Digital Solution</h6>
                       </div>
                       <div className="it-project-5__shape">
-                        <img src="assets/img/project/shape-5-1.png" alt="rk-theme" />
+                        <img src="assets/img/project/shape-5-1.png" alt="theme" />
                       </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
                     <div className="it-project-5__item fix">
-                      <img src="assets/img/project/project-3-3.jpg" alt="rk-theme" />
+                      <img src="assets/img/project/project-3-3.jpg" alt="theme" />
                       <div className="it-project-5__text">
                         <Link href="/facilities"><i
                           className="fa-sharp fa-regular fa-arrow-right"></i></Link>
@@ -90,7 +90,7 @@ const ProductDetails = () => {
                         <h6>Digital Solution</h6>
                       </div>
                       <div className="it-project-5__shape">
-                        <img src="assets/img/project/shape-5-1.png" alt="rk-theme" />
+                        <img src="assets/img/project/shape-5-1.png" alt="theme" />
                       </div>
                     </div>
                   </div>
