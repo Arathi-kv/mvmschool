@@ -3,7 +3,7 @@ import AdmissionForm from '@/components/form/AdmissionForm';
 
 const Admission = () => {
   return (
-    <div className="admission-page pt-20 pb-20 bg-gray-50">
+    <div className="admission-page pt-90 pb-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Admission Guidelines */}
@@ -16,7 +16,7 @@ const Admission = () => {
               <li>All admissions are provisional but principal has a right to cancel any admission at any time.</li>
               <li>Higher secondary admission will start only after publishing SSLC result as per government notification.</li>
             </ul>
-          </div>
+          </div><br></br>
 
           {/* Special Features */}
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -31,7 +31,7 @@ const Admission = () => {
               <li>💡 MVM EMBEDDED EDU APP</li>
               <li>🎈 IAS Orientation</li>
             </ul>
-          </div>
+          </div><br></br>
 
           {/* Hostel Procedure */}
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -43,7 +43,7 @@ const Admission = () => {
               <li>Separate hostel for both boys and girls are functioning in the campus. Special coaching programme are arranged for hostel student for physical, cultural and moral development of the pupil. The hostel mess is non-vegetarian; in no case outside food is allowed.</li>
               <li>The parents are allowed to visit their ward in the hostel only on holidays.</li>
             </ul>
-          </div>
+          </div><br></br>
 
           {/* Contact Details */}
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -56,10 +56,10 @@ const Admission = () => {
           {/* Admission Form */}
             <div className="container" style={{ marginTop: "50px" }}>
          <div className="d-flex justify-content-center align-items-center min-vh-100">
-  <div className="it-contact__form-box p-4 shadow-sm bg-white rounded-3">
-    <AdmissionForm />
-  </div>
-</div>
+          <div className="it-contact__form-box p-4 shadow-sm bg-white rounded-3">
+            <AdmissionForm />
+          </div>
+        </div>
 
         </div>
       </div>
