@@ -4,58 +4,135 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 type GalleryItem = {
+  title: string;
   thumbnail: string;
+  popupImages: string[];
+  extraImages?: string[];
 };
 
 const galleryItems: GalleryItem[] = [
-  { thumbnail: "/assets/img/gallery/img1.jpg" },
-  { thumbnail: "/assets/img/gallery/img2.jpg" },
-  { thumbnail: "/assets/img/gallery/img3.jpg" },
-  { thumbnail: "/assets/img/gallery/img4.jpg" },
-  { thumbnail: "/assets/img/gallery/img5.jpg" },
-  { thumbnail: "/assets/img/gallery/img6.jpg" },
-  { thumbnail: "/assets/img/gallery/img7.jpg" },
-  { thumbnail: "/assets/img/gallery/img8.jpg" },
-  { thumbnail: "/assets/img/gallery/img9.jpg" },
-  { thumbnail: "/assets/img/gallery/img10.jpg" },
-  { thumbnail: "/assets/img/gallery/img11.jpg" },
-  { thumbnail: "/assets/img/gallery/img12.jpg" },
-  { thumbnail: "/assets/img/gallery/img13.jpg" },
-  { thumbnail: "/assets/img/gallery/img14.jpg" },
-  { thumbnail: "/assets/img/gallery/img15.jpg" },
-  { thumbnail: "/assets/img/gallery/img16.jpg" },
-  { thumbnail: "/assets/img/gallery/img17.jpg" },
-  { thumbnail: "/assets/img/gallery/img18.jpg" },
-  { thumbnail: "/assets/img/gallery/img19.jpg" },
-  { thumbnail: "/assets/img/gallery/img20.jpg" },
-  { thumbnail: "/assets/img/gallery/img21.jpg" },
-  { thumbnail: "/assets/img/gallery/img22.jpg" },
-  { thumbnail: "/assets/img/gallery/img23.jpg" },
-  { thumbnail: "/assets/img/gallery/img24.jpg" },
-  { thumbnail: "/assets/img/gallery/img25.jpg" },
-  { thumbnail: "/assets/img/gallery/img26.jpg" },
-  { thumbnail: "/assets/img/gallery/img27.jpg" },
-  { thumbnail: "/assets/img/gallery/img28.jpg" },
-  { thumbnail: "/assets/img/gallery/img29.jpg" },
-  { thumbnail: "/assets/img/gallery/img30.jpg" },
-  { thumbnail: "/assets/img/gallery/img31.jpg" },
-  { thumbnail: "/assets/img/gallery/img32.jpg" },
-  { thumbnail: "/assets/img/gallery/img33.jpg" },
-  { thumbnail: "/assets/img/gallery/img34.jpg" },
-  { thumbnail: "/assets/img/gallery/img35.jpg" },
-  { thumbnail: "/assets/img/gallery/img36.jpg" },
-  { thumbnail: "/assets/img/gallery/img37.jpg" },
-  { thumbnail: "/assets/img/gallery/img38.jpg" },
-  { thumbnail: "/assets/img/gallery/img39.jpg" },
-  { thumbnail: "/assets/img/gallery/img40.jpg" },
-  { thumbnail: "/assets/img/gallery/img41.jpg" },
-  { thumbnail: "/assets/img/gallery/img42.jpg" },
-  { thumbnail: "/assets/img/gallery/img43.jpg" },
-  { thumbnail: "/assets/img/gallery/img44.jpg" },
-  { thumbnail: "/assets/img/gallery/img45.jpg" },
-  { thumbnail: "/assets/img/gallery/img46.jpg" },
-  { thumbnail: "/assets/img/gallery/img47.jpg" },
-  { thumbnail: "/assets/img/gallery/img48.jpg" },
+  {
+    title: "KG",
+   thumbnail:  "/assets/img/gallery/img1.jpg",
+    popupImages: ["/assets/img/gallery/img1.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img33.jpg",
+      "/assets/img/gallery/img2.jpg",
+      "/assets/img/gallery/img48.jpg",
+      "/assets/img/gallery/img14.jpg",
+    ],
+  },
+  {
+    title: "School Fest",
+     thumbnail:  "/assets/img/gallery/img4.jpg",
+    popupImages: [ "/assets/img/gallery/img4.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img15.jpg",
+      "/assets/img/gallery/img6.jpg",
+      "/assets/img/gallery/img19.jpg",
+      "/assets/img/gallery/img8.jpg",
+      "/assets/img/gallery/img17.jpg",
+       "/assets/img/gallery/img16.jpg",
+    ],
+  },
+
+   {
+    title: "Celebration",
+    thumbnail:  "/assets/img/gallery/img11.jpg",
+    popupImages: ["/assets/img/gallery/img11.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img12.jpg",
+      "/assets/img/gallery/img13.jpg",
+    ],
+  },
+  {
+    title: "Environment Day",
+     thumbnail:  "/assets/img/gallery/img20.jpg",
+  popupImages: ["/assets/img/gallery/img20.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img21.jpg",
+    ],
+  },
+ 
+  {
+    title: "Guides and Scouts",
+    thumbnail:  "/assets/img/gallery/img26.jpg",
+ popupImages: ["/assets/img/gallery/img26.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img22.jpg",
+      "/assets/img/gallery/img23.jpg",
+      "/assets/img/gallery/img31.jpg",
+      "/assets/img/gallery/img28.jpg",
+    ],
+  },
+  
+  {
+    title: "Students Performance",
+     thumbnail:  "/assets/img/gallery/img7.jpg",
+   popupImages: ["/assets/img/gallery/img7.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img9.jpg",
+      "/assets/img/gallery/img10.jpg",
+    ],
+  },
+ 
+  {
+    title: "PTA Meeting",
+     thumbnail:  "/assets/img/gallery/img44.jpg",
+ popupImages: ["/assets/img/gallery/img44.jpg"],
+    extraImages: [
+       "/assets/img/gallery/img45.jpg",
+    ],
+  },
+ 
+  {
+    title: "Reading Day",
+     thumbnail:  "/assets/img/gallery/img43.jpg",
+   popupImages: ["/assets/img/gallery/img43.jpg"],
+    extraImages: [
+         "/assets/img/gallery/img42.jpg",
+    ],
+  },
+  {
+    title: "School Assembly",
+    thumbnail:  "/assets/img/gallery/img37.jpg",
+    popupImages: ["/assets/img/gallery/img37.jpg"],
+       extraImages: 
+       ["/assets/img/gallery/img36.jpg",
+            "/assets/img/gallery/img35.jpg",
+         "/assets/img/gallery/img32.jpg" ,
+       ],
+  },
+ 
+  {
+    title: "School Team",
+     thumbnail:  "/assets/img/gallery/img3.jpg",
+    popupImages: ["/assets/img/gallery/img3.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img24.jpg",
+    ],
+  },
+  {
+    title: "Social Awareness",
+     thumbnail:  "/assets/img/gallery/img29.jpg",
+    popupImages: ["/assets/img/gallery/img29.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img18.jpg",
+    ],
+  },
+   {
+    title: "Staff and members",
+     thumbnail:  "/assets/img/gallery/img39.jpg",
+    popupImages: ["/assets/img/gallery/img39.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img40.jpg",
+      "/assets/img/gallery/img25.jpg",
+      "/assets/img/gallery/img46.jpg",
+      "/assets/img/gallery/img47.jpg",
+      "/assets/img/gallery/img34.jpg",
+    ],
+  },
+ 
 ];
 
 const DEFAULT_RATIO = 4 / 3;
@@ -63,9 +140,14 @@ const DEFAULT_RATIO = 4 / 3;
 const Gallery = () => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState<{ src: string }[]>([]);
+  const [title, setTitle] = useState("");
 
-  const handleOpen = (img: string) => {
-    setSlides([{ src: img }]); // only one image
+  const handleOpen = (item: GalleryItem) => {
+    setTitle(item.title);
+    const allImages = [...item.popupImages, ...(item.extraImages || [])].map(
+      (img) => ({ src: img })
+    );
+    setSlides(allImages);
     setOpen(true);
   };
 
@@ -81,12 +163,12 @@ const Gallery = () => {
             <div
               className="gallery-item"
               key={index}
-              onClick={() => handleOpen(item.thumbnail)}
+              onClick={() => handleOpen(item)}
             >
               <div className="thumb-wrapper" style={{ paddingTop }}>
                 <img
                   src={safeThumb}
-                  alt={`Gallery image ${index + 1}`}
+                  alt={item.title}
                   className="gallery-thumb"
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
@@ -95,21 +177,56 @@ const Gallery = () => {
                   }}
                 />
               </div>
+              <h5 className="gallery-caption">{item.title}</h5>
             </div>
           );
         })}
       </div>
 
-      {/* Lightbox */}
       {open && (
         <Lightbox
           open={open}
           close={() => setOpen(false)}
           slides={slides}
-          controller={{ closeOnBackdropClick: true }}
-          render={{
-            buttonPrev: () => null, // hide prev button
-            buttonNext: () => null, // hide next button
+          toolbar={{
+            buttons: [
+              <div
+                key="custom-title"
+                style={{
+                  position: "absolute",
+                  top: "20px",
+                  left: "30px",
+                  color: "white",
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  pointerEvents: "none",
+                }}
+              >
+                {title}
+              </div>,
+              <button
+                key="close-btn"
+                onClick={() => setOpen(false)}
+                style={{
+                  position: "absolute",
+                  top: "15px",
+                  right: "25px",
+                  background: "rgba(0,0,0,0.6)",
+                  border: "none",
+                  color: "white",
+                  fontSize: "24px",
+                  borderRadius: "50%",
+                  width: "40px",
+                  height: "40px",
+                  cursor: "pointer",
+                  lineHeight: "40px",
+                  textAlign: "center",
+                }}
+                aria-label="Close"
+              >
+                ✕
+              </button>,
+            ],
           }}
         />
       )}
@@ -135,7 +252,7 @@ const Gallery = () => {
         }
 
         .gallery-item:hover {
-          transform: scale(1.02);
+          transform: scale(1.01);
         }
 
         .thumb-wrapper {
@@ -153,6 +270,13 @@ const Gallery = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+
+        .gallery-caption {
+          margin-top: 10px;
+          font-weight: normal;
+          font-size: 1rem;
+          text-align: center;
         }
 
         @media (max-width: 768px) {
