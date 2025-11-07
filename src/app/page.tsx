@@ -25,11 +25,7 @@ const IndexPage = () => {
         {/* About Section */}
         <AboutHomeOne style_2={true} />
 
-        {/* Mission Section */}
-        <Mission />
-
-        {/* Separate Motto section */}
-         <Motto />
+        
 
        
       </main>
