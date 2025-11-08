@@ -1,183 +1,165 @@
 "use client";
-import React, { useState, useRef, FormEvent, ChangeEvent } from "react";
-import emailjs from "@emailjs/browser";
-import toast from "react-hot-toast";
+import React, { useState } from "react";
 
-interface AdmissionData {
-  studentName: string;
-  guardianName: string;
-  dob: string;
-  aadhar: string;
-  phone: string;
-  address: string;
-}
-
-const AdmissionForm: React.FC = () => {
-  const [formData, setFormData] = useState<AdmissionData>({
+const AdmissionForm = () => {
+  const [form, setForm] = useState({
     studentName: "",
     guardianName: "",
     dob: "",
-    aadhar: "",
     phone: "",
-    address: "",
+    email: "",
+    message: "",
   });
 
-  const [sending, setSending] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState("");
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  setForm({ ...form, [e.target.name]: e.target.value });
+};
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!formRef.current) return;
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setStatus("Sending...");
 
-    setSending(true);
+  try {
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: form.studentName,
+        email: form.email,
+        subject: `Admission Enquiry from ${form.studentName}`,
+        message: `
+Guardian Name: ${form.guardianName}
+Date of Birth: ${form.dob}
+Phone Number: ${form.phone}
 
-    try {
-      await emailjs.send(
-        "service_b8jhths", // Your EmailJS Service ID
-        "template_5cv60tb", // Your EmailJS Template ID
-        formData,
-        "rdpFsDpIb5RAcDe5S" // Your EmailJS Public Key
-      );
+Message:
+${form.message}
+        `,
+      }),
+    });
 
-      toast.success("Admission form submitted successfully!");
-      setFormData({
+    if (res.ok) {
+      setStatus("✅ Mail sent successfully!");
+      setForm({
         studentName: "",
         guardianName: "",
         dob: "",
-        aadhar: "",
         phone: "",
-        address: "",
+        email: "",
+        message: "",
       });
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      toast.error("Failed to send admission form. Try again later.");
-    } finally {
-      setSending(false);
+    } else {
+      setStatus("❌ Failed to send mail. Try again.");
     }
-  };
+  } catch (error) {
+    console.error(error);
+    setStatus("⚠️ Error sending message.");
+  }
+};
 
   return (
-    <section className="py-5 bg-light">
-      <div className="container">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold">Admission Form</h2>
-          <p className="text-muted">
-            Please fill in all required details to submit your admission request.
-          </p>
+    <div className="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+      <h3 className="text-2xl font-semibold text-center mb-6 text-gray-800">
+        Admission Form
+      </h3>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block font-medium text-gray-700 mb-1">
+            Student Name
+          </label>
+          <input
+            type="text"
+            name="studentName"
+            value={form.studentName}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
         </div>
 
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <div className="card border-0 shadow-lg rounded-4">
-              <div className="card-body p-4 p-md-5">
-                <form ref={formRef} onSubmit={handleSubmit}>
-                  <div className="row g-4">
-                    {/* Student Name */}
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Student Name*</label>
-                      <input
-                        type="text"
-                        name="studentName"
-                        className="form-control"
-                        required
-                        value={formData.studentName}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    {/* Guardian Name */}
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Guardian Name*</label>
-                      <input
-                        type="text"
-                        name="guardianName"
-                        className="form-control"
-                        required
-                        value={formData.guardianName}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    {/* Date of Birth */}
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Date of Birth*</label>
-                      <input
-                        type="date"
-                        name="dob"
-                        className="form-control"
-                        required
-                        value={formData.dob}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    {/* Aadhar */}
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Aadhar Number*</label>
-                      <input
-                        type="text"
-                        name="aadhar"
-                        className="form-control"
-                        required
-                        value={formData.aadhar}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    {/* Phone */}
-                    <div className="col-md-6">
-                      <label className="form-label fw-semibold">Phone Number*</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        className="form-control"
-                        required
-                        value={formData.phone}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    {/* Address */}
-                    <div className="col-12">
-                      <label className="form-label fw-semibold">Address*</label>
-                      <textarea
-                        name="address"
-                        className="form-control"
-                        rows={3}
-                        required
-                        value={formData.address}
-                        onChange={handleChange}
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  {/* Submit Button */}
-                  <div className="text-center mt-4">
-                    <button
-                      type="submit"
-                      className="btn btn-primary px-5 py-2 rounded-pill"
-                      disabled={sending}
-                    >
-                      {sending ? "Submitting..." : "Submit Admission Form"}
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <p className="text-center text-muted mt-4 small">
-              *All fields are mandatory. Your details will be kept confidential.
-            </p>
-          </div>
+        <div>
+          <label className="block font-medium text-gray-700 mb-1">
+            Guardian Name
+          </label>
+          <input
+            type="text"
+            name="guardianName"
+            value={form.guardianName}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
         </div>
-      </div>
-    </section>
+
+        <div>
+          <label className="block font-medium text-gray-700 mb-1">
+            Date of Birth
+          </label>
+          <input
+            type="date"
+            name="dob"
+            value={form.dob}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block font-medium text-gray-700 mb-1">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block font-medium text-gray-700 mb-1">
+            Email Address
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label className="block font-medium text-gray-700 mb-1">Message</label>
+          <textarea
+            name="message"
+            rows={4}
+            value={form.message}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition"
+        >
+          Send Message
+        </button>
+      </form>
+
+      {status && (
+        <p className="text-center text-gray-700 mt-4 font-medium">{status}</p>
+      )}
+    </div>
   );
 };
 
