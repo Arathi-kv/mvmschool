@@ -4,6 +4,19 @@ import Link from "next/link";
 import React from "react";
 
 const BlogHomeOne = () => {
+  const staff = [
+    {
+      img: "assets/img/management/rasheed-karinkappara-principal.jpg",
+      name: "Mr.Rasheed Karinkappara",
+      position: "Principal",
+    },
+    {
+      img: "assets/img/management/alikutty-tm-vice-principal.jpg",
+      name: "Mr.Alikutty T M",
+      position: "Vice Principal",
+    },
+  ];
+
   const curriculum = [
     {
       img: "assets/img/curriculum/lkg.jpg",
@@ -51,82 +64,150 @@ const BlogHomeOne = () => {
   ];
 
   return (
-    <section className="it-blog__area pt-120 pb-90 bg-light">
-      <div className="container">
-        {/* Header */}
-        <div className="text-center mb-5">
-          <span className="it-section-subtitle">Curriculum Overview</span>
-          <h2 className="it-section-title">
-            Building strong foundations for <br /> a brighter future
-          </h2>
-        </div>
+    <>
+      {/* === Principal & Vice Principal Section === */}
+      <section className="it-staff__area pt-100 pb-60 bg-white">
+        <div className="container">
+          <div className="text-center mb-5">
+            <span className="it-section-subtitle">Our Leadership</span>
+            <h2 className="it-section-title">Guided by Excellence</h2>
+          </div>
 
-        {/* Grid Layout */}
-        <div
-          className="grid-layout"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "30px",
-          }}
-        >
-          {curriculum.map((item, index) => (
-            <div
-              key={index}
-              className="it-blog__item"
-              style={{
-                background: "#fff",
-                borderRadius: "12px",
-                overflow: "hidden",
-                boxShadow: "0 4px 16px rgba(0, 0, 0, 0.08)",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              }}
-            >
-              <div className="it-blog__thumb p-relative">
+          <div
+            className="grid-layout"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))", // wider grid
+              gap: "50px",
+              justifyItems: "center",
+            }}
+          >
+            {staff.map((person, index) => (
+              <div
+                key={index}
+                className="it-staff__item text-center"
+                style={{
+                  background: "#fff",
+                  borderRadius: "6px",
+                  padding: "10px",
+                  boxShadow: "0 6px 18px rgba(0, 0, 0, 0.1)",
+                  width: "100%",
+                  maxWidth: "460px", // wider card
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                }}
+              >
                 <img
-                  src={item.img}
-                  alt={item.title}
+                  src={person.img}
+                  alt={person.name}
                   style={{
                     width: "100%",
-                    height: "220px",
+                    height: "380px",
                     objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "20px",
                   }}
                 />
-                <div className="it-blog__icon">
-                  <Link href="#">
-                    <i className="flaticon-up-right-arrow"></i>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="it-blog__content p-4">
-                <div className="it-blog__meta">
-                  <span>Curriculum</span>
-                </div>
                 <h4
-                  className="it-blog__title mb-3"
                   style={{
                     fontWeight: "600",
+                    fontSize: "20px",
                     color: "#0A1F44",
+                    marginBottom: "6px",
                   }}
                 >
-                  {item.title}
+                  {person.name}
                 </h4>
-                <div
+                <p
                   style={{
                     color: "#555",
-                    fontSize: "15px",
-                    lineHeight: "1.7",
+                    fontSize: "16px",
+                    marginBottom: "0",
                   }}
                 >
-                  {item.desc}
+                  {person.position}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === Curriculum Section === */}
+      <section className="it-blog__area pt-120 pb-90 bg-light">
+        <div className="container">
+          <div className="text-center mb-5">
+            <span className="it-section-subtitle">Curriculum Overview</span>
+            <h2 className="it-section-title">
+              Building strong foundations for <br /> a brighter future
+            </h2>
+          </div>
+
+          <div
+            className="grid-layout"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: "30px",
+            }}
+          >
+            {curriculum.map((item, index) => (
+              <div
+                key={index}
+                className="it-blog__item"
+                style={{
+                  background: "#fff",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.08)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                }}
+              >
+                <div className="it-blog__thumb p-relative">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    style={{
+                      width: "100%",
+                      height: "220px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <div className="it-blog__icon">
+                    <Link href="#">
+                      <i className="flaticon-up-right-arrow"></i>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="it-blog__content p-4">
+                  <div className="it-blog__meta">
+                    <span>Curriculum</span>
+                  </div>
+                  <h4
+                    className="it-blog__title mb-3"
+                    style={{
+                      fontWeight: "600",
+                      color: "#0A1F44",
+                    }}
+                  >
+                    {item.title}
+                  </h4>
+                  <div
+                    style={{
+                      color: "#555",
+                      fontSize: "15px",
+                      lineHeight: "1.7",
+                    }}
+                  >
+                    {item.desc}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -16,8 +16,8 @@ const ProjectHomeThree = () => {
             <div className="row">
               <div className="col-xl-12">
                 <div className="it-project-5__section-box text-center">
-                  <span className="it-section-subtitle-5">OUR SHOWCASE</span>
-                  <h4 className="it-section-title">Check Our Latest Projects</h4>
+                  <span className="it-section-subtitle-5">OUR CURRICULUM</span>
+                  <h4 className="it-section-title">A Journey of Learning and Growth</h4>
                 </div>
               </div>
             </div>
@@ -53,79 +53,94 @@ const ProjectHomeThree = () => {
 
                 <SwiperSlide className="swiper-slide">
                   <div className="it-project-5__item fix">
-                    <img src="assets/img/project/project-5-1.jpg" alt="theme" />
+                    <img src="assets/img/curriculum/lkg-home.jpg" alt="theme" />
                     <div className="it-project-5__text">
-                      <Link href="/facilities"><i
+                      <Link href="/curriculum"><i
                         className="fa-sharp fa-regular fa-arrow-right"></i></Link>
-                      <span>IDEA</span>
-                      <h6>Digital Solution</h6>
+                      <span>Curriculum</span>
+                      <h6>K.G Section</h6>
                     </div>
                     <div className="it-project-5__shape">
-                      <img src="assets/img/project/shape-5-1.png" alt="theme" />
+                     <img src="assets/img/curriculum/lkg-home.jpg" alt="theme" />
                     </div>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide className="swiper-slide">
                   <div className="it-project-5__item fix">
-                    <img src="assets/img/project/project-5-2.jpg" alt="theme" />
+                  <img src="assets/img/curriculum/lp-home.jpg" alt="theme" />
+
                     <div className="it-project-5__text">
-                      <Link href="/facilities"><i
+                      <Link href="/curriculum"><i
                         className="fa-sharp fa-regular fa-arrow-right"></i></Link>
-                      <span>IDEA</span>
-                      <h6>Digital Solution</h6>
+                     <span>Curriculum</span>
+                      <h6>Primary Section(L.P)</h6>
                     </div>
                     <div className="it-project-5__shape">
-                      <img src="assets/img/project/shape-5-1.png" alt="theme" />
+                        <img src="assets/img/curriculum/lp-home.jpg" alt="theme" />
+
                     </div>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide className="swiper-slide">
                   <div className="it-project-5__item fix">
-                    <img src="assets/img/project/project-5-3.jpg" alt="theme" />
+                    <img src="assets/img/curriculum/up-home.jpg" alt="theme" />
                     <div className="it-project-5__text">
-                      <Link href="/facilities"><i
+                      <Link href="/curriculum"><i
                         className="fa-sharp fa-regular fa-arrow-right"></i></Link>
-                      <span>IDEA</span>
-                      <h6>Digital Solution</h6>
+                     <span>Curriculum</span>
+                      <h6>Upper Primary(U.P)</h6>
                     </div>
                     <div className="it-project-5__shape">
-                      <img src="assets/img/project/shape-5-1.png" alt="theme" />
+                       <img src="assets/img/curriculum/up-home.jpg" alt="theme" />
                     </div>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide className="swiper-slide">
                   <div className="it-project-5__item fix">
-                    <img src="assets/img/project/project-5-4.jpg" alt="theme" />
+                    <img src="assets/img/curriculum/highschool-home.jpg" alt="theme" />
                     <div className="it-project-5__text">
-                      <Link href="/facilities"><i
+                      <Link href="/curriculum"><i
                         className="fa-sharp fa-regular fa-arrow-right"></i></Link>
-                      <span>IDEA</span>
-                      <h6>Digital Solution</h6>
+                       <span>Curriculum</span>
+                      <h6>High School Section</h6>
                     </div>
                     <div className="it-project-5__shape">
-                      <img src="assets/img/project/shape-5-1.png" alt="theme" />
+                      <img src="assets/img/curriculum/highschool-home.jpg" alt="theme" />
                     </div>
                   </div>
                 </SwiperSlide>
-
+                  <SwiperSlide className="swiper-slide">
+                  <div className="it-project-5__item fix">
+                    <img src="assets/img/curriculum/highsection-home.jpg" alt="theme" />
+                    <div className="it-project-5__text">
+                      <Link href="/curriculum"><i
+                        className="fa-sharp fa-regular fa-arrow-right"></i></Link>
+                       <span>Curriculum</span>
+                      <h6>Higher Secondary Section</h6>
+                    </div>
+                    <div className="it-project-5__shape">
+                      <img src="assets/img/curriculum/highsection-home.jpg" alt="theme" />
+                    </div>
+                  </div>
+                </SwiperSlide>
+                
                 <SwiperSlide className="swiper-slide">
                   <div className="it-project-5__item fix">
-                    <img src="assets/img/project/project-5-3.jpg" alt="theme" />
+                    <img src="assets/img/curriculum/moralEdu.jpg" alt="theme" />
                     <div className="it-project-5__text">
-                      <Link href="/facilities"><i
+                      <Link href="/curriculum"><i
                         className="fa-sharp fa-regular fa-arrow-right"></i></Link>
-                      <span>IDEA</span>
-                      <h6>Digital Solution</h6>
+                      <span>Curriculum</span>
+                      <h6>Moral / Islamic Education</h6>
                     </div>
                     <div className="it-project-5__shape">
-                      <img src="assets/img/project/shape-5-1.png" alt="theme" />
+                       <img src="assets/img/curriculum/moralEdu-home.jpg" alt="theme" />
                     </div>
                   </div>
                 </SwiperSlide>
-
 
                 <div className="project-5-slider-dots"></div>
               </Swiper>
