@@ -32,11 +32,11 @@ const AdmissionForm = () => {
           email: "school@example.com",
           subject: `Admission Request from ${form.studentName}`,
           message: `
-          Guardian Name: ${form.guardianName}
-          Date of Birth: ${form.dob}
-          Aadhaar Number: ${form.aadharNumber}
-          Phone Number: ${form.phone}
-          Address: ${form.address}
+Guardian Name: ${form.guardianName}
+Date of Birth: ${form.dob}
+Aadhaar Number: ${form.aadharNumber}
+Phone Number: ${form.phone}
+Address: ${form.address}
           `,
         }),
       });
@@ -71,7 +71,11 @@ const AdmissionForm = () => {
         </p>
       </div>
 
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-full sm:max-w-xl md:max-w-3xl">
+      {/* ✅ Wider form box */}
+      <div
+        className="bg-white p-8 rounded-2xl shadow-xl w-full"
+        style={{ maxWidth: "1000px" }}
+      >
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Two-column layout for first four fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -159,41 +163,64 @@ const AdmissionForm = () => {
               required
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             />
-                        </div>
-              <button
-                type="submit"
-                style={{
-                  width: "100%",
-                  backgroundColor: "#43baff;", // Indigo-600
-                  color: "#fff",
-                  fontWeight: 500,
-                  padding: "12px 0",
-                  border: "none",
-                  borderRadius: "0px",
-                  cursor: "pointer",
-                  transition: "background-color 0.3s ease",
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#43baff;")} // Indigo-700
-                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#43baff;")}
-              >
-                Submit Admission Form
-              </button>
+          </div>
 
-              </form>
+          {/* ✅ Inline button styles */}
+        <button
+  type="submit"
+  style={{
+    width: "40%", // moderate width
+    backgroundColor: "#43baff",
+    color: "#fff",
+    fontWeight: 500,
+    fontSize: "14px",
+    padding: "10px 0",
+    border: "none",
+    borderRadius: "0", // no rounded corners
+    cursor: "pointer",
+    transition: "background-color 0.3s ease",
+    display: "block",
+    margin: "20px auto 0", // 20px space before button, centered
+  }}
+  onMouseOver={(e) =>
+    (e.currentTarget.style.backgroundColor = "#1593e2")
+  }
+  onMouseOut={(e) =>
+    (e.currentTarget.style.backgroundColor = "#43baff")
+  }
+>
+  Submit Admission Form
+</button>
 
-              {status && (
-                <p style={{ textAlign: "center", color: "#374151", marginTop: "1rem", fontWeight: 500 }}>
-                  {status}
-                </p>
-              )}
 
-              <p style={{ textAlign: "center", color: "#6B7280", fontSize: "0.875rem", marginTop: "1.5rem" }}>
-                *All fields are mandatory. Your details will be kept confidential.
-              </p>
+        </form>
 
-                    </div>
-                  </div>
-                );
-              };
+        {status && (
+          <p
+            style={{
+              textAlign: "center",
+              color: "#374151",
+              marginTop: "1rem",
+              fontWeight: 500,
+            }}
+          >
+            {status}
+          </p>
+        )}
 
-              export default AdmissionForm;
+        <p
+          style={{
+            textAlign: "center",
+            color: "#6B7280",
+            fontSize: "0.875rem",
+            marginTop: "1.5rem",
+          }}
+        >
+          *All fields are mandatory. Your details will be kept confidential.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default AdmissionForm;
