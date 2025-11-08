@@ -5,8 +5,7 @@ import AboutHomeOne from '@/components/about/AboutHomeOne';
 import ProjectHomeOne from '@/components/project/ProjectHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
-import Mission from '@/components/mission/Mission';
-import Motto from '@/components/motto/Motto';
+
 
 
 export const metadata = {
