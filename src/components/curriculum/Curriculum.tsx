@@ -88,11 +88,11 @@ const BlogHomeOne = () => {
                 className="it-staff__item text-center"
                 style={{
                   background: "#fff",
-                  borderRadius: "6px",
+                  borderRadius: "2px",
                   padding: "10px",
-                  boxShadow: "0 6px 18px rgba(0, 0, 0, 0.1)",
+                  boxShadow: "0 6px 18px rgba(0, 0, 0, 0.02)",
                   width: "100%",
-                  maxWidth: "460px", // wider card
+                  maxWidth: "500px", // wider card
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}
               >

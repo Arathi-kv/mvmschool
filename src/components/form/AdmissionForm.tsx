@@ -6,161 +6,194 @@ const AdmissionForm = () => {
     studentName: "",
     guardianName: "",
     dob: "",
+    aadharNumber: "",
     phone: "",
-    email: "",
-    message: "",
+    address: "",
   });
 
   const [status, setStatus] = useState("");
 
- const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  setForm({ ...form, [e.target.name]: e.target.value });
-};
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setStatus("Sending...");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("Sending...");
 
-  try {
-    const res = await fetch("/api/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.studentName,
-        email: form.email,
-        subject: `Admission Enquiry from ${form.studentName}`,
-        message: `
-Guardian Name: ${form.guardianName}
-Date of Birth: ${form.dob}
-Phone Number: ${form.phone}
-
-Message:
-${form.message}
-        `,
-      }),
-    });
-
-    if (res.ok) {
-      setStatus("✅ Mail sent successfully!");
-      setForm({
-        studentName: "",
-        guardianName: "",
-        dob: "",
-        phone: "",
-        email: "",
-        message: "",
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.studentName,
+          email: "school@example.com",
+          subject: `Admission Request from ${form.studentName}`,
+          message: `
+          Guardian Name: ${form.guardianName}
+          Date of Birth: ${form.dob}
+          Aadhaar Number: ${form.aadharNumber}
+          Phone Number: ${form.phone}
+          Address: ${form.address}
+          `,
+        }),
       });
-    } else {
-      setStatus("❌ Failed to send mail. Try again.");
+
+      if (res.ok) {
+        setStatus("✅ Form submitted successfully!");
+        setForm({
+          studentName: "",
+          guardianName: "",
+          dob: "",
+          aadharNumber: "",
+          phone: "",
+          address: "",
+        });
+      } else {
+        setStatus("❌ Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("⚠️ Error sending data.");
     }
-  } catch (error) {
-    console.error(error);
-    setStatus("⚠️ Error sending message.");
-  }
-};
+  };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto">
-      <h3 className="text-2xl font-semibold text-center mb-6 text-gray-800">
-        Admission Form
-      </h3>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-10">
+      <div className="text-center mb-6">
+        <h2 className="text-3xl font-extrabold text-blue-900 mb-2">
+          Admission Form
+        </h2>
+        <p className="text-gray-600 text-sm">
+          Please fill in all required details to submit your admission request.
+        </p>
+      </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block font-medium text-gray-700 mb-1">
-            Student Name
-          </label>
-          <input
-            type="text"
-            name="studentName"
-            value={form.studentName}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+      <div className="bg-white p-8 rounded-2xl shadow-xl w-full sm:max-w-xl md:max-w-3xl">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Two-column layout for first four fields */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block font-medium text-gray-700 mb-1">
+                Student Name*
+              </label>
+              <input
+                type="text"
+                name="studentName"
+                value={form.studentName}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
+            </div>
 
-        <div>
-          <label className="block font-medium text-gray-700 mb-1">
-            Guardian Name
-          </label>
-          <input
-            type="text"
-            name="guardianName"
-            value={form.guardianName}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+            <div>
+              <label className="block font-medium text-gray-700 mb-1">
+                Guardian Name*
+              </label>
+              <input
+                type="text"
+                name="guardianName"
+                value={form.guardianName}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
+            </div>
 
-        <div>
-          <label className="block font-medium text-gray-700 mb-1">
-            Date of Birth
-          </label>
-          <input
-            type="date"
-            name="dob"
-            value={form.dob}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+            <div>
+              <label className="block font-medium text-gray-700 mb-1">
+                Date of Birth*
+              </label>
+              <input
+                type="date"
+                name="dob"
+                value={form.dob}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
+            </div>
 
-        <div>
-          <label className="block font-medium text-gray-700 mb-1">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            value={form.phone}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+            <div>
+              <label className="block font-medium text-gray-700 mb-1">
+                Aadhaar Number*
+              </label>
+              <input
+                type="text"
+                name="aadharNumber"
+                value={form.aadharNumber}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
+            </div>
+          </div>
 
-        <div>
-          <label className="block font-medium text-gray-700 mb-1">
-            Email Address
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+          {/* Phone and Address */}
+          <div>
+            <label className="block font-medium text-gray-700 mb-1">
+              Phone Number*
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
 
-        <div>
-          <label className="block font-medium text-gray-700 mb-1">Message</label>
-          <textarea
-            name="message"
-            rows={4}
-            value={form.message}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+          <div>
+            <label className="block font-medium text-gray-700 mb-1">
+              Address*
+            </label>
+            <textarea
+              name="address"
+              rows={3}
+              value={form.address}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            />
+                        </div>
+              <button
+                type="submit"
+                style={{
+                  width: "100%",
+                  backgroundColor: "#43baff;", // Indigo-600
+                  color: "#fff",
+                  fontWeight: 500,
+                  padding: "12px 0",
+                  border: "none",
+                  borderRadius: "0px",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#43baff;")} // Indigo-700
+                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#43baff;")}
+              >
+                Submit Admission Form
+              </button>
 
-        <button
-          type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium transition"
-        >
-          Send Message
-        </button>
-      </form>
+              </form>
 
-      {status && (
-        <p className="text-center text-gray-700 mt-4 font-medium">{status}</p>
-      )}
-    </div>
-  );
-};
+              {status && (
+                <p style={{ textAlign: "center", color: "#374151", marginTop: "1rem", fontWeight: 500 }}>
+                  {status}
+                </p>
+              )}
 
-export default AdmissionForm;
+              <p style={{ textAlign: "center", color: "#6B7280", fontSize: "0.875rem", marginTop: "1.5rem" }}>
+                *All fields are mandatory. Your details will be kept confidential.
+              </p>
+
+                    </div>
+                  </div>
+                );
+              };
+
+              export default AdmissionForm;
