@@ -9,6 +9,7 @@ const AdmissionForm = () => {
     aadharNumber: "",
     phone: "",
     address: "",
+    email: "", // ✅ added email field
   });
 
   const [status, setStatus] = useState("");
@@ -29,7 +30,7 @@ const AdmissionForm = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: form.studentName,
-          email: "school@example.com",
+          email: form.email, // ✅ send user's email
           subject: `Admission Request from ${form.studentName}`,
           message: `
 Guardian Name: ${form.guardianName}
@@ -37,6 +38,7 @@ Date of Birth: ${form.dob}
 Aadhaar Number: ${form.aadharNumber}
 Phone Number: ${form.phone}
 Address: ${form.address}
+Email: ${form.email}
           `,
         }),
       });
@@ -50,6 +52,7 @@ Address: ${form.address}
           aadharNumber: "",
           phone: "",
           address: "",
+          email: "",
         });
       } else {
         setStatus("❌ Failed to submit form. Please try again.");
@@ -61,165 +64,125 @@ Address: ${form.address}
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-10">
-      <div className="text-center mb-6">
-        <h2 className="text-3xl font-extrabold text-blue-900 mb-2">
-          Admission Form
-        </h2>
-        <p className="text-gray-600 text-sm">
-          Please fill in all required details to submit your admission request.
-        </p>
-      </div>
+    <section className="py-5">
+      <div className="container">
+        <div className="text-center mb-4">
+          <h2 className="fw-bold text---it-heading-primary">Admission Form</h2>
+          <p className="text-muted">
+            Please fill in all the required details to submit your admission request.
+          </p>
+        </div>
 
-      {/* ✅ Wider form box */}
-      <div
-        className="bg-white p-8 rounded-2xl shadow-xl w-full"
-        style={{ maxWidth: "1000px" }}
-      >
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Two-column layout for first four fields */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block font-medium text-gray-700 mb-1">
-                Student Name*
-              </label>
+        <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: "900px" }}>
+          <div className="row g-4">
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Student Name*</label>
               <input
                 type="text"
                 name="studentName"
                 value={form.studentName}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="form-control"
               />
             </div>
 
-            <div>
-              <label className="block font-medium text-gray-700 mb-1">
-                Guardian Name*
-              </label>
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Guardian Name*</label>
               <input
                 type="text"
                 name="guardianName"
                 value={form.guardianName}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="form-control"
               />
             </div>
 
-            <div>
-              <label className="block font-medium text-gray-700 mb-1">
-                Date of Birth*
-              </label>
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Date of Birth*</label>
               <input
                 type="date"
                 name="dob"
                 value={form.dob}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="form-control"
               />
             </div>
 
-            <div>
-              <label className="block font-medium text-gray-700 mb-1">
-                Aadhaar Number*
-              </label>
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Aadhaar Number*</label>
               <input
                 type="text"
                 name="aadharNumber"
                 value={form.aadharNumber}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="form-control"
+              />
+            </div>
+
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Phone Number*</label>
+              <input
+                type="tel"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
+
+            {/* ✅ Email Field */}
+            <div className="col-md-6">
+              <label className="form-label fw-semibold">Email*</label>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="form-control"
+              />
+            </div>
+
+            <div className="col-12">
+              <label className="form-label fw-semibold">Address*</label>
+              <textarea
+                name="address"
+                rows={3}
+                value={form.address}
+                onChange={handleChange}
+                required
+                className="form-control"
               />
             </div>
           </div>
 
-          {/* Phone and Address */}
-          <div>
-            <label className="block font-medium text-gray-700 mb-1">
-              Phone Number*
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+          <div className="text-center mt-4">
+            <button
+              type="submit"
+              className="btn px-5 py-2 fw-semibold"
+              style={{
+                backgroundColor: "#43baff",
+                color: "#fff",
+                border: "none",
+                width: "40%",
+                minWidth: "180px",
+              }}
+            >
+              Submit
+            </button>
           </div>
 
-          <div>
-            <label className="block font-medium text-gray-700 mb-1">
-              Address*
-            </label>
-            <textarea
-              name="address"
-              rows={3}
-              value={form.address}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
-            />
-          </div>
-
-          {/* ✅ Inline button styles */}
-        <button
-  type="submit"
-  style={{
-    width: "40%", // moderate width
-    backgroundColor: "#43baff",
-    color: "#fff",
-    fontWeight: 500,
-    fontSize: "14px",
-    padding: "10px 0",
-    border: "none",
-    borderRadius: "0", // no rounded corners
-    cursor: "pointer",
-    transition: "background-color 0.3s ease",
-    display: "block",
-    margin: "20px auto 0", // 20px space before button, centered
-  }}
-  onMouseOver={(e) =>
-    (e.currentTarget.style.backgroundColor = "#1593e2")
-  }
-  onMouseOut={(e) =>
-    (e.currentTarget.style.backgroundColor = "#43baff")
-  }
->
-  Submit Admission Form
-</button>
-
-
+          {status && (
+            <p className="text-center mt-3 fw-semibold text-secondary">{status}</p>
+          )}
         </form>
-
-        {status && (
-          <p
-            style={{
-              textAlign: "center",
-              color: "#374151",
-              marginTop: "1rem",
-              fontWeight: 500,
-            }}
-          >
-            {status}
-          </p>
-        )}
-
-        <p
-          style={{
-            textAlign: "center",
-            color: "#6B7280",
-            fontSize: "0.875rem",
-            marginTop: "1.5rem",
-          }}
-        >
-          *All fields are mandatory. Your details will be kept confidential.
-        </p>
       </div>
-    </div>
+    </section>
   );
 };
 
