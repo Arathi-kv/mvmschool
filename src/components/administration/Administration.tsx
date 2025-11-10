@@ -35,7 +35,7 @@ const Administration = () => {
                 <p className="text-muted mb-2">Principal</p>
                 <p>
                   Our Principal leads the institution with dedication and a vision
-                  for holistic education. She emphasizes excellence, discipline, and
+                  for holistic education. He emphasizes excellence, discipline, and
                   compassion in every aspect of school life.
                 </p>
               </div>
