@@ -14,17 +14,24 @@ const menu_data = [
 
   {
   id: 2,
-  title: "About us",
+  title: "About Us",
   link: "/about-us",
   has_dropdown: true,
   submenu: [
+     {
+      id: 11,
+      title: "Administration",
+      link: "/administration",
+    },
     {
-      id: 21,
+      id: 12,
       title: "Management",
       link: "/management",
     },
+   
   ],
 },
+
 
 
   {
@@ -50,9 +57,15 @@ const menu_data = [
     title: "Admission",
     link: "/admission",
   },
-
+  
   {
     id: 8,
+    title: "News",
+    link: "/news",
+  },
+
+  {
+    id: 9,
     title: "Contact",
     link: "/contact",
   },

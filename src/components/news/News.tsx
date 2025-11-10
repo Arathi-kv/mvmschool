@@ -54,9 +54,6 @@ const BlogHomeTwo = () => {
                     all classes from K.G. to Higher Secondary. Enroll now and be part
                     of a community that values quality education and holistic growth.
                   </p>
-                  <Link href="#">
-                    Read More<i className="fa-sharp fa-regular fa-arrow-right"></i>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -99,9 +96,6 @@ const BlogHomeTwo = () => {
                     prayer hall, and play areas — all designed to support academic and
                     moral development for every student.
                   </p>
-                  <Link href="#">
-                    Read More<i className="fa-sharp fa-regular fa-arrow-right"></i>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -144,9 +138,6 @@ const BlogHomeTwo = () => {
                     continuous learning experience from Kindergarten to Higher Secondary
                     level under experienced educators.
                   </p>
-                  <Link href="#">
-                    Read More<i className="fa-sharp fa-regular fa-arrow-right"></i>
-                  </Link>
                 </div>
               </div>
             </div>
