@@ -6,7 +6,7 @@ import React from 'react';
 const Team = () => {
   return (
     <>
-      <div className="it-team-4__area it-team-4__yellow-color pt-120 pb-90">
+      <div className="it-team-4__area pt-100 pb-100">
         <div className="container">
           <div className="row">
             <div className="col-xl-4 col-lg-4 col-sm-6 mb-30 wow itfadeUp" data-wow-duration=".9s"

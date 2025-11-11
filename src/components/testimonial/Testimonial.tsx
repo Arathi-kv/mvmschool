@@ -5,7 +5,7 @@ import React from 'react';
 const Testimonial = () => {
   return (
     <>
-      <div className="it-testimonial__area pt-120 pb-40">
+     <div className="it-testimonial__area pt-100 pb-40">
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-lg-6 mb-80 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">

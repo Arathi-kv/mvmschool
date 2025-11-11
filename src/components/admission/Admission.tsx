@@ -3,7 +3,7 @@ import AdmissionForm from '@/components/form/AdmissionForm';
 
 const Admission = () => {
   return (
-    <div className="admission-page pt-90 pb-20 bg-gray-50">
+     <div className="admission-page pt-100 pb-100 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Admission Guidelines */}

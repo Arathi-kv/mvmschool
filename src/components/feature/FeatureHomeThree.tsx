@@ -15,7 +15,7 @@ const FeatureHomeThree = () => {
 
   return (
     <section
-      className="it-feature-3__area py-5"
+       className="it-feature-3__area pt-100 pb-10"
       style={{
         background: "linear-gradient(180deg, #f8f9fb 0%, #ffffff 100%)",
       }}

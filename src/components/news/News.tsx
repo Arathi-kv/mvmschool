@@ -4,7 +4,7 @@ import React from 'react';
 const BlogHomeTwo = () => {
   return (
     <>
-      <div className="it-blog-4__area pt-120 pb-90">
+      <div className="it-blog-4__area pt-100 pb-90">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">

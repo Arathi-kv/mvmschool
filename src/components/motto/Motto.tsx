@@ -7,7 +7,7 @@ import mottoBg from "/public/assets/img/motto/motto-bg.jpg"; // make sure image 
 const Motto = () => {
   return (
     
-    <div className="it-motto__area py-5">
+    <div className="it-motto__area pt-10 pb-50">
       <div className="container">
         <div
           className="row align-items-center"

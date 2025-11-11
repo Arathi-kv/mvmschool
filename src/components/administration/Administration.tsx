@@ -2,7 +2,7 @@ import React from "react";
 
 const Administration = () => {
   return (
-    <div className="it-blog-4__area pt-120 pb-90">
+    <div className="it-about__area pt-100 pb-10">
       <div className="container">
         <div className="row">
           <div className="col-xl-12 text-center">

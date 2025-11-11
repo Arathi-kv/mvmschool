@@ -231,11 +231,11 @@ const Gallery = () => {
         />
       )}
 
-      <style jsx>{`
+         <style jsx>{`
         .gallery-container {
-          padding: 60px 0;
-        }
-
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
         .gallery-grid {
           display: grid;
           gap: 20px;

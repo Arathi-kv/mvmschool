@@ -3,19 +3,8 @@ import React from "react";
 const Contact: React.FC = () => {
   return (
     <>
-      {/* ===== Header Banner ===== */}
-      <section
-        className="position-relative text-center text-white py-5"
-        style={{
-          backgroundImage: "url('/assets/img/banner/contact-banner.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-      </section>
-
-      {/* ===== Row 1: Contact Info ===== */}
-      <section className="py-5 bg-white">
+       {/* ===== Row 1: Contact Info ===== */}
+      <section className="pt-100 pb-50 bg-white">
         <div className="container text-center">
           <h2 className="fw-bold mb-3">Get in Touch</h2>
           <p className="text-muted mb-5 mx-auto" style={{ maxWidth: "700px" }}>
