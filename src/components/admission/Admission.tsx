@@ -22,14 +22,14 @@ const Admission = () => {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Special Features</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>📝 കേം ബ്രിഡ്ജ് ഇംഗ്ളീഷ് പരിശീലന പരിപാടി.</li>
-              <li>💡 Special Coaching for NTSC & ISRO Young Scientist Program</li>
-              <li>🦾 റോബോട്ടിക്‌സ് പാഠ്യ പദ്ധതി.</li>
-              <li>🧮 ഇ-ക്യാമ്പസ്, ഐഡിയ ഫാക്ടറി തുടങ്ങിയ അന്താരാഷ്ട്ര സംവിധാനങ്ങൾ.</li>
-              <li>🔖 ധാർമികതയിൽ അധിഷ്ഠിതമായ റസിഡൻഷ്യൽ ക്യാമ്പസ്.</li>
-              <li>💸 NO DONATION</li>
-              <li>💡 MVM EMBEDDED EDU APP</li>
-              <li>🎈 IAS Orientation</li>
+              <li>കേം ബ്രിഡ്ജ് ഇംഗ്ളീഷ് പരിശീലന പരിപാടി.</li>
+              <li>Special Coaching for NTSC & ISRO Young Scientist Program</li>
+              <li>റോബോട്ടിക്‌സ് പാഠ്യ പദ്ധതി.</li>
+              <li>ഇ-ക്യാമ്പസ്, ഐഡിയ ഫാക്ടറി തുടങ്ങിയ അന്താരാഷ്ട്ര സംവിധാനങ്ങൾ.</li>
+              <li>ധാർമികതയിൽ അധിഷ്ഠിതമായ റസിഡൻഷ്യൽ ക്യാമ്പസ്.</li>
+              <li>NO DONATION</li>
+              <li>MVM EMBEDDED EDU APP</li>
+              <li>IAS Orientation</li>
             </ul>
           </div><br></br>
 
