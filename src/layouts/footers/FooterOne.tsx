@@ -10,7 +10,7 @@ const FooterOne = ({ style_2 }: any) => {
         {/* <!-- footer-area-start --> */}
         <div
           className="it-footer__area it-footer__space z-index"
-          style={{ backgroundColor: "#0F172A;" }}
+          style={{ backgroundColor: "#010222ff;" }}
         >
           <div className="container">
             <div className="row">
