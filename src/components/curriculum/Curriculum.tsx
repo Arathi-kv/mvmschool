@@ -4,19 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 const BlogHomeOne = () => {
-  const staff = [
-    {
-      img: "assets/img/management/rasheed-karinkappara-principal.jpg",
-      name: "Mr.Rasheed Karinkappara",
-      position: "Principal",
-    },
-    {
-      img: "assets/img/management/alikutty-tm-vice-principal.jpg",
-      name: "Mr.Alikutty T M",
-      position: "Vice Principal",
-    },
-  ];
-
   const curriculum = [
     {
       img: "assets/img/curriculum/lkg.jpg",
@@ -65,73 +52,6 @@ const BlogHomeOne = () => {
 
   return (
     <>
-      {/* === Principal & Vice Principal Section === */}
-      <section className="it-staff__area pt-100 pb-60 bg-white">
-        <div className="container">
-          <div className="text-center mb-5">
-            <span className="it-section-subtitle">Our Leadership</span>
-            <h2 className="it-section-title">Guided by Excellence</h2>
-          </div>
-
-          <div
-            className="grid-layout"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))", // wider grid
-              gap: "50px",
-              justifyItems: "center",
-            }}
-          >
-            {staff.map((person, index) => (
-              <div
-                key={index}
-                className="it-staff__item text-center"
-                style={{
-                  background: "#fff",
-                  borderRadius: "2px",
-                  padding: "10px",
-                  boxShadow: "0 6px 18px rgba(0, 0, 0, 0.02)",
-                  width: "100%",
-                  maxWidth: "500px", // wider card
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                }}
-              >
-                <img
-                  src={person.img}
-                  alt={person.name}
-                  style={{
-                    width: "100%",
-                    height: "380px",
-                    objectFit: "cover",
-                    borderRadius: "10px",
-                    marginBottom: "20px",
-                  }}
-                />
-                <h4
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "20px",
-                    color: "#0A1F44",
-                    marginBottom: "6px",
-                  }}
-                >
-                  {person.name}
-                </h4>
-                <p
-                  style={{
-                    color: "#555",
-                    fontSize: "16px",
-                    marginBottom: "0",
-                  }}
-                >
-                  {person.position}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* === Curriculum Section === */}
       <section className="it-blog__area pt-120 pb-90 bg-light">
         <div className="container">
