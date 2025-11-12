@@ -12,127 +12,80 @@ type GalleryItem = {
 
 const galleryItems: GalleryItem[] = [
   {
-    title: "KG",
-   thumbnail:  "/assets/img/gallery/img1.jpg",
-    popupImages: ["/assets/img/gallery/img1.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img33.jpg",
-      "/assets/img/gallery/img2.jpg",
-      "/assets/img/gallery/img48.jpg",
-      "/assets/img/gallery/img14.jpg",
-    ],
+    title: "Assembly",
+    thumbnail:  "/assets/img/gallery/img37.jpg",
+    popupImages: ["/assets/img/gallery/img37.jpg"],
+       extraImages: 
+       ["/assets/img/gallery/img36.jpg",
+            "/assets/img/gallery/img26.jpg",
+       
+       ],
   },
   {
-    title: "School Fest",
-     thumbnail:  "/assets/img/gallery/img4.jpg",
-    popupImages: [ "/assets/img/gallery/img4.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img15.jpg",
-      "/assets/img/gallery/img6.jpg",
-      "/assets/img/gallery/img19.jpg",
-      "/assets/img/gallery/img8.jpg",
-      "/assets/img/gallery/img17.jpg",
-       "/assets/img/gallery/img16.jpg",
-    ],
+    title: "Independence Day",
+     thumbnail:  "/assets/img/gallery/img43.jpg",
+   popupImages: ["/assets/img/gallery/img43.jpg"],
+   
   },
-
    {
-    title: "Celebration",
-    thumbnail:  "/assets/img/gallery/img11.jpg",
-    popupImages: ["/assets/img/gallery/img11.jpg"],
+    title: "JRC",
+     thumbnail:  "/assets/img/gallery/img35.jpg",
+    popupImages: ["/assets/img/gallery/img35.jpg"],
     extraImages: [
-      "/assets/img/gallery/img12.jpg",
-      "/assets/img/gallery/img13.jpg",
+      "/assets/img/gallery/img29.jpg",
+      "/assets/img/gallery/img22.jpg",
+    ],
+  },
+    {
+    title: "Parents Meet",
+     thumbnail:  "/assets/img/gallery/img45.jpg",
+ popupImages: ["/assets/img/gallery/img45.jpg"],
+    extraImages: [
+       "/assets/img/gallery/img44.jpg",
+    ],
+  },
+ {
+    title: "School Parliament ",
+     thumbnail:  "/assets/img/gallery/img3.jpg",
+    popupImages: ["/assets/img/gallery/img3.jpg"],
+   
+  },
+  {
+    title: "Scout and Guide",
+    thumbnail:  "/assets/img/gallery/img23.jpg",
+ popupImages: ["/assets/img/gallery/img23.jpg"],
+    extraImages: [
+      "/assets/img/gallery/img31.jpg",
     ],
   },
   {
-    title: "Environment Day",
+    title: "World Environment Day",
      thumbnail:  "/assets/img/gallery/img20.jpg",
   popupImages: ["/assets/img/gallery/img20.jpg"],
     extraImages: [
       "/assets/img/gallery/img21.jpg",
     ],
   },
- 
-  {
-    title: "Guides and Scouts",
-    thumbnail:  "/assets/img/gallery/img26.jpg",
- popupImages: ["/assets/img/gallery/img26.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img22.jpg",
-      "/assets/img/gallery/img23.jpg",
-      "/assets/img/gallery/img31.jpg",
-      "/assets/img/gallery/img28.jpg",
-    ],
-  },
-  
-  {
-    title: "Students Performance",
-     thumbnail:  "/assets/img/gallery/img7.jpg",
-   popupImages: ["/assets/img/gallery/img7.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img9.jpg",
-      "/assets/img/gallery/img10.jpg",
-    ],
-  },
- 
-  {
-    title: "PTA Meeting",
-     thumbnail:  "/assets/img/gallery/img44.jpg",
- popupImages: ["/assets/img/gallery/img44.jpg"],
-    extraImages: [
-       "/assets/img/gallery/img45.jpg",
-    ],
-  },
- 
-  {
-    title: "Reading Day",
-     thumbnail:  "/assets/img/gallery/img43.jpg",
-   popupImages: ["/assets/img/gallery/img43.jpg"],
-    extraImages: [
-         "/assets/img/gallery/img42.jpg",
-    ],
-  },
-  {
-    title: "School Assembly",
-    thumbnail:  "/assets/img/gallery/img37.jpg",
-    popupImages: ["/assets/img/gallery/img37.jpg"],
-       extraImages: 
-       ["/assets/img/gallery/img36.jpg",
-            "/assets/img/gallery/img35.jpg",
-         "/assets/img/gallery/img32.jpg" ,
-       ],
-  },
- 
-  {
-    title: "School Team",
-     thumbnail:  "/assets/img/gallery/img3.jpg",
-    popupImages: ["/assets/img/gallery/img3.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img24.jpg",
-    ],
-  },
-  {
-    title: "Social Awareness",
-     thumbnail:  "/assets/img/gallery/img29.jpg",
-    popupImages: ["/assets/img/gallery/img29.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img18.jpg",
-    ],
-  },
    {
-    title: "Staff and members",
-     thumbnail:  "/assets/img/gallery/img39.jpg",
-    popupImages: ["/assets/img/gallery/img39.jpg"],
+    title: "Youth Festival ",
+     thumbnail:  "/assets/img/gallery/img5.jpg",
+    popupImages: [ "/assets/img/gallery/img5.jpg"],
     extraImages: [
-      "/assets/img/gallery/img40.jpg",
+      "/assets/img/gallery/img6.jpg",
+      "/assets/img/gallery/img4.jpg",
+      "/assets/img/gallery/img7.jpg",
+      "/assets/img/gallery/img13.jpg",
+      "/assets/img/gallery/img9.jpg",
+       "/assets/img/gallery/img10.jpg",
+       "/assets/img/gallery/img18.jpg",
+       "/assets/img/gallery/img19.jpg",
+      "/assets/img/gallery/img8.jpg",
+      "/assets/img/gallery/img17.jpg",
+      "/assets/img/gallery/img16.jpg",
+      "/assets/img/gallery/img15.jpg",
       "/assets/img/gallery/img25.jpg",
-      "/assets/img/gallery/img46.jpg",
-      "/assets/img/gallery/img47.jpg",
-      "/assets/img/gallery/img34.jpg",
     ],
   },
- 
 ];
 
 const DEFAULT_RATIO = 4 / 3;

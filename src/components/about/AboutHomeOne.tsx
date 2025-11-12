@@ -7,7 +7,7 @@ import Link from 'next/link';
 const AboutHomeOne = ({style_2}: any) => {
   return (
     <>
-      <div className={`it-about__area pb-120 ${style_2 ? "pt-120" : ""}`}>
+      <div className={`it-about__area pb-10 ${style_2 ? "pt-100" : ""}`}>
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-lg-6 wow itfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">

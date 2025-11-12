@@ -83,22 +83,37 @@ const TestimonialHomeOne = () => {
                   className="swiper-container it-testimonial__active">
 
                   <SwiperSlide className="swiper-slide">
-                    <div className="it-testimonial__item text-center p-relative">
+                    <div className="it-testimonial__item text-left p-relative ">
                      
                       <div className="it-testimonial__author-info">
-                        <h5 className="it-testimonial__author-name" style={{ margin: "20px 0" }}>Vision</h5>
-                        <p>The vision of M.V.M.R.H.S.S  is that to provide quality education for  <br />all pupil with affordable cost.</p><br />
+                        <h5 className="it-testimonial__author-name text-center" style={{ margin: "20px 0" }}>Vision</h5>
+                        <p>To uplift the socially and educationally weaker sections in our
+                            locality, utilizing the latest and innovative educational technology and
+                            teaching methodology, and to bring up the forthcoming generations
+                            capable of withstanding the challenges of the modern world.
+                            
+                            To enhance the linguistic, communicative, cognitive and creative
+                            talents of our students, to facilitate excellence in their professional as
+                            well as personal life and to render them assistance to achieve self actu-
+                            alization.</p><br />
                       </div>
                     </div>
                   </SwiperSlide>
 
                   <SwiperSlide className="swiper-slide">
-                    <div className="it-testimonial__item p-relative text-center">
+                    <div className="it-testimonial__item p-relative text-left">
                         <div className="it-testimonial__author-info">
-                        <h5 className="it-testimonial__author-name" style={{ margin: "20px 0" }}>
+                        <h5 className="it-testimonial__author-name text-center" style={{ margin: "20px 0" }}>
                         Mission
                         </h5>
-                       <p>Our mission is to provide education for all religious groups without considering caste or creed. School provides education for all <br /> religious groups,such as Hindu, Muslim, and Christian etc. </p>
+                       <p>Bringing up future generations with a creative mind set, scientific
+                          temperament and positive outlook towards the fellow beings.
+                          Bringing out the innate potentialities in the toddlers, by exposing
+                          them to the rich and vibrant environment ideally and judiciously main-
+                          tained in the campus.<br />
+                          Mould our products into dynamic and balanced personalities,
+                          capable of reaching the Pre- Predetermined goals by channelizing the
+                          academic excellence imbibed from our class rooms.</p>< br />
                       </div>
                     </div>
                   </SwiperSlide>
