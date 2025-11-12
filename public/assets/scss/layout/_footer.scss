@@ -283,13 +283,13 @@
 
 .it-copyright{
     &__bg{
-        background-color: var(--it-theme-2);
+        background-color: var( --it-common-black);
         border-top: 1px solid rgba(255, 255, 255, 0.11);
     }
     &__text{
         padding: 30px 0;
         & span {
-            color:#7b8789;
+            color:#ffffff;
             font-size: 14px;
             & b {
                 &.color-red {
