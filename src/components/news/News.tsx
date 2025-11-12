@@ -16,16 +16,16 @@ const BlogHomeTwo = () => {
   const newsData = [
     {
       date: "10 Nov",
-      meta: "November 10, 2025 _ Announcement",
+      meta: "Announcement",
       title: "Admissions Open for the Academic Year",
       img: "assets/img/news/news1.jpg",
       desc: "M.V.M Higher Secondary School is now accepting applications for all classes from K.G. to Higher Secondary. Enroll now and be part of a community that values quality education and holistic growth.",
     },
     {
       date: "28 Oct",
-      meta: "October 28, 2025 _ Development",
+      meta: "Development",
       title: "Campus Facilities Upgraded for Student Excellence",
-      img: "assets/img/news/news1.jpg",
+      img: "assets/img/news/news2.jpg",
       desc: "Our campus now features upgraded classrooms, computer labs, library, prayer hall, and play areas — all designed to support academic and moral development for every student.",
     },
    
@@ -80,9 +80,9 @@ const BlogHomeTwo = () => {
                     <div className="it-blog-4__meta">
                       <span>{item.meta}</span>
                     </div>
-                    <Link href="#">
+                  
                       <h4 className="it-blog-4__title">{item.title}</h4>
-                    </Link>
+                   
                     <p>{item.desc}</p>
                   </div>
                 </div>

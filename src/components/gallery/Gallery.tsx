@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -13,72 +13,57 @@ type GalleryItem = {
 const galleryItems: GalleryItem[] = [
   {
     title: "Assembly",
-    thumbnail:  "/assets/img/gallery/img37.jpg",
+    thumbnail: "/assets/img/gallery/img37.jpg",
     popupImages: ["/assets/img/gallery/img37.jpg"],
-       extraImages: 
-       ["/assets/img/gallery/img36.jpg",
-            "/assets/img/gallery/img26.jpg",
-       
-       ],
+    extraImages: ["/assets/img/gallery/img36.jpg", "/assets/img/gallery/img26.jpg"],
   },
   {
     title: "Independence Day",
-     thumbnail:  "/assets/img/gallery/img43.jpg",
-   popupImages: ["/assets/img/gallery/img43.jpg"],
-   
+    thumbnail: "/assets/img/gallery/img43.jpg",
+    popupImages: ["/assets/img/gallery/img43.jpg"],
   },
-   {
+  {
     title: "JRC",
-     thumbnail:  "/assets/img/gallery/img35.jpg",
+    thumbnail: "/assets/img/gallery/img35.jpg",
     popupImages: ["/assets/img/gallery/img35.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img29.jpg",
-      "/assets/img/gallery/img22.jpg",
-    ],
+    extraImages: ["/assets/img/gallery/img29.jpg", "/assets/img/gallery/img22.jpg"],
   },
-    {
+  {
     title: "Parents Meet",
-     thumbnail:  "/assets/img/gallery/img45.jpg",
- popupImages: ["/assets/img/gallery/img45.jpg"],
-    extraImages: [
-       "/assets/img/gallery/img44.jpg",
-    ],
+    thumbnail: "/assets/img/gallery/img45.jpg",
+    popupImages: ["/assets/img/gallery/img45.jpg"],
+    extraImages: ["/assets/img/gallery/img44.jpg"],
   },
- {
+  {
     title: "School Parliament ",
-     thumbnail:  "/assets/img/gallery/img3.jpg",
+    thumbnail: "/assets/img/gallery/img3.jpg",
     popupImages: ["/assets/img/gallery/img3.jpg"],
-   
   },
   {
     title: "Scout and Guide",
-    thumbnail:  "/assets/img/gallery/img23.jpg",
- popupImages: ["/assets/img/gallery/img23.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img31.jpg",
-    ],
+    thumbnail: "/assets/img/gallery/img23.jpg",
+    popupImages: ["/assets/img/gallery/img23.jpg"],
+    extraImages: ["/assets/img/gallery/img31.jpg"],
   },
   {
     title: "World Environment Day",
-     thumbnail:  "/assets/img/gallery/img20.jpg",
-  popupImages: ["/assets/img/gallery/img20.jpg"],
-    extraImages: [
-      "/assets/img/gallery/img21.jpg",
-    ],
+    thumbnail: "/assets/img/gallery/img20.jpg",
+    popupImages: ["/assets/img/gallery/img20.jpg"],
+    extraImages: ["/assets/img/gallery/img21.jpg"],
   },
-   {
+  {
     title: "Youth Festival ",
-     thumbnail:  "/assets/img/gallery/img5.jpg",
-    popupImages: [ "/assets/img/gallery/img5.jpg"],
+    thumbnail: "/assets/img/gallery/img5.jpg",
+    popupImages: ["/assets/img/gallery/img5.jpg"],
     extraImages: [
       "/assets/img/gallery/img6.jpg",
       "/assets/img/gallery/img4.jpg",
       "/assets/img/gallery/img7.jpg",
       "/assets/img/gallery/img13.jpg",
       "/assets/img/gallery/img9.jpg",
-       "/assets/img/gallery/img10.jpg",
-       "/assets/img/gallery/img18.jpg",
-       "/assets/img/gallery/img19.jpg",
+      "/assets/img/gallery/img10.jpg",
+      "/assets/img/gallery/img18.jpg",
+      "/assets/img/gallery/img19.jpg",
       "/assets/img/gallery/img8.jpg",
       "/assets/img/gallery/img17.jpg",
       "/assets/img/gallery/img16.jpg",
@@ -94,6 +79,14 @@ const Gallery = () => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState<{ src: string }[]>([]);
   const [title, setTitle] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleOpen = (item: GalleryItem) => {
     setTitle(item.title);
@@ -105,7 +98,15 @@ const Gallery = () => {
   };
 
   return (
-    <div className="gallery-container">
+    <div
+      className="gallery-container"
+      style={{
+        paddingTop: "100px",
+        paddingBottom: "100px",
+        paddingLeft: isMobile ? "15px" : "0px", // ✅ Real visible space on mobile
+        paddingRight: isMobile ? "15px" : "0px",
+      }}
+    >
       <div className="gallery-grid">
         {galleryItems.map((item, index) => {
           const ratio = DEFAULT_RATIO;
@@ -184,11 +185,7 @@ const Gallery = () => {
         />
       )}
 
-         <style jsx>{`
-        .gallery-container {
-        padding-top: 100px;
-        padding-bottom: 100px;
-      }
+      <style jsx>{`
         .gallery-grid {
           display: grid;
           gap: 20px;

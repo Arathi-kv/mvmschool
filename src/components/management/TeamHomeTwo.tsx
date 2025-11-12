@@ -24,7 +24,7 @@ const TeamHomeTwo = () => {
                  <img src="assets/img/management/abdul-azeez-k-p-assabah-trust-chairman.jpg" alt="Chairman"
                  style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>Chairman</span>
@@ -42,7 +42,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/abdul-rasheed-k-m-joint-secretary.jpg" alt="Joint Secretary"
                     style={{border: "1px solid #56525283", padding: "4px",        }} />
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>Joint Secretary</span>
@@ -60,7 +60,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/k-kunji-muhammed-general-secretary.jpg" alt="General Secretary" 
                     style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>General Secretary</span>
@@ -78,7 +78,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/k-v-beeravu-treasurer.jpg" alt="Treasurer"
                     style={{border: "1px solid #56525283", padding: "4px",        }} />
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>Treasurer</span>
@@ -96,7 +96,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/kv-hassan-master.jpg" alt="Member" 
                     style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <Link href="/team-details">
@@ -113,7 +113,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/mujeeb-rahman-general-secretary.jpg" alt="General Secretary" 
                     style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>General Secretary</span>
@@ -131,7 +131,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/n-hameed-vice-president.jpg" alt="Vice President" 
                     style={{border: "1px solid #56525283", padding: "4px",        }}/>
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>Vice President</span>
@@ -149,7 +149,7 @@ const TeamHomeTwo = () => {
                   <img src="assets/img/management/sainu-nechikkal-joint-secretary.jpg" alt="Joint Secretary"
                     style={{border: "1px solid #56525283", padding: "4px",        }} />
                 </div>
-                <div className="it-team-4__content-wrap" style={{ marginTop: "20px" }}>
+                <div className="it-team-4__content-wrap" style={{ marginTop: "5px" }}>
 
                   <div className="it-team-4__author-info">
                     <span>Joint Secretary</span>
