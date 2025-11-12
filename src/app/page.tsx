@@ -2,7 +2,6 @@ import React from 'react';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import HeroHomeOne from '@/components/hero/HeroHomeOne';
 import AboutHomeOne from '@/components/about/AboutHomeOne';
-import AboutHomeTwo from '@/components/about/AboutHomeTwo';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
 import ProjectHomeThree from "@/components/project/ProjectHomeThree";
@@ -24,7 +23,7 @@ const IndexPage = () => {
 
         {/* About Section */}
         <AboutHomeOne style_2={true} />
-        <AboutHomeTwo></AboutHomeTwo>
+        
         
           {/* Shot Section for home only */}
         <ProjectHomeThree />
