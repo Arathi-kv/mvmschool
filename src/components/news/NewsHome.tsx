@@ -21,7 +21,7 @@ const BlogHomeTwo = () => {
           <div className="row">
             <div className="col-12 text-center">
               <div className="it-blog-4__section-title">
-                <span className="it-section-subtitle-4">Whats happening</span>
+                <span className="it-section-subtitle-5">Whats happening</span>
                 <h4 className="it-section-title">Our Latest News & Events</h4>
               </div>
             </div>
