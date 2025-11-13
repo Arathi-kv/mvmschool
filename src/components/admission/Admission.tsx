@@ -55,7 +55,7 @@ const Admission = () => {
           </div>
           {/* Admission Form */}
             <div className="container" style={{ marginTop: "50px" }}>
-         <div className="d-flex justify-content-center align-items-center min-vh-100">
+        <div className="d-flex justify-content-center align-items-center">
           <div className="it-contact__form-box p-4 shadow-sm bg-white rounded-3">
             <AdmissionForm />
           </div>
