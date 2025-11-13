@@ -43,7 +43,7 @@ const Admission = () => {
               <li>Separate hostel for both boys and girls are functioning in the campus. Special coaching programme are arranged for hostel student for physical, cultural and moral development of the pupil. The hostel mess is non-vegetarian; in no case outside food is allowed.</li>
               <li>The parents are allowed to visit their ward in the hostel only on holidays.</li>
             </ul>
-          </div><br></br>
+          </div>
 
           {/* Contact Details */}
           <div className="bg-white p-6 rounded-lg shadow-md">
