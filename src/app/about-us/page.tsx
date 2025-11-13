@@ -3,7 +3,7 @@ import Wrapper from '@/layouts/Wrapper';
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderFour from '@/layouts/headers/HeaderFour';
 import Breadcrumb from '@/components/common/Breadcrumb';
-import AboutHomeOne from '@/components/about/AboutHomeOne';
+import AboutHomeTwo from '@/components/about/AboutHomeTwo';
 import VideoHomeOne from '@/components/video/VideoHomeOne';
 import Mission from '@/components/mission/Mission';
 import Motto from '@/components/motto/Motto';
@@ -18,7 +18,8 @@ const AboutPage = () => {
       <HeaderFour />
       <main>
         <Breadcrumb title="About Us" subtitle="About Us" />
-        <AboutHomeOne style_2={true} />
+     
+         <AboutHomeTwo style_2={true} />
 
         {/* Mission Section */}
         <Mission />

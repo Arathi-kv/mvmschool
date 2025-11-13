@@ -25,10 +25,11 @@ const AboutHomeOne = ({style_2}: any) => {
                 </div>
                 <div className="it-about__content">
                   <p>
-                    Assabah Association Trust is a well organized and established non-profit organization, under Muslim management.
-                    The trust is managing number of educational institutions. M.V.M.R.H.S.S founded in 1986 under Assabah Association Trust.
-                    School provides quality education for all community with affordable cost.   Now the school has grown to a full
-                   fledged Higher Secondary School starting from K.G. to Higher Secondary level with reorganization of government of Kerala.
+                    Established in 1986, under Assabah Association Trust. a full-fledged Higher Secondary School
+                    starting from K.G. to Higher Secondary with reorganization from government of Kerala, MVMRHSS 
+                    believe that education is not merely the pursuit of academic excellence but the holistic development
+                     of every child. Established with a vision to nurture intellectually vibrant, morally upright, and socially
+                      responsible individuals, our school provides a dynamic learning environment that blends tradition with modern educational practices.
                  </p>
                    {/*<div className="it-about__list-box">
                    <ul>
