@@ -18,19 +18,22 @@ const menu_data = [
   link: "/about-us",
   has_dropdown: true,
   submenu: [
-     {
+    {
+    id: 3,
+     title: "Management",
+      link: "/management",
+  },
+    
+  ],
+},
+
+
+ {
       id: 11,
       title: "Administration",
       link: "/administration",
     },
-    {
-      id: 12,
-      title: "Management",
-      link: "/management",
-    },
-   
-  ],
-},
+
 
   {
     id: 5,
