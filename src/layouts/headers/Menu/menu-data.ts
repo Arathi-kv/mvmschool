@@ -32,18 +32,10 @@ const menu_data = [
   ],
 },
 
-
-
-  {
-    id: 3,
-    title: "Facilities",
-    link: "/facilities",
-  },
-
   {
     id: 5,
-    title: "Curriculum",
-    link: "/curriculum",
+    title: "Academics",
+    link: "/academics",
   },
 
   {

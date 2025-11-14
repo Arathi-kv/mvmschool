@@ -8,7 +8,7 @@ import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 
 export const metadata = {
-title: "M.V.M Higher Secondary School",
+title: "News",
 };
 
 

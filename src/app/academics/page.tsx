@@ -3,18 +3,19 @@ import Wrapper from '@/layouts/Wrapper';
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderFour from '@/layouts/headers/HeaderFour';
 import Breadcrumb from '@/components/common/Breadcrumb';
-import Curriculum from '@/components/curriculum/Curriculum';
-import CurriculumHome from '@/components/curriculum/CurriculumHome';
-export const metadata = { title: "Curriculum" };
+import Academics from '@/components/academics/Academics';
+import AdministrationOne from '@/components/administration/AdministrationOne';
+
+export const metadata = { title: "Academics" };
 
 const CurriculumPage = () => {
   return (
     <Wrapper>
       <HeaderFour />
       <main>
-        <Breadcrumb title="Curriculum" subtitle="Curriculum" />
-        <Curriculum />
-        <CurriculumHome></CurriculumHome>
+        <Breadcrumb title="Academics" subtitle="Academics" />
+      <AdministrationOne></AdministrationOne>
+        <Academics></Academics>
       </main>
       <FooterOne />
     </Wrapper>

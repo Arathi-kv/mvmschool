@@ -9,7 +9,7 @@ const Admission = () => {
           {/* Admission Guidelines */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Admission Guidelines</h2>
-            <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc pl-4 sm:pl-6 space-y-2">
               <li>All admission are strictly based on admission test except K.G admission.</li>
               <li>Pupil should produce their T.C at the time of admission.</li>
               <li>K.G and first standard pupil should produce their birth certificate at the time of admission.</li>
@@ -21,7 +21,7 @@ const Admission = () => {
           {/* Special Features */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Special Features</h2>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc pl-4 sm:pl-6 space-y-2">
               <li>കേം ബ്രിഡ്ജ് ഇംഗ്ളീഷ് പരിശീലന പരിപാടി.</li>
               <li>Special Coaching for NTSC & ISRO Young Scientist Program</li>
               <li>റോബോട്ടിക്‌സ് പാഠ്യ പദ്ധതി.</li>
@@ -36,7 +36,7 @@ const Admission = () => {
           {/* Hostel Procedure */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">Hostel Admission Procedure</h2>
-            <ul className="list-disc list-inside space-y-2">
+             <ul className="list-disc pl-4 sm:pl-6 space-y-2">
               <li>Who want hostel admission they want to submit an application in prescribed form in our school office.</li>
               <li>If any pupil violate the rules and regulations of school, that pupil both admission may be cancelled at any time.</li>
               <li>Hostel admission available from 5th standard onwards.</li>

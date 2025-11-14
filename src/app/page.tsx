@@ -4,7 +4,7 @@ import HeroHomeOne from '@/components/hero/HeroHomeOne';
 import AboutHomeOne from '@/components/about/AboutHomeOne';
 import FooterOne from '@/layouts/footers/FooterOne';
 import Wrapper from '@/layouts/Wrapper';
-import ProjectHomeThree from "@/components/project/ProjectHomeThree";
+import CurriculumHome from "@/components/curriculum/CurriculumHome"
 import NewsHome from '@/components/news/NewsHome';
 
 
@@ -26,7 +26,7 @@ const IndexPage = () => {
         
         
           {/* Shot Section for home only */}
-        <ProjectHomeThree />
+        <CurriculumHome />
         <NewsHome></NewsHome>
 
        
