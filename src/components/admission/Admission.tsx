@@ -43,13 +43,13 @@ const Admission = () => {
               <li>Separate hostel for both boys and girls are functioning in the campus. Special coaching programme are arranged for hostel student for physical, cultural and moral development of the pupil. The hostel mess is non-vegetarian; in no case outside food is allowed.</li>
               <li>The parents are allowed to visit their ward in the hostel only on holidays.</li>
             </ul>
-          </div>
+          </div>< br />
 
           {/* Contact Details */}
           <div className="bg-white p-6 rounded-lg shadow-md">
           
             <p>
-              <strong>For more details , please contact</strong> <a href="tel:+919567871424" className="text-blue-600 underline">9567871424</a>, <a href="tel:+917593078368" className="text-blue-600 underline">7593078368</a>
+              For more details , please contact <a href="tel:+919567871424" className="text-blue-600 underline">9567871424</a>, <a href="tel:+917593078368" className="text-blue-600 underline">7593078368</a>
             </p>
           </div>
           {/* Admission Form */}
